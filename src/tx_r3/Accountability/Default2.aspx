@@ -476,7 +476,10 @@
            </td>
         </tr>
         <tr>
-        <td colspan="3"><asp:Panel ID="panelSpace" runat="server"><br /><br /><br /><br /><br /><br /><br /></br><br /><br/><br /><br /><br /><br /></br><br /><br/><br /><br /><br /><br /></br></asp:Panel></td>
+        <td colspan="3"><asp:Panel ID="panelSpace" runat="server"><br /><br /><br /><br /><br /><br /><br />
+            <br></br><br /><br/><br /><br /><br /><br />
+            <br></br><br /><br/><br /><br /><br /><br />
+            <br></br></asp:Panel></td>
         </tr>
         <tr>
          <td colspan="3">
@@ -517,10 +520,6 @@
                      <asp:DropDownList ID="ddlServiceLength" runat="server" Width="80px" onfocus="ValidateForm();" >
                      </asp:DropDownList>
                     </td>
-                  <%-- <td align="right"><font color="#FFFFFF">* </font>School Finance Related:</td>
-                    <td>
-                     <asp:CheckBox ID="cbFinance" runat="server" />
-                   </td>        --%>
                 </tr>
                 
                 <tr>
@@ -589,35 +588,31 @@
                 <tr><td colspan="6">&nbsp;</td></tr>
                 <tr>
                     <td colspan="6" style="background-color:#f5f5f5;border:dashed 1px #dcdcdc;">
-                   <asp:Literal ID="litClient" runat="server"><font color="red">* </font></asp:Literal>Location/Audience/#Served
-                    
-                    <table border="0" cellpadding="3" cellspacing="0">
+                        <asp:Literal ID="litClient" runat="server"><font color="red">* </font></asp:Literal>Location/Audience/#Served
+                     <table border="0" cellpadding="3" cellspacing="0">
+                         <!-- Begin VM 10-2-2018 -->
+                        <tr >
+                            <td colspan="6">
+                               <ASP:Checkbox runat="server" ID="CK22B" Text="Indicator 2.2b: Natural Disaster and Emergency Mass Communications"  ForeColor="black" AutoPostBack="true"  Width="500"/>
+                            </td>
+                         </tr>
+                        <!-- End VM 10-2-2018-->
 					    <tr>
-                        <td align="right"><%--District:--%></td>
-                            "
-                               
-                        <td>  
-                        <telerik:RadComboBox ID="ddlClient" runat="server" Label="District:" Height="200px" Width="150px" Filter="Contains" 
+                         <td align="left">  
+                        <telerik:RadComboBox ID="ddlClient" Label="Client:" runat="server" Height="200px" Width="200px" Filter="Contains" 
                                  MarkFirstMatch="true" EnableLoadOnDemand="true" ClientID="ddlClient"
                                  OnItemsRequested="ddlClient_ItemsRequested"  AllowCustomText="true" AutoPostBack="true" 
                                  HighlightTemplatedItems="true" OnSelectedIndexChanged = "ddlClient_SelectedIndexChanged"></telerik:RadComboBox>
                                 
                         </td>
-                        <td align="right"><%--Campus:--%>
-                            </td>
                         <td>
-                    <%-- <asp:DropDownList ID="ddlSite" runat="server" Width="200px"></asp:DropDownList>--%>
+                    
                         <telerik:RadComboBox ID="ddlSite" runat="server" label="Campus:" Height="200px" Width="150px" Filter="Contains" 
                                      MarkFirstMatch="true" EnableLoadOnDemand="true" ClientID="ddlSite" 
                                      AllowCustomText="true" AutoPostBack="true" HighlightTemplatedItems="true">
                         </telerik:RadComboBox>
                         </td>
-                   <%-- <td align="right"><asp:Literal ID="litRegion" runat="server"><font color="red">* </font></asp:Literal>ESC Region:</td>--%>
-                        <%--<td>
-                         <asp:DropDownList ID="ddlRegion" runat="server" Width="200px" OnSelectedIndexChanged = "ddlRegion_SelectedIndexChanged" AutoPostBack="true" Visible="false">
-                        
-                         </asp:DropDownList>
-                        </td>--%>
+              
                                   
 						<td>
 						    <asp:Label ID="AudienceLabel"
@@ -649,24 +644,14 @@
 				    </table>       
                    </td>
                 </tr>
-                <%-- <tr>
-                    <td align="right"><font color="white">* </font>ESC-U Competencies:</td>
-                    <td>
-                        <asp:DropDownList ID="ddlCompetencies" runat="server" Width="200px">
-                        </asp:DropDownList>
+               <%-- <tr>
+                    <td colspan="6">
+                        <asp:CheckBox runat="server" ID="cbCOVID_19" Text="COVID-19"/>
                     </td>
-                    <td align="right"><font color="white">* </font>E-Campus#:</td>
-                    <td>
-                        <asp:TextBox ID="txtECampus" runat="server" Width="200px"></asp:TextBox>
-                    </td>
-                    <td align="right"><font color="white">* </font>Cross Divisional Focus:</td>
-                    <td>
-                     <asp:CheckBox ID="cbCrossDivisionalFocus" runat="server" />
-                    </td>
-                                    
                 </tr>--%>
-                
                 <tr>
+                
+                
                    <td colspan="6">
                    <table border="0" cellpadding="3" cellspacing="0">
                     <tr>
@@ -717,36 +702,48 @@
                 <td colspan="6">&nbsp;</td>
                
                 </tr>
-                <%--<tr>
-                    <td colspan="6" style="background-color:#f5f5f5;border:dashed 1px #dcdcdc; width:950px">
-                        <table width="50%">
+               
+                <tr>
+                   
+                   <td colspan="6" valign="top">
+                        <table border="0" width="100%" cellpadding="3">
                             <tr>
-                                <td>Division:</td>
+                                <td valign="top"><asp:Label ID="CommentsLabel"
+                                    text="Comments"
+                                    AssociatedControlID="txtComments"
+                                    runat="server"></asp:Label></td>
                                 <td>
-                                    <asp:Literal ID="litDivision" runat="server"></asp:Literal>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Department:</td>
-                                <td>
-                                    <asp:Literal ID="litDepartment" runat="server"></asp:Literal>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Team:</td>
-                                <td>
-                                    <asp:Literal ID="litTeam" runat="server"></asp:Literal>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Coordinator/Direct:</td>
-                                <td>
-                                    <asp:Literal ID="litBoss" runat="server"></asp:Literal>
+                                 <asp:TextBox Rows="5" runat="server" ID="txtComments" Width="800px" TextMode="MultiLine"></asp:TextBox>
                                 </td>
                             </tr>
                         </table>
+                   </td>
+                </tr>
+                 <tr>
+                    <td colspan="6">
+                     <div style="display:inline-block;vertical-align:top">
+                          TEA Strategic Priorities
+                      </div>
+                      <div style="margin: 0px 10px;">
+                            <table border="0">
+					            <tr>
+						            <td>
+						                <asp:DropDownList ID="ddlStrategicPriorityList" runat="server" Width="500px"></asp:DropDownList>
+						            </td>
+						            <td>
+							            &nbsp;&nbsp;<input type="button" id="StrategicPriorityAdd" name="StrategicPriorityAdd" width="60px" value="Add" onclick="AddMultiSelect('ddlStrategicPriorityList', 'lbStrategicPriority', 'StrategicPriority', 'No Strategic Priority.');" /><input type="button" name="btnStrategicPriority" id="btnStrategicPriority" value="Del." onclick="    OnRemoveMulti('lbStrategicPriority', 'ddlStrategicPriorityList', 'StrategicPriority');"/>
+						            </td>
+					            </tr>
+					            <tr>
+						            <td>
+							            <asp:ListBox ID="lbStrategicPriority" runat="server" Width="500px" Height="50"></asp:ListBox>
+                                        <input type="hidden" id="StrategicPriority" runat="server" /><br />
+						            </td>
+					            </tr>
+				                </table>  
+                          </div>
                     </td>
-                </tr>--%>
+                </tr>
                 <tr>
                     <td colspan="6"><br /></td>
                 </tr>
@@ -782,7 +779,7 @@
                            </td>        
                             
                          </tr>
-                         <tr><td colspan="2"><br /></td></tr>
+                         <tr><td><br /></td></tr>
                          <asp:Panel ID="panelNonFirstStandardFinancialAssistance" runat="server" Visible="false">
                          <tr>
                             <td colspan="2" width="50%" style="background-color:#f5f5f5;border:dashed 1px #dcdcdc;">
@@ -834,64 +831,50 @@
                                 </td>
                             </tr>
                             <tr>
-                                <tr>
-                              <td style="background-color:#f5f5f5;border:dashed 1px #dcdcdc;">
-                              <asp:Literal ID="libSecondaryCredit" runat="server"><font color="#f5f5f5">* </font></asp:Literal>
-                                  <asp:Label ID="SecondaryCreditLabel"
-                                      text="1.2 Post Secondary Credit:"
-                                      AssociatedControlID="ddlCreditList"
-                                      runat="server"></asp:Label>
-                                <table border="0" width="410px" cellpadding="3" cellspacing="0">
-					                <tr>
-						                <td>
-						                   <asp:DropDownList ID="ddlCreditList" runat="server" Width="300px"></asp:DropDownList>
-						                </td>
-						                <td>
-							                &nbsp;&nbsp;<input type="button" id="CreditAdd" name="CreditAdd" width="60px" value="Add" onclick="AddMultiSelect('ddlCreditList', 'lbCredit', 'credit', 'No Credit has been selected.');" /><input type="button" name="btnDeleteCredit" id="btnDeleteCredit" value="Del." onclick="OnRemoveMulti('lbCredit', 'ddlCreditList', 'credit');"/>
-						                </td>
-					                </tr>
-					                <tr>
-						                <td colspan="2">
-							                <asp:ListBox ID="lbCredit" runat="server" Width="300px" Height="50"></asp:ListBox>
-                                            <asp:Label ID="CreditListBoxLabel"
-                                                text="<font color#f5f5f5>Selected Values</font>"
-                                                AssociatedCOntrolID="lbCredit"
-                                                runat="server"></asp:Label>
-                                            <input type="hidden" id="credit" runat="server" /><br />		
-						                </td>
-					                </tr>
-                                    <tr>
-                                      <td colspan="2" width="50%" style="background-color:#f5f5f5;border:dashed 1px #dcdcdc;">
-                                      <asp:Literal ID="litFinacialIntegrity" runat="server"><font color="#f5f5f5">* </font></asp:Literal>
-                                          <asp:Label ID="FinancialIntegrityLabel"
-                                              text="2.3a Financial Integrity:"
-                                              AssociatedControlID="ddlIntegrityList"
-                                              runat="server"></asp:Label>
-                                        <table border="0" width="410px" cellpadding="3" cellspacing="0">
-					                        <tr>
-						                        <td>
-						                           <asp:DropDownList ID="ddlIntegrityList" runat="server" Width="300px"></asp:DropDownList>
-						                        </td>
-						                        <td>
-							                        &nbsp;&nbsp;<input type="button" id="IntegrityAdd" name="IntegrityAdd" width="60px" value="Add" onclick="AddMultiSelect('ddlIntegrityList', 'lbIntegrity', 'integrity', 'No Finacial Integrity has been selected.');" /><input type="button" name="btnDeleteIntegrity" id="btnDeleteIntegrity" value="Del." onclick="OnRemoveMulti('lbIntegrity', 'ddlIntegrityList', 'integrity');"/>
-						                        </td>
-					                        </tr>
-					                        <tr>
-						                        <td colspan="3">
-							                        <asp:ListBox ID="lbIntegrity" runat="server" Width="300px" Height="50"></asp:ListBox>
-                                                    <asp:Label ID="IntegrityLBLabel"
-                                                        text="<font color#f5f5f5> Selected Values</font>"
-                                                        AssociatedControlID="lbIntegrity"
-                                                        runat="server"></asp:Label>
-                                                    <input type="hidden" id="integrity" runat="server" /><br />
-						                        </td>
-					                        </tr>
-				                         </table>       
-                                        </td>
-                                    </tr>
-				                 </table>       
+                                <td style="background-color:#f5f5f5;border:dashed 1px #dcdcdc;">
+                                    <asp:Literal ID="libSecondaryCredit" runat="server"><font color="#f5f5f5">* </font></asp:Literal>
+                                    <asp:Label ID="SecondaryCreditLabel" runat="server" AssociatedControlID="ddlCreditList" text="1.2 Post Secondary Credit:"></asp:Label>
+                                    <table border="0" cellpadding="3" cellspacing="0" width="410px">
+                                        <tr>
+                                            <td>
+                                                <asp:DropDownList ID="ddlCreditList" runat="server" Width="300px">
+                                                </asp:DropDownList>
+                                            </td>
+                                            <td>&nbsp;&nbsp;<input type="button" id="CreditAdd" name="CreditAdd" width="60px" value="Add" onclick="AddMultiSelect('ddlCreditList', 'lbCredit', 'credit', 'No Credit has been selected.');" /><input type="button" name="btnDeleteCredit" id="btnDeleteCredit" value="Del." onclick="OnRemoveMulti('lbCredit', 'ddlCreditList', 'credit');"/> </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <asp:ListBox ID="lbCredit" runat="server" Height="50" Width="300px"></asp:ListBox>
+                                                <asp:Label ID="CreditListBoxLabel" runat="server" AssociatedCOntrolID="lbCredit" text="&lt;font color#f5f5f5&gt;Selected Values&lt;/font&gt;"></asp:Label>
+                                                <input type="hidden" id="credit" runat="server" />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" style="background-color:#f5f5f5;border:dashed 1px #dcdcdc;" width="50%">
+                                                <asp:Literal ID="litFinacialIntegrity" runat="server"><font color="#f5f5f5">* </font></asp:Literal>
+                                                <asp:Label ID="FinancialIntegrityLabel" runat="server" AssociatedControlID="ddlIntegrityList" text="2.3a Financial Integrity:"></asp:Label>
+                                                <table border="0" cellpadding="3" cellspacing="0" width="410px">
+                                                    <tr>
+                                                        <td>
+                                                            <asp:DropDownList ID="ddlIntegrityList" runat="server" Width="300px">
+                                                            </asp:DropDownList>
+                                                        </td>
+                                                        <td>&nbsp;&nbsp;<input type="button" id="IntegrityAdd" name="IntegrityAdd" width="60px" value="Add" onclick="AddMultiSelect('ddlIntegrityList', 'lbIntegrity', 'integrity', 'No Finacial Integrity has been selected.');" /><input type="button" name="btnDeleteIntegrity" id="btnDeleteIntegrity" value="Del." onclick="OnRemoveMulti('lbIntegrity', 'ddlIntegrityList', 'integrity');"/> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <asp:ListBox ID="lbIntegrity" runat="server" Height="50" Width="300px"></asp:ListBox>
+                                                            <asp:Label ID="IntegrityLBLabel" runat="server" AssociatedControlID="lbIntegrity" text="&lt;font color#f5f5f5&gt; Selected Values&lt;/font&gt;"></asp:Label>
+                                                            <input type="hidden" id="integrity" runat="server" />
+                                                            <br />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
-                            </tr>
                             </tr>
                         </table>
                     </td>
@@ -900,23 +883,11 @@
                 </table>
                     </td>
                 </tr>
-                <tr>
-                   
-                   <td colspan="6" valign="top">
-                        <table border="0" width="100%" cellpadding="3">
-                            <tr>
-                                <td valign="top"><asp:Label ID="CommentsLabel"
-                                    text="Comments"
-                                    AssociatedControlID="txtComments"
-                                    runat="server"></asp:Label></td>
-                                <td>
-                                 <asp:TextBox Rows="5" runat="server" ID="txtComments" Width="800px" TextMode="MultiLine"></asp:TextBox>
-                                </td>
-                            </tr>
-                        </table>
-                   </td>
-                </tr>
+                
             </table>
+                  </td>
+                  </tr>
+                  </table>
             </ContentTemplate>
            </asp:UpdatePanel>
           </asp:Panel>
@@ -927,13 +898,13 @@
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-                                <a style="cursor:pointer; text-decoration:underline; color:#48789b" onclick='window.open("<%= url %>report.aspx?cid=tx_r3&sid=<%= sid %>&id=<%= report_time_sheet_id %>","_blank","width=550 height=550 resizable=1")'>Current Time Sheet Report</a>
+                                <a style="cursor:pointer; text-decoration:underline; color:#48789b" onclick='window.open("<%= url %>report.aspx?cid=tx_r3&fromfrontend=1&sid=<%= sid %>&id=<%= report_time_sheet_id %>","_blank","width=550 height=550 resizable=1")'>Current Time Sheet Report</a>
                             </td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
                             <td>
-                                <a style="cursor:pointer; text-decoration:underline; color:#48789b" onclick='window.open("<%= url %>report.aspx?cid=tx_r3&sid=<%= sid %>&id=<%= report_summary_id %>","_blank","width=550 height=550 resizable=1")'>Summary Report</a>
+                                <a style="cursor:pointer; text-decoration:underline; color:#48789b" onclick='window.open("<%= url %>report.aspx?cid=tx_r3&fromfrontend=1&sid=<%= sid %>&id=<%= report_summary_id %>","_blank","width=550 height=550 resizable=1")'>Summary Report</a>
                             </td>
                         </tr>
                         <tr><td colspan="2" ><br /><br /></td></tr>

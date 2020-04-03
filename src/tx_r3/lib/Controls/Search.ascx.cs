@@ -127,12 +127,12 @@ public partial class Search : System.Web.UI.UserControl
 
             OKtoAdd &= (faceToFace && (sessionInfo.IsFaceToFace || sessionInfo.IsConference || sessionInfo.IsMultiVenue))
                     || (online && (sessionInfo.IsOnline || sessionInfo.IsMultiVenueOnline))
-                    || (net3 &&  (sessionInfo.IsNet3Event || sessionInfo.IsNet3StudentEvent));
+                    || (net3 && (sessionInfo.IsNet3Event || sessionInfo.IsNet3StudentEvent || sessionInfo.IsZoomEvent));
 
             if (free)
                 OKtoAdd &= (sessionInfo.Fee <= 0);
 
-            if (weekend && (sessionInfo.IsFaceToFace || sessionInfo.IsConference || sessionInfo.IsMultiVenue || sessionInfo.IsNet3Event || sessionInfo.IsNet3StudentEvent))
+            if (weekend && (sessionInfo.IsFaceToFace || sessionInfo.IsConference || sessionInfo.IsMultiVenue || sessionInfo.IsNet3Event || sessionInfo.IsNet3StudentEvent || sessionInfo.IsZoomEvent))
                 OKtoAdd &= ( 
                             (sessionInfo.StartDate.DayOfWeek == DayOfWeek.Saturday) 
                             || 

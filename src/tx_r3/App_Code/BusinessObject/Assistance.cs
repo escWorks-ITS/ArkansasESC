@@ -278,6 +278,22 @@ namespace tx_r3.BusinessObect.Accountability
             get { return GetProperty(StrategyIdProperty); }
             set { SetProperty(StrategyIdProperty, value); }
         }
+
+        //Added by VM 10-2-2018
+        private static PropertyInfo<bool> Is22bMassCommunicationProperty = RegisterProperty<bool>(new PropertyInfo<bool>("is22bMassCommunication"));
+        public bool Is22bMassCommunication
+        {
+            get { return GetProperty(Is22bMassCommunicationProperty); }
+            set { SetProperty(Is22bMassCommunicationProperty, value); }
+        }
+
+        //private static PropertyInfo<bool> COVID_19Property = RegisterProperty<bool>(new PropertyInfo<bool>("COVID_19"));
+        //public bool COVID_19
+        //{
+        //    get { return GetProperty(COVID_19Property); }
+        //    set { SetProperty(COVID_19Property, value); }
+        //}
+
         //Child Objects Properties
 
         protected static PropertyInfo<LocationAudiences> LocationAudiencesProperty =
@@ -326,6 +342,15 @@ namespace tx_r3.BusinessObect.Accountability
         {
             get { return GetProperty(NonFirstStandardFinancialAssistancesProperty); }
             set { SetProperty(NonFirstStandardFinancialAssistancesProperty, value); }
+        }
+
+        //Added by VM 6-14-2018
+        protected static PropertyInfo<StrategicPrioritys> StrategicPrioritysProperty =
+        RegisterProperty<StrategicPrioritys>(new PropertyInfo<StrategicPrioritys>("StrategicPrioritys"));
+        public StrategicPrioritys StrategicPrioritys
+        {
+            get { return GetProperty(StrategicPrioritysProperty); }
+            set { SetProperty(StrategicPrioritysProperty, value); }
         }
       
         #endregion
@@ -548,6 +573,8 @@ namespace tx_r3.BusinessObect.Accountability
                 LoadProperty(LeaveTypeIdProperty, dr.GetInt32("leave_type_id"));
                 LoadProperty(FundingIdProperty, dr.GetInt32("funding_id"));
                 LoadProperty(StrategyIdProperty, dr.GetInt32("strategy_id"));
+                LoadProperty(Is22bMassCommunicationProperty, dr.GetBoolean("is22bMassCommunication")); //Added by VM 10-2-2018
+                //LoadProperty(COVID_19Property, dr.GetBoolean("COVID_19"));
             }
         }
 
@@ -563,6 +590,7 @@ namespace tx_r3.BusinessObect.Accountability
                 this.PostSecondaryCredits = PostSecondaryCredits.NewPostSecondaryCredits();
                 this.FinancialIntegritys = FinancialIntegritys.NewFinancialIntegritys();
                 this.NonFirstStandardFinancialAssistances = NonFirstStandardFinancialAssistances.NewNonFirstStandardFinancialAssistances();
+                this.StrategicPrioritys = StrategicPrioritys.NewStrategicPrioritys(); // Added by VM 6-14-2018
             }
         }
 
@@ -642,6 +670,7 @@ namespace tx_r3.BusinessObect.Accountability
             LoadProperty(IncreaseStudentPerformancesProperty, IncreaseStudentPerformances.GetIncreaseStudentPerformances(dr.GetInt32("obj_id")));
             LoadProperty(PostSecondaryCreditsProperty, PostSecondaryCredits.GetPostSecondaryCredits(dr.GetInt32("obj_id")));
             LoadProperty(NonFirstStandardFinancialAssistancesProperty, NonFirstStandardFinancialAssistances.GetNonFirstStandardFinancialAssistances(dr.GetInt32("obj_id")));
+            LoadProperty(StrategicPrioritysProperty, StrategicPrioritys.GetStrategicPrioritys(dr.GetInt32("obj_id"))); // Added by VM 6-14-2018
 
         }
 
@@ -676,6 +705,8 @@ namespace tx_r3.BusinessObect.Accountability
             cmd.Parameters.AddWithValue("leave_type_id", LeaveTypeId);
             cmd.Parameters.AddWithValue("funding_id", FundingId);
             cmd.Parameters.AddWithValue("strategy_id", StrategyId);
+            cmd.Parameters.AddWithValue("is22bMassCommunication", Is22bMassCommunication); //Added by VM 10-2-2018
+            //cmd.Parameters.AddWithValue("COVID_19", COVID_19); 
         }
 
         public double GetHours(int id)
@@ -713,7 +744,8 @@ namespace tx_r3.BusinessObect.Accountability
                     || (FieldManager.FieldExists(FinancialIntegritysProperty) && this.FinancialIntegritys.IsDirty)
                     || (FieldManager.FieldExists(IncreaseStudentPerformancesProperty) && this.IncreaseStudentPerformances.IsDirty)
                     || (FieldManager.FieldExists(PostSecondaryCreditsProperty) && this.PostSecondaryCredits.IsDirty)
-                    || (FieldManager.FieldExists(NonFirstStandardFinancialAssistancesProperty) && this.NonFirstStandardFinancialAssistances.IsDirty))
+                    || (FieldManager.FieldExists(NonFirstStandardFinancialAssistancesProperty) && this.NonFirstStandardFinancialAssistances.IsDirty)
+                    || (FieldManager.FieldExists(StrategicPrioritysProperty) && this.StrategicPrioritys.IsDirty)) // Added by VM 6-14-2018
                 {
                     FieldManager.UpdateChildren(this, dbConn);
                 }

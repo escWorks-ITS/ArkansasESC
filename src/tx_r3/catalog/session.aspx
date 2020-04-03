@@ -128,4 +128,9 @@
         </tr>
     </table>
     <asp:PlaceHolder runat="server" ID="pLocationPlaceHolder" />
+    <br /><br />
+     <asp:Panel runat="server" ID="panelOnDemand" Visible="false">
+        <i>This course is part of a series. Upon registering for this class, any other courses in the series will be added to your cart, and fees will be adjusted accordingly.
+        </i>
+    </asp:Panel>
 </asp:Content>

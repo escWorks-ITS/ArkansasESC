@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props')" />
   <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
-  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -43,53 +43,99 @@
     <Reference Include="AliaSQL.Core, Version=1.4.2.318, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AliaSQL.Core.1.4.2.0318\lib\net45\AliaSQL.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=5.1.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.5.1.2\lib\net461\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="BouncyCastle.CryptoExt, Version=1.7.4114.6378, Culture=neutral, PublicKeyToken=0e99375e54769942">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\BouncyCastle.CryptoExt.dll</HintPath>
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\BouncyCastle.CryptoExt.dll</HintPath>
     </Reference>
-    <Reference Include="escWebBase, Version=4.5.1.37402, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\escWebBase.4.5.1.37402\lib\net472\escWebBase.dll</HintPath>
+    <Reference Include="escWebBase, Version=4.5.1.33572, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\escWebBase.1.0.94.3\lib\net472\escWebBase.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <HintPath>..\packages\MSTest.TestFramework.2.1.1\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="Qlik.Engine, Version=13.15.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\Qlik.Engine.dll</HintPath>
+    <Reference Include="Qlik.Engine, Version=14.0.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\Qlik.Engine.dll</HintPath>
     </Reference>
-    <Reference Include="Qlik.Engine.Extensions, Version=13.15.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\Qlik.Engine.Extensions.dll</HintPath>
+    <Reference Include="Qlik.Engine.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\Qlik.Engine.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Qlik.Engine.Extensions.WinForms, Version=13.15.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\Qlik.Engine.Extensions.WinForms.dll</HintPath>
+    <Reference Include="Qlik.Engine.Extensions.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\Qlik.Engine.Extensions.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Qlik.Sense.Client, Version=13.15.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\Qlik.Sense.Client.dll</HintPath>
+    <Reference Include="Qlik.Sense.Client, Version=14.0.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\Qlik.Sense.Client.dll</HintPath>
     </Reference>
     <Reference Include="Qlik.Sense.Communication, Version=33.0.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\Qlik.Sense.Communication.dll</HintPath>
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\Qlik.Sense.Communication.dll</HintPath>
     </Reference>
     <Reference Include="Qlik.Sense.JsonRpc, Version=33.0.0.0, Culture=neutral, PublicKeyToken=1a848309662c81e5, processorArchitecture=MSIL">
-      <HintPath>..\packages\QlikSense.NetSDK.13.15.0\lib\net452\Qlik.Sense.JsonRpc.dll</HintPath>
+      <HintPath>..\packages\QlikSense.NetSDK.14.0.0\lib\net452\Qlik.Sense.JsonRpc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IntegrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -119,9 +165,9 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props'))" />
-    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets'))" />
     <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets'))" />
   </Target>
-  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" />
+  <Import Project="..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.2.1.1\build\net45\MSTest.TestAdapter.targets')" />
 </Project>

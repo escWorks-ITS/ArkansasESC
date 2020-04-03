@@ -16,7 +16,6 @@ using Telerik.Web.UI;
 using Csla.Validation;
 using region4.escWeb;
 
-
 public partial class Accountability_Default : System.Web.UI.Page
 {
     private escWeb.tx_r3.ObjectModel.User user;
@@ -46,7 +45,7 @@ public partial class Accountability_Default : System.Web.UI.Page
 
         PopulateDropDownList(ddlStrategies, "[p.Accountability.DropdownLists.Load]", 1124, "dropdownlsit_strategy", 5);
         PopulateDropDownList(ddlTEC, "[p.Accountability.DropdownLists.Load]", region4.escWeb.SiteVariables.AccountabilityTEC, "dropdownlsit_tec", 60);
- 
+
         PopulateDropDownList(ddlContentList, "[p.Accountability.DropdownLists.Load]", region4.escWeb.SiteVariables.AccountabilityContent, "ddlContentList", 60);
         PopulateDropDownList(ddlPerformanceList, "[p.Accountability.DropdownLists.Load]", region4.escWeb.SiteVariables.AccountabilityIncreaseStudentPerformance, "dropdownlsit_performanceList", 60);
         PopulateDropDownList(ddlCreditList, "[p.Accountability.DropdownLists.Load]", region4.escWeb.SiteVariables.AccountabilityPostSecondaryCredit, "dropdownlsit_creditList", 60);
@@ -55,9 +54,10 @@ public partial class Accountability_Default : System.Web.UI.Page
         PopulateDropDownList(AudienceList, "[p.Accountability.DropdownLists.Load]", region4.escWeb.SiteVariables.AccountabilityAudience, "dropdownlsit_audienceList", 5);
         PopulateDropDownList(ddlFunding, "[p.Accountability.DropdownLists.Load]", 3006, "dropdownlsit_ddlFunding", 60);
         PopulateDropDownList(ddlNonFirstStandardFinancialAssistanceList, "[p.Accountability.DropdownLists.Load]", 3005, "dropdownlsit_ddlNonFirstStandardFinancialAssistanceList", 60);
-        PopulateCombBox(ddlClient);
+        PopulateDropDownList(ddlStrategicPriorityList, "[p.Accountability.DropdownLists.Load]", 10000, "dropdownlsit_ddlStrategicPriorityList", 60); //Added by VM 6-14-2018
+        //PopulateCombBox(ddlClient);
 
-        
+
         if (Session["profile"] != null)
             user = (escWeb.tx_r3.ObjectModel.User)Session["profile"];
         litEmployeeName.Text = user.FirstName + " " + user.LastName;
@@ -148,6 +148,7 @@ public partial class Accountability_Default : System.Web.UI.Page
             if (credit.Value.Trim() != "") { SetupMultiValueControl(ref lbCredit, ref ddlCreditList, ref credit, credit.Value); }
             if (integrity.Value.Trim() != "") { SetupMultiValueControl(ref lbIntegrity, ref ddlIntegrityList, ref integrity, integrity.Value); }
             if (NonFirstStandardFinancialAssistance.Value.Trim() != "") { SetupMultiValueControl(ref lbNonFirstStandardFinancialAssistance, ref ddlNonFirstStandardFinancialAssistanceList, ref NonFirstStandardFinancialAssistance, NonFirstStandardFinancialAssistance.Value); }
+            if (StrategicPriority.Value.Trim() != "") { SetupMultiValueControl(ref lbStrategicPriority, ref ddlStrategicPriorityList, ref StrategicPriority, StrategicPriority.Value); } // Added by VM 6-14-2018
         }
 
         if (date == "")
@@ -250,6 +251,7 @@ public partial class Accountability_Default : System.Web.UI.Page
             cmd.CommandText = "[p.Accountability.Location.Client.Load]";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@text", e.Text);
+            cmd.Parameters.AddWithValue("@Ck22b", CK22B.Checked); // Added by VM 10-2-2018
             using (SqlDataAdapter SqlDa = new SqlDataAdapter(cmd))
             {
                 SqlDa.Fill(0, 50, clients);
@@ -267,7 +269,7 @@ public partial class Accountability_Default : System.Web.UI.Page
     protected void ddlClient_SelectedIndexChanged(object o, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
     {
 
-        if (ddlSite.Items.Count > 1)
+        if (ddlSite.Items.Count > 0)
             ddlSite.Items.Clear();
 
         if (ddlClient.SelectedValue == "")
@@ -281,7 +283,7 @@ public partial class Accountability_Default : System.Web.UI.Page
         }
 
         PopulateCombBox(ddlSite, Convert.ToInt32(ddlClient.SelectedValue));
-        
+
     }
 
     protected void ddlActivities_OnSelectionChange(object o, EventArgs e)
@@ -387,7 +389,7 @@ public partial class Accountability_Default : System.Web.UI.Page
         {
             for (int i = 0; i < assistance.LocationAudiences.Count; i++)
             {
-                ListItem itm = new ListItem(assistance.LocationAudiences[i].OrganizationName + " | " + assistance.LocationAudiences[i].SiteName + " | " + assistance.LocationAudiences[i].RoomName + " | " + assistance.LocationAudiences[i].AudienceName + " | " + assistance.LocationAudiences[i].Amount.ToString() ,
+                ListItem itm = new ListItem(assistance.LocationAudiences[i].OrganizationName + " | " + assistance.LocationAudiences[i].SiteName + " | " + assistance.LocationAudiences[i].RoomName + " | " + assistance.LocationAudiences[i].AudienceName + " | " + assistance.LocationAudiences[i].Amount.ToString(),
                     assistance.LocationAudiences[i].OrgId.ToString() + "|" + assistance.LocationAudiences[i].SiteId.ToString() + "|" + assistance.LocationAudiences[i].RoomId.ToString() + "|" + assistance.LocationAudiences[i].AudienceId.ToString() + "|" + assistance.LocationAudiences[i].Amount.ToString());
 
                 AudienceListBox.Items.Add(itm);
@@ -484,6 +486,24 @@ public partial class Accountability_Default : System.Web.UI.Page
         NonFirstStandardFinancialAssistance.Value = assistance_served;
         SetupMultiValueControl(ref lbNonFirstStandardFinancialAssistance, ref ddlNonFirstStandardFinancialAssistanceList, ref NonFirstStandardFinancialAssistance, assistance_served);
 
+        //Added by VM 6-14-2018
+        string strategic_priority = string.Empty;
+        foreach (tx_r3.BusinessObect.Accountability.StrategicPriority s in assistance.StrategicPrioritys)
+        {
+            if (strategic_priority == string.Empty)
+            {
+                if (assistance.StrategicPrioritys.Count == 1)
+                    strategic_priority = s.ItemId.ToString() + ",";
+                else
+                    strategic_priority = s.ItemId.ToString();
+            }
+            else
+                strategic_priority += "," + s.ItemId.ToString();
+        }
+
+        StrategicPriority.Value = strategic_priority;
+        SetupMultiValueControl(ref lbStrategicPriority, ref ddlStrategicPriorityList, ref StrategicPriority, strategic_priority);
+
         txtObjID.Text = assistance.ObjId.ToString();
 
         if (ConfigurationManager.AppSettings["accountability.activity.leave"].Contains(ddlActivities.SelectedValue))
@@ -522,6 +542,8 @@ public partial class Accountability_Default : System.Web.UI.Page
         cbCoreService.Checked = assistance.IsCoreService;
 
         ddlFunding.SelectedValue = assistance.FundingId.ToString();
+        CK22B.Checked = assistance.Is22bMassCommunication; //Added by VM 10-2-2018
+        //cbCOVID_19.Checked = assistance.COVID_19;
     }
 
     protected void ClearForm()
@@ -550,6 +572,8 @@ public partial class Accountability_Default : System.Web.UI.Page
         cbFinance.Checked = false;
         cbExtendedLearningOpportunity.Checked = false;
         cbCoreService.Checked = false;
+        CK22B.Checked = false; // Added by VM 10-2-2018
+       // cbCOVID_19.Checked = false;
         lbContent.Items.Clear();
         panelContent.Visible = false;
         lbPerformance.Items.Clear();
@@ -571,6 +595,9 @@ public partial class Accountability_Default : System.Web.UI.Page
         panelNonFirstStandardFinancialAssistance.Visible = false;
         lbContent.Items.Clear();
         panelLeaveType.Visible = false;
+
+        lbStrategicPriority.Items.Clear(); //Added by VM 6-14-2018
+        StrategicPriority.Value = string.Empty; //Added by VM 6-14-2018
     }
 
     protected void SetupMultiValueControl(ref ListBox listbox, ref DropDownList dropdownlist, ref HtmlInputHidden input, string value)
@@ -898,26 +925,59 @@ public partial class Accountability_Default : System.Web.UI.Page
             a.LeaveTypeId = panelLeaveType.Visible ? Convert.ToInt32(ddlLeaveType.SelectedValue) : 0;
             a.FundingId = Convert.ToInt32(ddlFunding.SelectedValue);
             a.StrategyId = Convert.ToInt32(ddlStrategies.SelectedValue);
-
+            a.Is22bMassCommunication = CK22B.Checked ? true : false; //Added by VM 10-2-2018
+           // a.COVID_19 = cbCOVID_19.Checked ? true : false;
             //get locations and audiences
+            List<Item> list = new List<Item>(); //Added by VM 10-2-2018
             foreach (ListItem item in AudienceListBox.Items) //Added by VM 9-18-2014
             {
                 string[] itm_value = item.Value.Split('|');
                 string[] itm_text = item.Text.Split('|');
 
-                LocationAudience la = LocationAudience.CreateNew();
-                la.ObjId = a.ObjId;
-                la.OrgId = itm_value[0] == "" ? 0 : Convert.ToInt32(itm_value[0]);
-                la.OrganizationName = itm_text[0].ToString();
-                la.SiteId = itm_value[1] == "" ? 0 : Convert.ToInt32(itm_value[1]);
-                la.SiteName = itm_text[1].ToString();
-                la.RoomId = itm_value[2] == "" ? 0 : Convert.ToInt32(itm_value[2]);
-                la.RoomName = itm_text[2].ToString();
-                la.AudienceId = itm_value[3] == "" ? 0 : Convert.ToInt32(itm_value[3]);
-                la.AudienceName = itm_text[3].ToString();
-                la.Amount = itm_value[4] == "" ? 0 : Convert.ToInt32(itm_value[4]);
+                
+                //Added by VM 10-2-2018
+                if (Convert.ToInt32(itm_value[1]) == 191751) // prod 191751
+                {
+                    list = getSitecampusPair();
+                    foreach (Item i in list)
+                    {
+                        LocationAudience la = LocationAudience.CreateNew();
+                        la.ObjId = a.ObjId;
+                        la.OrgId = itm_value[0] == "" ? 0 : Convert.ToInt32(itm_value[0]);
+                        la.OrganizationName = itm_text[0].ToString();
 
-                a.LocationAudiences.AddNew(la);
+                        la.ObjId = a.ObjId;
+                        la.OrgId = itm_value[0] == "" ? 0 : Convert.ToInt32(itm_value[0]);
+
+                        la.SiteId = i.SiteId;
+                        la.SiteName = i.SiteName;
+                        la.RoomId = i.RoomId;
+                        la.RoomName = i.RoomName;
+                        la.AudienceId = itm_value[3] == "" ? 0 : Convert.ToInt32(itm_value[3]);
+                        la.AudienceName = itm_text[3].ToString();
+                        la.Amount = itm_value[4] == "" ? 0 : Convert.ToInt32(itm_value[4]);
+
+                        a.LocationAudiences.AddNew(la);
+
+                    }
+
+                }
+                else
+                {
+                    LocationAudience la = LocationAudience.CreateNew();
+                    la.ObjId = a.ObjId;
+                    la.OrgId = itm_value[0] == "" ? 0 : Convert.ToInt32(itm_value[0]);
+                    la.OrganizationName = itm_text[0].ToString();
+                    la.SiteId = itm_value[1] == "" ? 0 : Convert.ToInt32(itm_value[1]);
+                    la.SiteName = itm_text[1].ToString();
+                    la.RoomId = itm_value[2] == "" ? 0 : Convert.ToInt32(itm_value[2]);
+                    la.RoomName = itm_text[2].ToString();
+                    la.AudienceId = itm_value[3] == "" ? 0 : Convert.ToInt32(itm_value[3]);
+                    la.AudienceName = itm_text[3].ToString();
+                    la.Amount = itm_value[4] == "" ? 0 : Convert.ToInt32(itm_value[4]);
+
+                    a.LocationAudiences.AddNew(la);
+                }
             }
 
             //content
@@ -981,6 +1041,17 @@ public partial class Accountability_Default : System.Web.UI.Page
                 }
             }
 
+            //Added by VM 6-14-2018
+            SetupMultiValueControl(ref lbStrategicPriority, ref ddlStrategicPriorityList, ref StrategicPriority, StrategicPriority.Value);
+            foreach (ListItem itm in lbStrategicPriority.Items)
+            {
+                tx_r3.BusinessObect.Accountability.StrategicPriority sp = tx_r3.BusinessObect.Accountability.StrategicPriority.CreateNew();
+                sp.ItemId = Convert.ToInt32(itm.Value);
+                sp.ObjId = a.ObjId;
+                sp.ItemName = itm.Text;
+                a.StrategicPrioritys.Add(sp);
+            }
+
             a.CallCheckRules(a);
 
             if (validateFields(a))
@@ -994,9 +1065,9 @@ public partial class Accountability_Default : System.Web.UI.Page
                 assistanceList = tx_r3.BusinessObect.Accountability.Assistances.GetAssistances(a.Service_Date, a.Service_Date, user.Sid);
                 dailyList = assistanceList.GetAssistancesByDateRange(a.Service_Date, a.Service_Date);
                 myListDisplay = AssistancesDisplay.GetAssistancesDisplay(new DateTime(a.Service_Date.Year, a.Service_Date.Month, 1), new DateTime(a.Service_Date.Year, a.Service_Date.Month, 1).AddMonths(1).AddDays(-1), user.Sid);
-                
+
                 Session["myListDisplay"] = myListDisplay;
-                
+
                 Session["myList"] = assistanceList;
                 Session["dailyList"] = dailyList;
 
@@ -1102,6 +1173,8 @@ public partial class Accountability_Default : System.Web.UI.Page
                 a.LeaveTypeId = panelLeaveType.Visible ? Convert.ToInt32(ddlLeaveType.SelectedValue) : 0;
                 a.FundingId = Convert.ToInt32(ddlFunding.SelectedValue);
                 a.StrategyId = Convert.ToInt32(ddlStrategies.SelectedValue);
+                a.Is22bMassCommunication = CK22B.Checked ? true : false; //Added by VM 10-2-2018
+                //a.COVID_19 = cbCOVID_19.Checked ? true : false; 
 
                 a.LocationAudiences.Clear();
 
@@ -1196,12 +1269,24 @@ public partial class Accountability_Default : System.Web.UI.Page
                     a.NonFirstStandardFinancialAssistances.Add(fa);
                 }
 
+                //Added by VM 6-14-2018
+                a.StrategicPrioritys.Clear();
+                SetupMultiValueControl(ref lbStrategicPriority, ref ddlStrategicPriorityList, ref StrategicPriority, StrategicPriority.Value);
+                foreach (ListItem itm in lbStrategicPriority.Items)
+                {
+                    tx_r3.BusinessObect.Accountability.StrategicPriority sp = tx_r3.BusinessObect.Accountability.StrategicPriority.CreateNew();
+                    sp.ItemId = Convert.ToInt32(itm.Value);
+                    sp.ObjId = a.ObjId;
+                    sp.ItemName = itm.Text;
+                    a.StrategicPrioritys.Add(sp);
+                }
+
                 a.CallCheckRules(a);
 
                 if (validateFields(a))
                 {
                     message.Remove(0, message.Length);
-                   
+
                     assistanceList.Save();
 
                     BindingData(a);
@@ -1516,5 +1601,80 @@ public partial class Accountability_Default : System.Web.UI.Page
         return result;
     }
 
+
+    protected List<Item> getSitecampusPair() //Added by VM 10-2-2018
+    {
+        List<Item> myList = new List<Item>();
+
+        using (SqlConnection conn = region4.Common.DataConnection.DbConnection)
+        {
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "[p.Accountability.Location.SiteRoomPair]";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            try
+            {
+                cmd.Connection.Open();
+                SqlDataReader SQLdr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (SQLdr.Read())
+                {
+                    Item itm = new Item();
+                    itm.SiteId = Convert.ToInt32(SQLdr["site_id"]);
+                    itm.RoomId = Convert.ToInt32(SQLdr["campus_id"]);
+                    itm.SiteName = SQLdr["site_name"].ToString();
+                    itm.RoomName = SQLdr["room_name"].ToString();
+                    myList.Add(itm);
+                }
+
+            }
+            catch (Exception exc)
+            {
+                System.Web.HttpContext.Current.Response.Write(exc.Message);
+            }
+            finally
+            {
+                if (cmd.Connection.State != ConnectionState.Closed)
+                    cmd.Connection.Close();
+
+                cmd.Connection.Dispose();
+            }
+
+            return myList;
+        }
+
+    }
+
+    protected struct Item //Added by VM 10-2-2018
+    {
+        private int _siteId;
+        public int SiteId
+        {
+            get { return _siteId; }
+            set { _siteId = value; }
+        }
+
+        private int _roomId;
+        public int RoomId
+        {
+            get { return _roomId; }
+            set { _roomId = value; }
+        }
+
+        private string _siteName;
+        public string SiteName
+        {
+            get { return _siteName; }
+            set { _siteName = value; }
+        }
+
+        private string _roomName;
+        public string RoomName
+        {
+            get { return _roomName; }
+            set { _roomName = value; }
+        }
+    }
+
+   
 }
 

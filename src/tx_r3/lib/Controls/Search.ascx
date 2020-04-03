@@ -92,7 +92,7 @@
                             Width="20%" />
                         <asp:CheckBox ID="chkVideo" runat="server" Text="Online" Checked="true" Font-Size="X-Small"
                             Width="20%" />
-                        <asp:CheckBox ID="chkNet3" runat="server" Text="NET3" Checked="true" Font-Size="X-Small"
+                        <asp:CheckBox ID="chkNet3" runat="server" Text="NET3/Zoom" Checked="true" Font-Size="X-Small"
                             Width="15%" />
                         <asp:CheckBox ID="chkFree" runat="server" Text="Free" Font-Size="X-Small" Width="20%" />
                         <asp:CheckBox ID="chkWeekend" runat="server" Text="Evening/Weekend" Font-Size="X-Small" Width="20%" />
@@ -143,12 +143,12 @@
                         <telerik:GridBoundColumn DataField="Title" UniqueName="Title" HeaderText="Title"
                             AllowSorting="true" ShowSortIcon="true" AllowFiltering="false" Groupable="false"
                             Reorderable="false" Visible="true">
-                            <HeaderStyle Width="30%" Font-Size="Small" />
+                            <HeaderStyle Width="40%" Font-Size="Small" />
                         </telerik:GridBoundColumn>
                         <telerik:GridBoundColumn DataField="DescriptionDisplay" UniqueName="DescriptionDisplay"
-                            HeaderText="Description" AllowSorting="false" AllowFiltering="false" Groupable="false"
+                            HeaderText="Subtitle" AllowSorting="false" AllowFiltering="false" Groupable="false"
                             Reorderable="false" Visible="true">
-                            <HeaderStyle Width="40%" Font-Size="Small" />
+                            <HeaderStyle Width="30%" Font-Size="Small" />
                         </telerik:GridBoundColumn>
                         <telerik:GridBoundColumn DataField="EventTypeDisplay" UniqueName="EventTypeDisplay" HeaderText="Type"
                             AllowSorting="true" ShowSortIcon="true" AllowFiltering="false" Groupable="false"

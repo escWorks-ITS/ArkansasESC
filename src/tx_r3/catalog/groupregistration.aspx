@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     EnableEventValidation="false" CodeFile="groupregistration.aspx.cs" Inherits="catalog_groupregistration"
-    Title="Group Registration" %>
+    Title="Group Registration" ValidateRequest="false"%>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="Server">

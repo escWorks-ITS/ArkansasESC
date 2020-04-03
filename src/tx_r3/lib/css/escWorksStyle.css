@@ -689,3 +689,15 @@ td.tableCell li a:hover {
 	opacity:.75;
 	color:black
 }
+
+.conferenceLabelMobile {
+    display: none;
+}
+
+.conferenceDropDownMobile {
+    display: visible;
+}
+
+.conferenceTextBoxMobile {
+    display: none;
+}

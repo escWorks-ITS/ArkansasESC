@@ -21,6 +21,14 @@ namespace escWeb.tx_r3.ObjectModel
             }
         }
 
+        public bool IsZoomEvent
+        {
+            get
+            {
+                return (EventType.ItemId == int.Parse(ConfigurationManager.AppSettings["ZoomEventTypeId"])); //8046
+            }
+        }
+
         public bool IsNet3StudentEvent
         {
             get

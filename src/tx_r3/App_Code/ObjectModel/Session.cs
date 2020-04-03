@@ -25,7 +25,23 @@ namespace escWeb.tx_r3.ObjectModel
             this._allowPO = (bool)reader["allowPO"];
             this._dimensions = reader["dimensions"].ToString();
             this._standards = reader["standards"].ToString();
+
+            //Added by VM 4-26-2017
+            this._PrevSessionID = (int)(reader["PrerequisiteSessionID"] == DBNull.Value ? -1 : reader["PrerequisiteSessionID"]);
+            this._NextSessionID = (int)(reader["NextSessionID"] == DBNull.Value ? -1 : reader["NextSessionID"]);
            
+        }
+
+        //Added by VM 4-26-2017
+        public override int Limit
+        {
+            get
+            {
+                if (IsSelfPacedOnline || (IsOnDemandOnline && _limit == 0))//If it is 0, we treat it as unlimited
+                    return 999999;
+                else
+                    return _limit;
+            }
         }
 
         //public override DateTime RegistrationEndDate

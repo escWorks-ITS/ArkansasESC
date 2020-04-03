@@ -7,11 +7,7 @@
     <table border="0" cellpadding="4" cellspacing="0" width="100%"> 
         <tr>
             <td>
-                <asp:UpdatePanel runat="server" ID="UV">
-                    <ContentTemplate>
                         <uc1:Search ID="Search1" runat="server"/>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
             </td>
         </tr>
     </table>

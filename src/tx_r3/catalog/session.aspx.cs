@@ -94,6 +94,11 @@ public partial class catalog_session : region4.escWeb.BasePages.Catalog.session_
             pnlSeatsFilled.Visible = true;
         pLocationPlaceHolder.Controls.Add(base.ReturnTimeLocationTable(session));
 
+        if (session.NextSessionID > 0 || session.PrevSessionID > 0)
+        {
+            this.panelOnDemand.Visible = true;
+        }
+
     }
 
     protected override void btnAddSessionToCart_Click(object sender, EventArgs e)
@@ -106,11 +111,24 @@ public partial class catalog_session : region4.escWeb.BasePages.Catalog.session_
         else
         {
             escWeb.tx_r3.ObjectModel.SessionRegistration registration = (escWeb.tx_r3.ObjectModel.SessionRegistration)region4.escWeb.SiteVariables.ObjectProvider.ReturnSessionRegistration(session, CurrentUser);
-            if (ShoppingCart.NumberOfSeatsAvailable(registration.Session.ID) >= 1)
+
+            if (registration.Session.PrevSessionID > 0 || registration.Session.NextSessionID > 0)
+            {
+                region4.ObjectModel.GroupRegistration groupRegistration = new region4.ObjectModel.GroupRegistration(CurrentUser);
+                if (groupRegistration.AddSessionRegistration(registration) > 0)
+                {
+                    ShoppingCart.Add(groupRegistration);
+                }
+            }
+            
+            else if (ShoppingCart.NumberOfSeatsAvailable(registration.Session.ID) >= 1)
             {
                 ShoppingCart.Add(registration);
             }
             Response.Redirect(region4.escWeb.SiteVariables.RelativeURLs.shoppingCart);
+
+           
+            
         }
     }
 
