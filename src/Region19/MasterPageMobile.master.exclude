@@ -1,0 +1,200 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageMobile.master.cs" Inherits="MasterPageMobile" %>
+
+<%@ Register TagPrefix="ucontrol" TagName="FileList" Src="~/lib/Controls/DisplayFiles.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en"
+xml:lang="en">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>escWorks</title>
+    <link type="text/css" rel="stylesheet" href="~/lib/css/escWorksStyle.css" />
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script>    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+
+.navbar-default { background-color: #1D4A78}
+.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus { background-color: #428BCA}
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover,.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus { background-color: #87A175}
+.dropdown-menu { background-color: #FFFFFF}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #428BCA}
+.navbar-default { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar-default { border-color: #ffffff}
+.navbar-default .navbar-brand { color: #FFFFFF}
+.navbar-default .navbar-brand:hover { color: #FFFFFF}
+.navbar-default .navbar-nav>li>a { color: #FFFFFF}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus { color: #FFFFFF}
+.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus { color: #FFFFFF}
+.navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { color: #FFFFFF}
+.dropdown-menu>li>a { color: #333333}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #FFFFFF}
+.navbar-default .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar-default .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-default .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar-default .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
+
+    </style>  
+
+  <style type="text/css">
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+
+  </style>
+
+    <script language="javascript" type="text/javascript">
+
+            function CheckCart() {
+                top.location.href = "/catalog/register/checkout.aspx";
+            }
+
+
+        function SearchSession() {
+            var mSession = document.aspnetForm.searchText.value.trim(); 
+
+            if (mSession.length < 1) {
+                alert("Please type ID or Keyword");
+                return;
+            }
+            if (isNaN(mSession))
+                top.location.href = "search.aspx?SearchCriteria=" + mSession;
+            else
+                top.location.href = "./catalog/session.aspx?session_id=" + mSession;
+        }
+    </script>
+
+
+</head>
+<body style="width: 100%">
+
+    <form runat="server" class="">
+
+    <div class="">
+
+      <table style="width:100%" >
+        <tr>
+            <td style="width:40px;">
+
+  <div class="dropdown">
+
+    <escWorks:MenuLink runat="server" id="MenuLink1" DisplayAllItems="true" DisplayCreateNewLink="true" />
+
+  </div>
+                </td>
+        <td>
+        <div style="height:48px;background-repeat: no-repeat;background-color:#2F4D73;">
+            <img src="<%# BasePage.PathToRoot %>lib/standard/img/escBannerTest3.jpg" width="200" height="48px;" />
+        </div>
+        </td>
+
+            <td style="width:40px;">
+                  <asp:LinkButton  runat="server" ID="LinkButton1" class="btn btn-info btn-lg pull-right" type="submit" OnClientClick="CheckCart();return false;"
+                    Text="" >
+                      <i class="glyphicon glyphicon-shopping-cart"></i>
+                  </asp:LinkButton>            
+            </td>
+
+            </tr>
+            </table>
+
+        <div >
+
+<%--<nav class="navbar navbar-default" style="margin-bottom:0px;">
+  <div class="container">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+      <a class="navbar-brand" href="/default.aspx"><span class="glyphicon glyphicon-home"></span> Home</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse" style="margin-right:30px;">
+
+        <escWorks:MenuNav runat="server" id="MenuNav1" DisplayAllItems="true" DisplayCreateNewLink="true" />
+
+          </div>
+
+  </div>
+</nav>--%>
+
+        </div>
+    </div>
+
+
+
+  <div class="">
+
+      <table style="width:100%">
+        <tr>
+<%--            <td style="width:40px;">
+
+  <div class="dropdown">
+
+    <escWorks:MenuLink runat="server" id="MenuLinks" DisplayAllItems="true" DisplayCreateNewLink="true" />
+
+  </div>
+            </td>--%>
+            <td>
+                 <input type="text" name="searchText" id="searchText" class="form-control" placeholder="Search by Session ID or Keyword">
+            </td>
+            <td style="width:40px;">
+                  <asp:LinkButton  runat="server" ID="btnSearchSession" class="btn btn-success btn-lg pull-right" type="submit" OnClientClick="SearchSession();return false;"
+                    Text="" >
+                      <i class="glyphicon glyphicon-search"></i>
+                  </asp:LinkButton>            
+            </td>
+        </tr>
+      </table>
+
+
+  </div>
+
+
+    <div class="" style="margin-top:4px;">
+        <div class="col-md-9 col-md-push-3" style="background-color:#FFFFFF; padding: 4px;">
+
+    <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
+    </asp:ScriptManager>
+
+    <div class="mainBody" style="background-color: #ffffff;border: #999999 1px solid;  min-height:300px;">
+            <escWorks:PageTitle runat="server" ID="pageTitle" BackColor="#FFFFFF" />
+            <br />
+            <asp:ContentPlaceHolder runat="server" ID="mainBody" />
+    </div>
+
+        </div>
+
+
+
+        <div class="col-md-3 col-md-pull-9" style="background-color:#2f4c72; padding: 10px;">
+            <h2><font color="#a3c2d7">Quick</font><font color="#FFFFFF">Links</font></h2><br />
+            <h3><escWorks:MenuV2 runat="server" id="MenuV1" DisplayAllItems="true" DisplayCreateNewLink="true" /></h3>
+        </div>
+
+    </div>
+
+        </form>
+
+    <div class="" style="margin-top:6px;">
+        <div align="center" style="padding: 5px; background-color: #dedede;">
+            <h3><font color="#2f4c72">7145 West Tidwell Dr, Houston, TX 77092</font></h3>
+        </div>
+        <div style="padding: 5px;" align="center">
+            <a title="escWorks.NET" href="http://www.escworks.com">
+                <img src="<%# BasePage.PathToRoot %>lib/standard/img/escWorks_LOGO_PoweredBy.jpg"
+                    alt="Powered by escWorks Logo"border="0" /></a>
+        </div>
+        <asp:Label runat="server" ID="lblStagingServer" CssClass="error" Text="" />
+    </div>
+</body>
+</html>

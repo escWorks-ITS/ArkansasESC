@@ -1391,6 +1391,9 @@
         <member name="P:Qlik.Sense.Client.ICurrentSelection.Selections">
             <summary>Reference to property Layout.SelectionObject.Selections</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.ICurrentSelection.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.CurrentSelection">
             <summary />
         </member>
@@ -1878,7 +1881,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.Filterpane.GetListboxAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.Filterpane.OnGetListboxAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -1891,7 +1893,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.Filterpane.CreateListboxAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.ListboxProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.Filterpane.OnCreateListboxAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -1919,6 +1920,9 @@
         <member name="P:Qlik.Sense.Client.Visualizations.IFilterpane.Items">
             <summary>Reference to property Layout.ChildList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IFilterpane.Layout">
+            <summary />
+        </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IFilterpane.GetListbox(System.String)">
             <summary /><param name="id" /><returns />
         </member>
@@ -1927,7 +1931,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IFilterpane.GetListboxAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IFilterpane.CreateListbox(System.String,Qlik.Sense.Client.Visualizations.ListboxProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -1937,11 +1940,9 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IFilterpane.CreateListboxAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.ListboxProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Calculations">
             <summary>Box plot calculation settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Calculations.Auto">
             <summary>Use automatic calculations</summary>
@@ -1957,7 +1958,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.CalculationParameters">
             <summary>Box plot calculation settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.CalculationParameters.Fractiles">
             <summary>A number representing the two whisker fractiles as N and 1-N</summary>
@@ -1973,7 +1973,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Elements">
             <summary>Box plot elements settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Elements.BoxStart">
             <summary>Box plot element settings</summary>
@@ -1998,7 +1997,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.BoxElement">
             <summary>Box plot element settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.BoxElement.Name">
             <summary />
@@ -2011,7 +2009,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Outliers">
             <summary>Box plot outliers element</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Outliers.Show">
             <summary>Show the outliers.</summary>
@@ -2021,7 +2018,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.BoxplotDef">
             <summary>Settings specific to the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.BoxplotDef.Elements">
             <summary>Box plot elements settings</summary>
@@ -2043,7 +2039,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Color">
             <summary>Color settings for the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Color.Box">
             <summary>Color information structure. Holds actual color and index in palette.</summary>
@@ -2056,7 +2051,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Presentation">
             <summary>Presentation settings for the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Presentation.Whiskers">
             <summary>Settings for the boxplot whiskers</summary>
@@ -2066,7 +2060,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Whiskers">
             <summary>Settings for the boxplot whiskers</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Whiskers.Show">
             <summary>Show whiskers.</summary>
@@ -2076,7 +2069,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.SortSettings">
             <summary>Wrapper for sorting properties which will be set on the outer dimension.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.SortSettings.AutoSort">
             <summary>Sort automatically</summary>
@@ -2116,7 +2108,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.Boxplot">
             <summary>Settings specific to the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.Boxplot.Elements">
             <summary>Box plot elements settings</summary>
@@ -2138,7 +2129,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.ICalculations">
             <summary>Box plot calculation settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.ICalculations.Auto">
             <summary>Use automatic calculations</summary>
@@ -2151,7 +2141,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.ICalculationParameters">
             <summary>Box plot calculation settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.ICalculationParameters.Fractiles">
             <summary>A number representing the two whisker fractiles as N and 1-N</summary>
@@ -2164,7 +2153,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IElements">
             <summary>Box plot elements settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IElements.BoxStart">
             <summary>Box plot element settings</summary>
@@ -2186,7 +2174,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IBoxElement">
             <summary>Box plot element settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IBoxElement.Name">
             <summary />
@@ -2196,14 +2183,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IOutliers">
             <summary>Box plot outliers element</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IOutliers.Show">
             <summary>Show the outliers.</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IBoxplotDef">
             <summary>Settings specific to the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IBoxplotDef.Elements">
             <summary>Box plot elements settings</summary>
@@ -2222,7 +2207,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IColor">
             <summary>Color settings for the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IColor.Box">
             <summary>Color information structure. Holds actual color and index in palette.</summary>
@@ -2232,21 +2216,18 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IPresentation">
             <summary>Presentation settings for the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IPresentation.Whiskers">
             <summary>Settings for the boxplot whiskers</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IWhiskers">
             <summary>Settings for the boxplot whiskers</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IWhiskers.Show">
             <summary>Show whiskers.</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.ISortSettings">
             <summary>Wrapper for sorting properties which will be set on the outer dimension.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.ISortSettings.AutoSort">
             <summary>Sort automatically</summary>
@@ -2274,7 +2255,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotComponents.IBoxplot">
             <summary>Settings specific to the boxplot</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotComponents.IBoxplot.Elements">
             <summary>Box plot elements settings</summary>
@@ -2293,7 +2273,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.BarGrouping">
             <summary>Bar grouping settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.BarGrouping.Grouping">
             <summary>Bar grouping.</summary>
@@ -2303,7 +2282,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.CustomErrorMessage">
             <summary>Defines custom error messages.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.CustomErrorMessage.CalcCond">
             <summary>DEPRECATED: Use qCalcCondition.qMsg instead</summary>
@@ -2313,7 +2291,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.DimensionAxis">
             <summary>Dimension axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.DimensionAxis.Show">
             <summary>Labels and title</summary>
@@ -2332,7 +2309,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.GridLines">
             <summary>Grid lines settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.GridLines.Auto">
             <summary>Automatic grid line spacing.</summary>
@@ -2345,7 +2321,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.Legend">
             <summary>Legend settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.Legend.Show">
             <summary>Show the legend.</summary>
@@ -2361,7 +2336,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.PaletteObject">
             <summary>Color information structure. Holds actual color and index in palette.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.PaletteObject.Index">
             <summary>Index in palette</summary>
@@ -2374,7 +2348,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ColorMode">
             <summary>Color settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ColorMode.Auto">
             <summary>Use automatic coloring.</summary>
@@ -2426,7 +2399,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.MeasureAxis">
             <summary>Measure axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.MeasureAxis.Show">
             <summary>Labels and title</summary>
@@ -2454,7 +2426,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ReferenceLine">
             <summary>Reference lines settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ReferenceLine.Show">
             <summary>Whether to show this reference line</summary>
@@ -2500,7 +2471,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.MapBackground">
             <summary>Map background settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.MapBackground.Show">
             <summary>Show background layer.</summary>
@@ -2516,7 +2486,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.MapBackgroundLayer">
             <summary>Map background layer settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.MapBackgroundLayer.Type">
             <summary>Map background layer settings.</summary>
@@ -2532,7 +2501,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.BarchartDataPoint">
             <summary>Data points</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.BarchartDataPoint.ShowLabels">
             <summary>Show labels on data points</summary>
@@ -2542,7 +2510,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.CombochartDataPoint">
             <summary>Data points</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.CombochartDataPoint.Show">
             <summary>Show data points on line series. Only used if there is at least one measure with type set to &#39;line&#39;</summary>
@@ -2576,7 +2543,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.GaugeSegmentInfo">
             <summary>Segment settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.GaugeSegmentInfo.Limits">
             <summary />
@@ -2592,7 +2558,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.GaugeSegmentInfoLimits">
             <summary>Limits for the segments.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.GaugeSegmentInfoLimits.Value">
             <summary />
@@ -2605,7 +2570,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.GaugeSegmentInfoColors">
             <summary>DEPRECATED: Colors of the segments. Array should contain (segment limits) + 1 colors.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.GaugeSegmentInfoColors.Color">
             <summary>Color of segment.</summary>
@@ -2624,7 +2588,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.KpiConditionalColoring">
             <summary>Coloring settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.KpiConditionalColoring.UseConditionalColoring">
             <summary>Boolean to set if the object should use conditions to color the object</summary>
@@ -2643,7 +2606,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.KpiSegmentInfo">
             <summary>Segment settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.KpiSegmentInfo.Limits">
             <summary />
@@ -2659,7 +2621,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.KpiLimitsItem">
             <summary>Limits for the segments.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.KpiLimitsItem.Value">
             <summary>Value for limit between two segments</summary>
@@ -2672,7 +2633,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.KpiColorsItem">
             <summary>DEPRECATED: Color settings for a segment.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.KpiColorsItem.Color">
             <summary>Integer reference to a color for the segment</summary>
@@ -2685,7 +2645,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.KpiPaletteColorsItem">
             <summary>Color settings for a segment.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.KpiPaletteColorsItem.Color">
             <summary>Color as string</summary>
@@ -2701,7 +2660,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.KpiRangeLimits">
             <summary>Limits for the range.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.KpiRangeLimits.Min">
             <summary />
@@ -2723,7 +2681,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.LinechartDataPoint">
             <summary>Data point settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.LinechartDataPoint.Show">
             <summary>Show data points.</summary>
@@ -2736,7 +2693,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.PiechartDonut">
             <summary>Pie chart donut settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.PiechartDonut.ShowAsDonut">
             <summary>Present as donut.</summary>
@@ -2746,7 +2702,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.PiechartDataPoint">
             <summary>Pie chart data point settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.PiechartDataPoint.Auto">
             <summary>Automatically choose how to present data points values.</summary>
@@ -2759,7 +2714,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ScatterplotReferenceLines">
             <summary>Scatter plot reference lines. Set on X-axis and Y-axis separately.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ScatterplotReferenceLines.RefLinesX">
             <summary />
@@ -2772,7 +2726,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ScatterplotDataPoint">
             <summary>Scatter plot data point settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ScatterplotDataPoint.BubbleSizes">
             <summary>Bubble size.</summary>
@@ -2785,7 +2738,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ScatterplotLabels">
             <summary>Scatter plot label settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ScatterplotLabels.Mode">
             <summary>Show labels. 1 for auto, 2 for show all and 0 for hiding labels.</summary>
@@ -2801,7 +2753,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TableTotals">
             <summary>Table totals settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TableTotals.Show">
             <summary>Auto setting for the totals row.</summary>
@@ -2817,7 +2768,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TableScrolling">
             <summary>Table scrolling settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TableScrolling.KeepFirstColumnInView">
             <summary>Freeze the first column when scrolling table horizontally.</summary>
@@ -2827,7 +2777,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TableMultiline">
             <summary>Table text wrapping settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TableMultiline.WrapTextInHeaders">
             <summary>Enable or disable text wrapping in table headers.</summary>
@@ -2840,7 +2789,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TextImageBackgroundDef">
             <summary>Background image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TextImageBackgroundDef.IsUsed">
             <summary>Use background image.</summary>
@@ -2859,7 +2807,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TextImageContentDef">
             <summary>Image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TextImageContentDef.Id">
             <summary>Id of the image. Will be used in the markdown string to reference an image.</summary>
@@ -2872,7 +2819,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TreemapLabels">
             <summary>Treemap labels settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TreemapLabels.Auto">
             <summary>Automatic label handling.</summary>
@@ -2960,7 +2906,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TextImageBackground">
             <summary>Background image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TextImageBackground.IsUsed">
             <summary>Use background image.</summary>
@@ -2979,7 +2924,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.TextImageContent">
             <summary>Image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.TextImageContent.Id">
             <summary>Id of the image. Will be used in the markdown string to reference an image.</summary>
@@ -2992,21 +2936,18 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IBarGrouping">
             <summary>Bar grouping settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IBarGrouping.Grouping">
             <summary>Bar grouping.</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ICustomErrorMessage">
             <summary>Defines custom error messages.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ICustomErrorMessage.CalcCond">
             <summary>DEPRECATED: Use qCalcCondition.qMsg instead</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IDimensionAxis">
             <summary>Dimension axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IDimensionAxis.Show">
             <summary>Labels and title</summary>
@@ -3022,7 +2963,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IGridLines">
             <summary>Grid lines settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IGridLines.Auto">
             <summary>Automatic grid line spacing.</summary>
@@ -3032,7 +2972,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ILegend">
             <summary>Legend settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ILegend.Show">
             <summary>Show the legend.</summary>
@@ -3045,7 +2984,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IPaletteObject">
             <summary>Color information structure. Holds actual color and index in palette.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IPaletteObject.Index">
             <summary>Index in palette</summary>
@@ -3055,7 +2993,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IColorMode">
             <summary>Color settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IColorMode.Auto">
             <summary>Use automatic coloring.</summary>
@@ -3104,7 +3041,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IMeasureAxis">
             <summary>Measure axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IMeasureAxis.Show">
             <summary>Labels and title</summary>
@@ -3129,7 +3065,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IReferenceLine">
             <summary>Reference lines settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IReferenceLine.Show">
             <summary>Whether to show this reference line</summary>
@@ -3166,7 +3101,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IMapBackground">
             <summary>Map background settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IMapBackground.Show">
             <summary>Show background layer.</summary>
@@ -3179,7 +3113,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IMapBackgroundLayer">
             <summary>Map background layer settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IMapBackgroundLayer.Type">
             <summary>Map background layer settings.</summary>
@@ -3192,14 +3125,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IBarchartDataPoint">
             <summary>Data points</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IBarchartDataPoint.ShowLabels">
             <summary>Show labels on data points</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ICombochartDataPoint">
             <summary>Data points</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ICombochartDataPoint.Show">
             <summary>Show data points on line series. Only used if there is at least one measure with type set to &#39;line&#39;</summary>
@@ -3227,7 +3158,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IGaugeSegmentInfo">
             <summary>Segment settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IGaugeSegmentInfo.Limits">
             <summary />
@@ -3240,7 +3170,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IGaugeSegmentInfoLimits">
             <summary>Limits for the segments.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IGaugeSegmentInfoLimits.Value">
             <summary />
@@ -3250,7 +3179,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IGaugeSegmentInfoColors">
             <summary>DEPRECATED: Colors of the segments. Array should contain (segment limits) + 1 colors.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IGaugeSegmentInfoColors.Color">
             <summary>Color of segment.</summary>
@@ -3263,7 +3191,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IKpiConditionalColoring">
             <summary>Coloring settings</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IKpiConditionalColoring.UseConditionalColoring">
             <summary>Boolean to set if the object should use conditions to color the object</summary>
@@ -3279,7 +3206,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IKpiSegmentInfo">
             <summary>Segment settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IKpiSegmentInfo.Limits">
             <summary />
@@ -3292,7 +3218,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IKpiLimitsItem">
             <summary>Limits for the segments.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IKpiLimitsItem.Value">
             <summary>Value for limit between two segments</summary>
@@ -3302,7 +3227,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IKpiColorsItem">
             <summary>DEPRECATED: Color settings for a segment.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IKpiColorsItem.Color">
             <summary>Integer reference to a color for the segment</summary>
@@ -3312,7 +3236,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IKpiPaletteColorsItem">
             <summary>Color settings for a segment.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IKpiPaletteColorsItem.Color">
             <summary>Color as string</summary>
@@ -3325,7 +3248,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IKpiRangeLimits">
             <summary>Limits for the range.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IKpiRangeLimits.Min">
             <summary />
@@ -3341,7 +3263,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ILinechartDataPoint">
             <summary>Data point settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ILinechartDataPoint.Show">
             <summary>Show data points.</summary>
@@ -3351,14 +3272,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IPiechartDonut">
             <summary>Pie chart donut settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IPiechartDonut.ShowAsDonut">
             <summary>Present as donut.</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IPiechartDataPoint">
             <summary>Pie chart data point settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IPiechartDataPoint.Auto">
             <summary>Automatically choose how to present data points values.</summary>
@@ -3368,7 +3287,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IScatterplotReferenceLines">
             <summary>Scatter plot reference lines. Set on X-axis and Y-axis separately.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IScatterplotReferenceLines.RefLinesX">
             <summary />
@@ -3378,7 +3296,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IScatterplotDataPoint">
             <summary>Scatter plot data point settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IScatterplotDataPoint.BubbleSizes">
             <summary>Bubble size.</summary>
@@ -3388,7 +3305,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.IScatterplotLabels">
             <summary>Scatter plot label settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.IScatterplotLabels.Mode">
             <summary>Show labels. 1 for auto, 2 for show all and 0 for hiding labels.</summary>
@@ -3401,7 +3317,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITableTotals">
             <summary>Table totals settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITableTotals.Show">
             <summary>Auto setting for the totals row.</summary>
@@ -3414,14 +3329,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITableScrolling">
             <summary>Table scrolling settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITableScrolling.KeepFirstColumnInView">
             <summary>Freeze the first column when scrolling table horizontally.</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITableMultiline">
             <summary>Table text wrapping settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITableMultiline.WrapTextInHeaders">
             <summary>Enable or disable text wrapping in table headers.</summary>
@@ -3431,7 +3344,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITextImageBackgroundDef">
             <summary>Background image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITextImageBackgroundDef.IsUsed">
             <summary>Use background image.</summary>
@@ -3447,7 +3359,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITextImageContentDef">
             <summary>Image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITextImageContentDef.Id">
             <summary>Id of the image. Will be used in the markdown string to reference an image.</summary>
@@ -3457,7 +3368,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITreemapLabels">
             <summary>Treemap labels settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITreemapLabels.Auto">
             <summary>Automatic label handling.</summary>
@@ -3476,7 +3386,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITextImageBackground">
             <summary>Background image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITextImageBackground.IsUsed">
             <summary>Use background image.</summary>
@@ -3492,7 +3401,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Components.ITextImageContent">
             <summary>Image.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Components.ITextImageContent.Id">
             <summary>Id of the image. Will be used in the markdown string to reference an image.</summary>
@@ -3501,8 +3409,7 @@
             <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.Layer">
-            <summary>Map layer base class. Don't use this class directly, use the PointLayer or Polygon3Layer class and make sure to set the correct type.</summary>
-            <summary />
+            <summary>Map layer base class. Don&#39;t use this class directly, use the PointLayer or Polygon3Layer class and make sure to set the correct type.</summary>
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.Layer.Type">
             <summary>Type of layer.</summary>
@@ -3524,7 +3431,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.MapListObjectDef">
             <summary>The listobject used by map visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.MapListObjectDef.Expressions">
             <summary />
@@ -3546,7 +3452,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.PolygonLayer">
             <summary>Map polygon layer (old version).</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.PolygonLayer.ListObjectDef">
             <summary>The listobject used by map visualization</summary>
@@ -3556,7 +3461,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.PointLayerDef">
             <summary>Map point layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.PointLayerDef.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -3584,7 +3488,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3LayerDef">
             <summary>Map polygon layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3LayerDef.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -3603,7 +3506,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3LayerGeodataDef">
             <summary>Hypercube for geo data. Should have the same dimension as the hypercube in the property root.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3LayerGeodataDef.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -3616,7 +3518,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.MapListObject">
             <summary>The listobject used by map visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.MapListObject.Expressions">
             <summary />
@@ -3638,7 +3539,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.PointLayer">
             <summary>Map point layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.PointLayer.UseSize">
             <summary>Use measure for point sizing.</summary>
@@ -3666,7 +3566,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3LayerGeodata">
             <summary>Hypercube for geo data. Should have the same dimension as the hypercube in the property root.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3LayerGeodata.HyperCube">
             <summary />
@@ -3676,7 +3575,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3Layer">
             <summary>Map polygon layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.Polygon3Layer.Geodata">
             <summary>Hypercube for geo data. Should have the same dimension as the hypercube in the property root.</summary>
@@ -3694,8 +3592,7 @@
             <summary>Creates an instance of the Polygon3Layer class</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.ILayer">
-            <summary>Map layer base class. Don't use this class directly, use the PointLayer or Polygon3Layer class and make sure to set the correct type.</summary>
-            <summary />
+            <summary>Map layer base class. Don&#39;t use this class directly, use the PointLayer or Polygon3Layer class and make sure to set the correct type.</summary>
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.ILayer.Type">
             <summary>Type of layer.</summary>
@@ -3714,7 +3611,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IMapListObjectDef">
             <summary>The listobject used by map visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IMapListObjectDef.Expressions">
             <summary />
@@ -3730,14 +3626,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPolygonLayer">
             <summary>Map polygon layer (old version).</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPolygonLayer.ListObjectDef">
             <summary>The listobject used by map visualization</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPointLayerDef">
             <summary>Map point layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPointLayerDef.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -3762,7 +3656,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3LayerDef">
             <summary>Map polygon layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3LayerDef.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -3778,14 +3671,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3LayerGeodataDef">
             <summary>Hypercube for geo data. Should have the same dimension as the hypercube in the property root.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3LayerGeodataDef.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IMapListObject">
             <summary>The listobject used by map visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IMapListObject.Expressions">
             <summary />
@@ -3801,7 +3692,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPointLayer">
             <summary>Map point layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPointLayer.UseSize">
             <summary>Use measure for point sizing.</summary>
@@ -3826,14 +3716,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3LayerGeodata">
             <summary>Hypercube for geo data. Should have the same dimension as the hypercube in the property root.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3LayerGeodata.HyperCube">
             <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3Layer">
             <summary>Map polygon layer.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.MapComponents.IPolygon3Layer.Geodata">
             <summary>Hypercube for geo data. Should have the same dimension as the hypercube in the property root.</summary>
@@ -3849,7 +3737,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Picasso.DimensionAxis">
             <summary>Dimension axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Picasso.DimensionAxis.Show">
             <summary>Labels and title</summary>
@@ -3865,7 +3752,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Picasso.GridLines">
             <summary>Grid lines settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Picasso.GridLines.Auto">
             <summary>Automatic grid line spacing.</summary>
@@ -3878,7 +3764,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Picasso.MeasureAxis">
             <summary>Measure axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Picasso.MeasureAxis.ShowBounds">
             <summary>Show min and max on axis</summary>
@@ -3921,7 +3806,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Picasso.IDimensionAxis">
             <summary>Dimension axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Picasso.IDimensionAxis.Show">
             <summary>Labels and title</summary>
@@ -3934,7 +3818,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Picasso.IGridLines">
             <summary>Grid lines settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Picasso.IGridLines.Auto">
             <summary>Automatic grid line spacing.</summary>
@@ -3944,7 +3827,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.Picasso.IMeasureAxis">
             <summary>Measure axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.Picasso.IMeasureAxis.ShowBounds">
             <summary>Show min and max on axis</summary>
@@ -3969,7 +3851,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.VisualizationBaseProperties">
             <summary>Base visualizations class with common settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.VisualizationBaseProperties.Visualization">
             <summary>Visualization type. Must always be set.</summary>
@@ -4000,7 +3881,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.FilterpaneProperties">
             <summary>Filter pane visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.FilterpaneProperties.ChildListDef">
             <summary />
@@ -4031,7 +3911,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ListboxProperties">
             <summary>Listbox visualization. Used within filterpanes, NOT supported to use on its own.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ListboxProperties.ListObjectDef">
             <summary />
@@ -4098,7 +3977,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.VisualizationHyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.VisualizationHyperCubeDef.Dimensions">
             <summary />
@@ -4228,7 +4106,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BarchartProperties">
             <summary>Bar chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BarchartProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4274,7 +4151,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotProperties">
             <summary>Box plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotProperties.BoxplotDef">
             <summary>Settings specific to the boxplot</summary>
@@ -4305,7 +4181,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.CombochartProperties">
             <summary>Combo chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.CombochartProperties.HyperCubeDef">
             <summary />
@@ -4375,7 +4250,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.CombochartSeries">
             <summary>Combo chart series settings: on which axis to put the measure and how to visualize its data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.CombochartSeries.Type">
             <summary>How to visualize the series.</summary>
@@ -4394,7 +4268,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.DistributionplotProperties">
             <summary>Distribution plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.DistributionplotProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4431,7 +4304,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.GaugeProperties">
             <summary>Gauge visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.GaugeProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4486,7 +4358,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.HistogramProperties">
             <summary>Histogram visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.HistogramProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4634,7 +4505,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.LinechartMeasureAxis">
             <summary>Line chart measure axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.LinechartMeasureAxis.Logarithmic">
             <summary>Logarithmic scale</summary>
@@ -4644,7 +4514,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.PiechartProperties">
             <summary>Pie chart visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.PiechartProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4672,7 +4541,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.PivottableProperties">
             <summary>Pivot table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.PivottableProperties.HyperCubeDef">
             <summary />
@@ -4694,7 +4562,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ScatterplotProperties">
             <summary>Scatter plot visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ScatterplotProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4737,7 +4604,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.TableProperties">
             <summary>Straight table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.TableProperties.HyperCubeDef">
             <summary />
@@ -4849,7 +4715,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.TextImageProperties">
             <summary>Text and Image visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.TextImageProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4874,7 +4739,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.TreemapProperties">
             <summary>Treemap visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.TreemapProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -4896,7 +4760,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.WaterfallChartProperties">
             <summary>Waterfall chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.WaterfallChartProperties.HyperCubeDef">
             <summary />
@@ -8356,7 +8219,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.VisualizationBaseLayout">
             <summary>Base visualizations class with common settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.VisualizationBaseLayout.Visualization">
             <summary>Visualization type. Must always be set.</summary>
@@ -8441,7 +8303,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.VisualizationHyperCube">
             <summary>The hypercube used by most visualizations</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.VisualizationHyperCube.LayoutExclude">
             <summary />
@@ -8541,7 +8402,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BarchartLayout">
             <summary>Bar chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BarchartLayout.RefLine">
             <summary />
@@ -8605,7 +8465,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.DistributionplotLayout">
             <summary>Distribution plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.DistributionplotLayout.DimensionAxis">
             <summary>Dimension axis settings.</summary>
@@ -8642,7 +8501,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.GaugeLayout">
             <summary>Gauge visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.GaugeLayout.RefLine">
             <summary />
@@ -8697,7 +8555,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.HistogramLayout">
             <summary>Histogram visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.HistogramLayout.DimensionAxis">
             <summary>Dimension axis settings.</summary>
@@ -8803,7 +8660,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.PiechartLayout">
             <summary>Pie chart visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.PiechartLayout.Donut">
             <summary>Pie chart donut settings.</summary>
@@ -8831,7 +8687,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.PivottableLayout">
             <summary>Pivot table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.PivottableLayout.HyperCube">
             <summary />
@@ -8853,7 +8708,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ScatterplotLayout">
             <summary>Scatter plot visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ScatterplotLayout.RefLine">
             <summary>Scatter plot reference lines. Set on X-axis and Y-axis separately.</summary>
@@ -8932,7 +8786,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.TextImageLayout">
             <summary>Text and Image visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.TextImageLayout.Markdown">
             <summary>Markdown describing the content. Standard markdown syntax has been used together with custom formats for font colors etc. See documentation for more details.</summary>
@@ -8957,7 +8810,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.TreemapLayout">
             <summary>Treemap visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.TreemapLayout.Labels">
             <summary>Treemap labels settings.</summary>
@@ -9024,7 +8876,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.BoxplotLayout">
             <summary>Box plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.BoxplotLayout.BoxplotDef">
             <summary>Settings specific to the boxplot</summary>
@@ -9055,7 +8906,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.CombochartLayout">
             <summary>Combo chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.CombochartLayout.BarGrouping">
             <summary>Bar grouping settings.</summary>
@@ -9137,7 +8987,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.TableLayout">
             <summary>Straight table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.TableLayout.Totals">
             <summary>Table totals settings.</summary>
@@ -9165,7 +9014,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.WaterfallChartLayout">
             <summary>Waterfall chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.WaterfallChartLayout.MeasureAxis">
             <summary>Measure axis settings.</summary>
@@ -9196,7 +9044,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.FilterpaneLayout">
             <summary>Filter pane visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.FilterpaneLayout.ChildList">
             <summary />
@@ -9209,7 +9056,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ListboxLayout">
             <summary>Listbox visualization. Used within filterpanes, NOT supported to use on its own.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ListboxLayout.ListObject">
             <summary />
@@ -9271,6 +9117,9 @@
         <member name="P:Qlik.Sense.Client.Visualizations.IVisualizationBase.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IVisualizationBase.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IMap">
             <summary />
         </member>
@@ -9303,6 +9152,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IMap.DynamicStructure">
             <summary>Reference to property Layout.LayoutExclude</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IMap.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IWidget">
             <summary />
@@ -9489,6 +9341,9 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IWidget.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IWidget.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IBarchart">
             <summary />
@@ -9691,6 +9546,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IBarchart.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IBarchart.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IDistributionplot">
             <summary />
         </member>
@@ -9882,6 +9740,9 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IDistributionplot.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IDistributionplot.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IGauge">
             <summary />
@@ -10093,6 +9954,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IGauge.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IGauge.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IHistogram">
             <summary />
         </member>
@@ -10281,6 +10145,9 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IHistogram.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IHistogram.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ILinechart">
             <summary />
@@ -10489,6 +10356,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.ILinechart.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.ILinechart.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IPiechart">
             <summary />
         </member>
@@ -10672,6 +10542,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IPiechart.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IPiechart.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IPivottable">
             <summary />
         </member>
@@ -10839,6 +10712,9 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.IPivottable.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IPivottable.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IScatterplot">
             <summary />
@@ -11038,6 +10914,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IScatterplot.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IScatterplot.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITextImage">
             <summary />
         </member>
@@ -11218,6 +11097,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.ITextImage.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.ITextImage.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITreemap">
             <summary />
         </member>
@@ -11395,6 +11277,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.ITreemap.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.ITreemap.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IBoxplot">
             <summary />
         </member>
@@ -11424,6 +11309,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IBoxplot.DynamicStructure">
             <summary>Reference to property Layout.LayoutExclude</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IBoxplot.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ICombochart">
             <summary />
@@ -11623,6 +11511,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.ICombochart.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.ICombochart.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IKpi">
             <summary />
         </member>
@@ -11812,6 +11703,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IKpi.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IKpi.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITable">
             <summary />
         </member>
@@ -11991,6 +11885,9 @@
         </member>
         <member name="M:Qlik.Sense.Client.Visualizations.ITable.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
+        </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.ITable.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IWaterfallChart">
             <summary />
@@ -12175,6 +12072,9 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IWaterfallChart.ClearSelectionsAsync(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary /><param name="colIndices" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IWaterfallChart.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IListbox">
             <summary />
         </member>
@@ -12292,9 +12192,11 @@
         <member name="M:Qlik.Sense.Client.Visualizations.IListbox.AcceptSearchAsync(System.Boolean,System.Boolean)">
             <summary /><param name="toggleMode" /><param name="softLock" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.Visualizations.IListbox.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IVisualizationBaseProperties">
             <summary>Base visualizations class with common settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IVisualizationBaseProperties.Visualization">
             <summary>Visualization type. Must always be set.</summary>
@@ -12319,7 +12221,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IFilterpaneProperties">
             <summary>Filter pane visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IFilterpaneProperties.ChildListDef">
             <summary />
@@ -12338,7 +12239,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IListboxProperties">
             <summary>Listbox visualization. Used within filterpanes, NOT supported to use on its own.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IListboxProperties.ListObjectDef">
             <summary />
@@ -12387,7 +12287,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IVisualizationHyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IVisualizationHyperCubeDef.Dimensions">
             <summary />
@@ -12490,7 +12389,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IBarchartProperties">
             <summary>Bar chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IBarchartProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -12530,7 +12428,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IBoxplotProperties">
             <summary>Box plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IBoxplotProperties.BoxplotDef">
             <summary>Settings specific to the boxplot</summary>
@@ -12555,7 +12452,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ICombochartProperties">
             <summary>Combo chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ICombochartProperties.HyperCubeDef">
             <summary />
@@ -12610,7 +12506,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ICombochartSeries">
             <summary>Combo chart series settings: on which axis to put the measure and how to visualize its data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ICombochartSeries.Type">
             <summary>How to visualize the series.</summary>
@@ -12626,7 +12521,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IDistributionplotProperties">
             <summary>Distribution plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IDistributionplotProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -12657,7 +12551,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IGaugeProperties">
             <summary>Gauge visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IGaugeProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -12706,7 +12599,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IHistogramProperties">
             <summary>Histogram visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IHistogramProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -12827,14 +12719,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ILinechartMeasureAxis">
             <summary>Line chart measure axis settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ILinechartMeasureAxis.Logarithmic">
             <summary>Logarithmic scale</summary>
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IPiechartProperties">
             <summary>Pie chart visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IPiechartProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -12856,7 +12746,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IPivottableProperties">
             <summary>Pivot table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IPivottableProperties.HyperCubeDef">
             <summary />
@@ -12869,7 +12758,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IScatterplotProperties">
             <summary>Scatter plot visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IScatterplotProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -12906,7 +12794,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITableProperties">
             <summary>Straight table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ITableProperties.HyperCubeDef">
             <summary />
@@ -12988,7 +12875,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITextImageProperties">
             <summary>Text and Image visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ITextImageProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -13007,7 +12893,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITreemapProperties">
             <summary>Treemap visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ITreemapProperties.HyperCubeDef">
             <summary>The hypercube used by most visualizations</summary>
@@ -13023,7 +12908,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IWaterfallChartProperties">
             <summary>Waterfall chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IWaterfallChartProperties.HyperCubeDef">
             <summary />
@@ -13075,7 +12959,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IVisualizationBaseLayout">
             <summary>Base visualizations class with common settings.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IVisualizationBaseLayout.Visualization">
             <summary>Visualization type. Must always be set.</summary>
@@ -13142,7 +13025,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IVisualizationHyperCube">
             <summary>The hypercube used by most visualizations</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IVisualizationHyperCube.LayoutExclude">
             <summary />
@@ -13221,7 +13103,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IBarchartLayout">
             <summary>Bar chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IBarchartLayout.RefLine">
             <summary />
@@ -13273,7 +13154,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IDistributionplotLayout">
             <summary>Distribution plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IDistributionplotLayout.DimensionAxis">
             <summary>Dimension axis settings.</summary>
@@ -13304,7 +13184,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IGaugeLayout">
             <summary>Gauge visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IGaugeLayout.RefLine">
             <summary />
@@ -13353,7 +13232,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IHistogramLayout">
             <summary>Histogram visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IHistogramLayout.DimensionAxis">
             <summary>Dimension axis settings.</summary>
@@ -13441,7 +13319,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IPiechartLayout">
             <summary>Pie chart visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IPiechartLayout.Donut">
             <summary>Pie chart donut settings.</summary>
@@ -13463,7 +13340,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IPivottableLayout">
             <summary>Pivot table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IPivottableLayout.HyperCube">
             <summary />
@@ -13476,7 +13352,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IScatterplotLayout">
             <summary>Scatter plot visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IScatterplotLayout.RefLine">
             <summary>Scatter plot reference lines. Set on X-axis and Y-axis separately.</summary>
@@ -13540,7 +13415,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITextImageLayout">
             <summary>Text and Image visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ITextImageLayout.Markdown">
             <summary>Markdown describing the content. Standard markdown syntax has been used together with custom formats for font colors etc. See documentation for more details.</summary>
@@ -13559,7 +13433,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITreemapLayout">
             <summary>Treemap visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ITreemapLayout.Labels">
             <summary>Treemap labels settings.</summary>
@@ -13608,7 +13481,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IBoxplotLayout">
             <summary>Box plot visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IBoxplotLayout.BoxplotDef">
             <summary>Settings specific to the boxplot</summary>
@@ -13633,7 +13505,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ICombochartLayout">
             <summary>Combo chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ICombochartLayout.BarGrouping">
             <summary>Bar grouping settings.</summary>
@@ -13703,7 +13574,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.ITableLayout">
             <summary>Straight table visualization.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.ITableLayout.Totals">
             <summary>Table totals settings.</summary>
@@ -13725,7 +13595,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IWaterfallChartLayout">
             <summary>Waterfall chart visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IWaterfallChartLayout.MeasureAxis">
             <summary>Measure axis settings.</summary>
@@ -13750,14 +13619,12 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IFilterpaneLayout">
             <summary>Filter pane visualization</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IFilterpaneLayout.ChildList">
             <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.IListboxLayout">
             <summary>Listbox visualization. Used within filterpanes, NOT supported to use on its own.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.IListboxLayout.ListObject">
             <summary />
@@ -13959,7 +13826,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.HistogramComponents.HistogramDataPoint">
             <summary>Data points</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.HistogramComponents.HistogramDataPoint.ShowLabels">
             <summary>Show labels on bars</summary>
@@ -13999,7 +13865,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.Visualizations.HistogramComponents.IHistogramDataPoint">
             <summary>Data points</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.Visualizations.HistogramComponents.IHistogramDataPoint.ShowLabels">
             <summary>Show labels on bars</summary>
@@ -14386,6 +14251,9 @@
         <member name="M:Qlik.Sense.Client.IAppField.AcceptSearchAsync(System.Boolean,System.Boolean)">
             <summary /><param name="toggleMode" /><param name="softLock" /><returns />
         </member>
+        <member name="P:Qlik.Sense.Client.IAppField.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IGeoField">
             <summary>
             Appfield for handling Maps
@@ -14668,6 +14536,9 @@
         <member name="P:Qlik.Sense.Client.ISheet.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.ISheet.Layout">
+            <summary />
+        </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetBarchart(System.String)">
             <summary /><param name="id" /><returns />
         </member>
@@ -14676,7 +14547,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetBarchartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateBarchart(System.String,Qlik.Sense.Client.Visualizations.BarchartProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14686,7 +14556,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateBarchartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.BarchartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetFilterpane(System.String)">
             <summary /><param name="id" /><returns />
@@ -14696,7 +14565,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetFilterpaneAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateFilterpane(System.String,Qlik.Sense.Client.Visualizations.FilterpaneProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14706,7 +14574,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateFilterpaneAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.FilterpaneProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetListbox(System.String)">
             <summary /><param name="id" /><returns />
@@ -14716,7 +14583,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetListboxAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateListbox(System.String,Qlik.Sense.Client.Visualizations.ListboxProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14726,7 +14592,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateListboxAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.ListboxProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetGauge(System.String)">
             <summary /><param name="id" /><returns />
@@ -14736,7 +14601,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetGaugeAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateGauge(System.String,Qlik.Sense.Client.Visualizations.GaugeProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14746,7 +14610,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateGaugeAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.GaugeProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetLinechart(System.String)">
             <summary /><param name="id" /><returns />
@@ -14756,7 +14619,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetLinechartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateLinechart(System.String,Qlik.Sense.Client.Visualizations.LinechartProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14766,7 +14628,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateLinechartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.LinechartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetPiechart(System.String)">
             <summary /><param name="id" /><returns />
@@ -14776,7 +14637,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetPiechartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreatePiechart(System.String,Qlik.Sense.Client.Visualizations.PiechartProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14786,7 +14646,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreatePiechartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.PiechartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetScatterplot(System.String)">
             <summary /><param name="id" /><returns />
@@ -14796,7 +14655,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetScatterplotAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateScatterplot(System.String,Qlik.Sense.Client.Visualizations.ScatterplotProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14806,7 +14664,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateScatterplotAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.ScatterplotProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetTable(System.String)">
             <summary /><param name="id" /><returns />
@@ -14816,7 +14673,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetTableAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateTable(System.String,Qlik.Sense.Client.Visualizations.TableProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14826,7 +14682,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateTableAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.TableProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetTextImage(System.String)">
             <summary /><param name="id" /><returns />
@@ -14836,7 +14691,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetTextImageAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateTextImage(System.String,Qlik.Sense.Client.Visualizations.TextImageProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14846,7 +14700,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateTextImageAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.TextImageProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetTreemap(System.String)">
             <summary /><param name="id" /><returns />
@@ -14856,7 +14709,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetTreemapAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateTreemap(System.String,Qlik.Sense.Client.Visualizations.TreemapProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14866,7 +14718,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateTreemapAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.TreemapProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetMap(System.String)">
             <summary /><param name="id" /><returns />
@@ -14876,7 +14727,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetMapAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateMap(System.String,Qlik.Sense.Client.Visualizations.MapProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14886,7 +14736,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateMapAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.MapProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetCombochart(System.String)">
             <summary /><param name="id" /><returns />
@@ -14896,7 +14745,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetCombochartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateCombochart(System.String,Qlik.Sense.Client.Visualizations.CombochartProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14906,7 +14754,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateCombochartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.CombochartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetKpi(System.String)">
             <summary /><param name="id" /><returns />
@@ -14916,7 +14763,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetKpiAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateKpi(System.String,Qlik.Sense.Client.Visualizations.KpiProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14926,7 +14772,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreateKpiAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.KpiProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetPivottable(System.String)">
             <summary /><param name="id" /><returns />
@@ -14936,7 +14781,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.GetPivottableAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreatePivottable(System.String,Qlik.Sense.Client.Visualizations.PivottableProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -14946,7 +14790,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.ISheet.CreatePivottableAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.PivottableProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="T:Qlik.Sense.Client.Storytelling.ISlide">
             <summary>
@@ -15039,6 +14882,9 @@
         <member name="P:Qlik.Sense.Client.Storytelling.ISlide.Items">
             <summary>Reference to property Layout.ChildList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.Storytelling.ISlide.Layout">
+            <summary />
+        </member>
         <member name="M:Qlik.Sense.Client.Storytelling.ISlide.GetSlideItem(System.String)">
             <summary /><param name="id" /><returns />
         </member>
@@ -15047,7 +14893,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.ISlide.GetSlideItemAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.ISlide.CreateSlideItem(System.String,Qlik.Sense.Client.Storytelling.SlideItemProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -15057,7 +14902,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.ISlide.CreateSlideItemAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Storytelling.SlideItemProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="T:Qlik.Sense.Client.Storytelling.IStory">
             <summary>
@@ -15111,6 +14955,9 @@
         <member name="P:Qlik.Sense.Client.Storytelling.IStory.Items">
             <summary>Reference to property Layout.ChildList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.Storytelling.IStory.Layout">
+            <summary />
+        </member>
         <member name="M:Qlik.Sense.Client.Storytelling.IStory.GetSlide(System.String)">
             <summary /><param name="id" /><returns />
         </member>
@@ -15119,7 +14966,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.IStory.GetSlideAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.IStory.CreateSlide(System.String,Qlik.Sense.Client.Storytelling.SlideProperties)">
             <summary /><param name="id" /><param name="properties" /><returns />
@@ -15129,7 +14975,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.IStory.CreateSlideAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Storytelling.SlideProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="T:Qlik.Sense.Client.Storytelling.StoryListProperties">
             <summary />
@@ -15532,7 +15377,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Story.GetSlideAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Story.OnGetSlideAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -15545,7 +15389,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Story.CreateSlideAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Storytelling.SlideProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Story.OnCreateSlideAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -15661,7 +15504,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Slide.GetSlideItemAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Slide.OnGetSlideItemAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -15674,7 +15516,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Slide.CreateSlideItemAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Storytelling.SlideItemProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Storytelling.Slide.OnCreateSlideItemAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -16212,6 +16053,9 @@
         <member name="P:Qlik.Sense.Client.Storytelling.IStoryList.Items">
             <summary>Reference to property Layout.AppObjectList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.Storytelling.IStoryList.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Storytelling.ISlideItem">
             <summary />
         </member>
@@ -16265,6 +16109,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.Storytelling.ISlideItem.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.Storytelling.ISlideItem.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Storytelling.IStoryListProperties">
             <summary />
@@ -16718,6 +16565,20 @@
             A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
             </returns>
         </member>
+        <member name="M:Qlik.Sense.Client.ExtendedCurrentSelection.GetSelectedDataPager(System.String)">
+            <summary>
+            Returns a data pager for the values selected from a particular field.
+            </summary>
+            <param name="fieldName">The name of the field for which to return a pager.</param>
+            <returns>The pager.</returns>
+        </member>
+        <member name="M:Qlik.Sense.Client.ExtendedCurrentSelection.GetSelectedDataPager(System.Int32)">
+            <summary>
+            Returns a data pager for the values selected from a particular field.
+            </summary>
+            <param name="index">Zero base index for the field in the current selection.</param>
+            <returns>The pager.</returns>
+        </member>
         <member name="M:Qlik.Sense.Client.ExtendedCurrentSelection.GetField(System.String)">
             <summary>
             Get a specific field
@@ -16834,6 +16695,20 @@
             A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
             </returns>
         </member>
+        <member name="M:Qlik.Sense.Client.IExtendedCurrentSelection.GetSelectedDataPager(System.String)">
+            <summary>
+            Returns a data pager for the values selected from a particular field.
+            </summary>
+            <param name="fieldName">The name of the field for which to return a pager.</param>
+            <returns>The pager.</returns>
+        </member>
+        <member name="M:Qlik.Sense.Client.IExtendedCurrentSelection.GetSelectedDataPager(System.Int32)">
+            <summary>
+            Returns a data pager for the values selected from a particular field.
+            </summary>
+            <param name="index">Zero base index for the field in the current selection.</param>
+            <returns>The pager.</returns>
+        </member>
         <member name="P:Qlik.Sense.Client.IExtendedCurrentSelection.Properties">
             <summary />
         </member>
@@ -16855,9 +16730,11 @@
         <member name="P:Qlik.Sense.Client.IExtendedCurrentSelection.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IExtendedCurrentSelection.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.ISheetCell">
             <summary>Settings for a cell on the sheet.</summary>
-            <summary />
         </member>
         <member name="M:Qlik.Sense.Client.ISheetCell.ToGenericObject">
             <summary>
@@ -16873,7 +16750,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.SheetCell">
             <summary>Settings for a cell on the sheet.</summary>
-            <summary />
         </member>
         <member name="M:Qlik.Sense.Client.SheetCell.ToGenericObject">
             <summary>
@@ -16925,6 +16801,31 @@
             </summary>
             <param name="success">Result of previous operation</param>
             <param name="childId">Identifier of the child that was destroyed.</param>
+        </member>
+        <member name="F:Qlik.Sense.Client.Sheet.SheetCellSplitDirection.Top">
+            <summary>
+            Top
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.Client.Sheet.SheetCellSplitDirection.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.Client.Sheet.SheetCellSplitDirection.Right">
+            <summary>
+            Right
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.Client.Sheet.SheetCellSplitDirection.Bottom">
+            <summary>
+            Bottom
+            </summary>
+        </member>
+        <member name="F:Qlik.Sense.Client.Sheet.SheetCellSplitDirection.None">
+            <summary>
+            None
+            </summary>
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.DidCreateChild(Qlik.Engine.NxInfo,Qlik.Engine.GenericObject)">
             <summary>
@@ -17222,7 +17123,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetBarchartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetBarchartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17235,7 +17135,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateBarchartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.BarchartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateBarchartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17248,7 +17147,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetFilterpaneAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetFilterpaneAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17261,7 +17159,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateFilterpaneAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.FilterpaneProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateFilterpaneAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17274,7 +17171,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetListboxAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetListboxAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17287,7 +17183,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateListboxAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.ListboxProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateListboxAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17300,7 +17195,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetGaugeAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetGaugeAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17313,7 +17207,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateGaugeAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.GaugeProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateGaugeAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17326,7 +17219,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetLinechartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetLinechartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17339,7 +17231,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateLinechartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.LinechartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateLinechartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17352,7 +17243,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetPiechartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetPiechartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17365,7 +17255,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreatePiechartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.PiechartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreatePiechartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17378,7 +17267,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetScatterplotAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetScatterplotAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17391,7 +17279,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateScatterplotAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.ScatterplotProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateScatterplotAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17404,7 +17291,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetTableAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetTableAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17417,7 +17303,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateTableAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.TableProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateTableAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17430,7 +17315,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetTextImageAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetTextImageAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17443,7 +17327,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateTextImageAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.TextImageProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateTextImageAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17456,7 +17339,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetTreemapAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetTreemapAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17469,7 +17351,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateTreemapAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.TreemapProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateTreemapAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17482,7 +17363,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetMapAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetMapAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17495,7 +17375,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateMapAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.MapProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateMapAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17508,7 +17387,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetCombochartAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetCombochartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17521,7 +17399,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateCombochartAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.CombochartProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateCombochartAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17534,7 +17411,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetKpiAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetKpiAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17547,7 +17423,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreateKpiAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.KpiProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreateKpiAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17560,7 +17435,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.GetPivottableAsync(Qlik.Engine.AsyncHandle,System.String)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnGetPivottableAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17573,7 +17447,6 @@
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.CreatePivottableAsync(Qlik.Engine.AsyncHandle,System.String,Qlik.Sense.Client.Visualizations.PivottableProperties)">
             <param name="asyncHandle">Handle to asynchronous method request</param>
-            <summary /><param name="id" /><param name="properties" /><returns />
         </member>
         <member name="M:Qlik.Sense.Client.Sheet.OnCreatePivottableAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
@@ -17755,7 +17628,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.BookmarkListProperties">
             <summary>Properties for defining list of bookmarks.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.BookmarkListProperties.BookmarkListDef">
             <summary />
@@ -17825,7 +17697,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.MasterObjectObjectViewDef">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.MasterObjectObjectViewDef.Title">
             <summary>Name of the master object.</summary>
@@ -17865,7 +17736,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.MeasureObjectViewDef">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.MeasureObjectViewDef.Title">
             <summary>Title of the master measure.</summary>
@@ -17890,7 +17760,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.MetaAttributes">
             <summary>The metadata object used by all app objects</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.MetaAttributes.Title">
             <summary />
@@ -17909,7 +17778,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.MetaAttributesDef">
             <summary>The metadata object used by all app objects</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.MetaAttributesDef.Title">
             <summary>Title for the app object</summary>
@@ -18000,7 +17868,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.VariableListProperties">
             <summary>Properties for defining list of variables.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.VariableListProperties.VariableListDef">
             <summary />
@@ -18082,7 +17949,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.NavigationPoint">
             <summary>Settings for a navigation point on the App navigation bar.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.NavigationPoint.Info">
             <summary>Info section for navigation point</summary>
@@ -18098,7 +17964,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.NavigationPointInfo">
             <summary>Info section for navigation point</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.NavigationPointInfo.Id">
             <summary>Id of object.</summary>
@@ -18750,7 +18615,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.MasterObjectObjectView">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.MasterObjectObjectView.Title">
             <summary>Name of the master object.</summary>
@@ -18766,7 +18630,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.MeasureObjectView">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.MeasureObjectView.Title">
             <summary>Title of the master measure.</summary>
@@ -19088,7 +18951,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.BookmarkListLayout">
             <summary>Properties for defining list of bookmarks.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.BookmarkListLayout.BookmarkList">
             <summary />
@@ -19125,7 +18987,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.VariableListLayout">
             <summary>Properties for defining list of variables.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.VariableListLayout.VariableList">
             <summary />
@@ -19223,6 +19084,9 @@
         <member name="P:Qlik.Sense.Client.IGenericObjectList.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IGenericObjectList.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IAppPropertiesObject">
             <summary />
         </member>
@@ -19265,6 +19129,9 @@
         <member name="P:Qlik.Sense.Client.IAppPropertiesObject.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IAppPropertiesObject.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IUndoInfo">
             <summary />
         </member>
@@ -19291,6 +19158,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.IUndoInfo.RedoCount">
             <summary>Reference to property Layout.UndoInfo.RedoCount</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.IUndoInfo.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.IBookmark">
             <summary />
@@ -19319,6 +19189,9 @@
         <member name="P:Qlik.Sense.Client.IBookmark.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IBookmark.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IVariable">
             <summary />
         </member>
@@ -19337,6 +19210,9 @@
         <member name="P:Qlik.Sense.Client.IVariable.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IVariable.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IFieldList">
             <summary />
         </member>
@@ -19345,6 +19221,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.IFieldList.Items">
             <summary>Reference to property Layout.FieldList.Items</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.IFieldList.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.IDimension">
             <summary />
@@ -19364,6 +19243,9 @@
         <member name="P:Qlik.Sense.Client.IDimension.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IDimension.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IMeasure">
             <summary />
         </member>
@@ -19382,6 +19264,9 @@
         <member name="P:Qlik.Sense.Client.IMeasure.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IMeasure.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.ISheetList">
             <summary />
         </member>
@@ -19390,6 +19275,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.ISheetList.Items">
             <summary>Reference to property Layout.AppObjectList.Items</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.ISheetList.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.IBookmarkList">
             <summary />
@@ -19400,6 +19288,9 @@
         <member name="P:Qlik.Sense.Client.IBookmarkList.Items">
             <summary>Reference to property Layout.BookmarkList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IBookmarkList.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IMasterObjectList">
             <summary />
         </member>
@@ -19408,6 +19299,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.IMasterObjectList.Items">
             <summary>Reference to property Layout.AppObjectList.Items</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.IMasterObjectList.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.IMeasureList">
             <summary />
@@ -19418,6 +19312,9 @@
         <member name="P:Qlik.Sense.Client.IMeasureList.Items">
             <summary>Reference to property Layout.MeasureList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IMeasureList.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IVariableList">
             <summary />
         </member>
@@ -19427,6 +19324,9 @@
         <member name="P:Qlik.Sense.Client.IVariableList.Items">
             <summary>Reference to property Layout.VariableList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.IVariableList.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.IDimensionList">
             <summary />
         </member>
@@ -19435,6 +19335,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.IDimensionList.Items">
             <summary>Reference to property Layout.DimensionList.Items</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.IDimensionList.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.IMasterObject">
             <summary />
@@ -19450,6 +19353,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.IMasterObject.DynamicStructure">
             <summary>Reference to property Layout.LayoutExclude</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.IMasterObject.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.ISheetCellPosition">
             <summary />
@@ -19507,7 +19413,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IBookmarkListProperties">
             <summary>Properties for defining list of bookmarks.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IBookmarkListProperties.BookmarkListDef">
             <summary />
@@ -19556,7 +19461,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IMasterObjectObjectViewDef">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IMasterObjectObjectViewDef.Title">
             <summary>Name of the master object.</summary>
@@ -19584,7 +19488,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IMeasureObjectViewDef">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IMeasureObjectViewDef.Title">
             <summary>Title of the master measure.</summary>
@@ -19600,7 +19503,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IMetaAttributes">
             <summary>The metadata object used by all app objects</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IMetaAttributes.Title">
             <summary />
@@ -19616,7 +19518,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IMetaAttributesDef">
             <summary>The metadata object used by all app objects</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IMetaAttributesDef.Title">
             <summary>Title for the app object</summary>
@@ -19683,7 +19584,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IVariableListProperties">
             <summary>Properties for defining list of variables.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IVariableListProperties.VariableListDef">
             <summary />
@@ -19741,7 +19641,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.INavigationPoint">
             <summary>Settings for a navigation point on the App navigation bar.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.INavigationPoint.Info">
             <summary>Info section for navigation point</summary>
@@ -19754,7 +19653,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.INavigationPointInfo">
             <summary>Info section for navigation point</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.INavigationPointInfo.Id">
             <summary>Id of object.</summary>
@@ -19881,7 +19779,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IMasterObjectObjectView">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IMasterObjectObjectView.Title">
             <summary>Name of the master object.</summary>
@@ -19894,7 +19791,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IMeasureObjectView">
             <summary>Data.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IMeasureObjectView.Title">
             <summary>Title of the master measure.</summary>
@@ -20105,7 +20001,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IBookmarkListLayout">
             <summary>Properties for defining list of bookmarks.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IBookmarkListLayout.BookmarkList">
             <summary />
@@ -20124,7 +20019,6 @@
         </member>
         <member name="T:Qlik.Sense.Client.IVariableListLayout">
             <summary>Properties for defining list of variables.</summary>
-            <summary />
         </member>
         <member name="P:Qlik.Sense.Client.IVariableListLayout.VariableList">
             <summary />
@@ -20711,6 +20605,9 @@
         <member name="P:Qlik.Sense.Client.Snapshot.ISnapshotList.Items">
             <summary>Reference to property Layout.BookmarkList.Items</summary>
         </member>
+        <member name="P:Qlik.Sense.Client.Snapshot.ISnapshotList.Layout">
+            <summary />
+        </member>
         <member name="T:Qlik.Sense.Client.Snapshot.ISnapshot">
             <summary />
         </member>
@@ -20749,6 +20646,9 @@
         </member>
         <member name="P:Qlik.Sense.Client.Snapshot.ISnapshot.QlikConnection">
             <summary>Reference to property Layout.Session</summary>
+        </member>
+        <member name="P:Qlik.Sense.Client.Snapshot.ISnapshot.Layout">
+            <summary />
         </member>
         <member name="T:Qlik.Sense.Client.Snapshot.ISnapshotListProperties">
             <summary />

@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseLibrary", "Base\BaseLibrary\BaseLibrary.csproj", "{F92107C2-AC7E-45E2-A88F-EBB789D7F576}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "tx_r19", "http://localhost:1800", "{891A0D96-D6EF-445B-B8DC-BB9641BC706A}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/Front-Ends/Models/tx_r19", KUTKAAAA"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		ProjectReferences = "{f92107c2-ac7e-45e2-a88f-ebb789d7f576}|escWebBase.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1800"
+		Debug.AspNetCompiler.PhysicalPath = "tx_r19\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1800\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1800"
+		Release.AspNetCompiler.PhysicalPath = "tx_r19\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1800\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "tx_r19\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Base\\BaseLibrary\\BaseLibrary.csproj
+		SccProjectName1 = \u0022$/Front-Ends/Models/Base/BaseLibrary\u0022,\u0020HOKEAAAA
+		SccLocalPath1 = Base\\BaseLibrary
+		SccWebProject2 = true
+		SccProjectUniqueName2 = http://localhost:1800
+		SccProjectName2 = \u0022$/Front-Ends/Models/tx_r19\u0022,\u0020KUTKAAAA
+		SccLocalPath2 = C:\\Projects\\Front-Ends\\Models\\tx_r19
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ModelPresentation|Any CPU = ModelPresentation|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F92107C2-AC7E-45E2-A88F-EBB789D7F576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92107C2-AC7E-45E2-A88F-EBB789D7F576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92107C2-AC7E-45E2-A88F-EBB789D7F576}.ModelPresentation|Any CPU.ActiveCfg = ModelPresentation|Any CPU
+		{F92107C2-AC7E-45E2-A88F-EBB789D7F576}.ModelPresentation|Any CPU.Build.0 = ModelPresentation|Any CPU
+		{F92107C2-AC7E-45E2-A88F-EBB789D7F576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92107C2-AC7E-45E2-A88F-EBB789D7F576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891A0D96-D6EF-445B-B8DC-BB9641BC706A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891A0D96-D6EF-445B-B8DC-BB9641BC706A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891A0D96-D6EF-445B-B8DC-BB9641BC706A}.ModelPresentation|Any CPU.ActiveCfg = Debug|Any CPU
+		{891A0D96-D6EF-445B-B8DC-BB9641BC706A}.ModelPresentation|Any CPU.Build.0 = Debug|Any CPU
+		{891A0D96-D6EF-445B-B8DC-BB9641BC706A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{891A0D96-D6EF-445B-B8DC-BB9641BC706A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

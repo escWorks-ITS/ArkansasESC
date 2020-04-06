@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageDummy.master.cs" Inherits="MasterPageDummy" %>
+
+<%@ Register TagPrefix="ucontrol" TagName="FileList" Src="~/lib/Controls/DisplayFiles.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>escWorks</title>
+    <link type="text/css" rel="stylesheet" href="~/lib/css/pageTitle.css" />
+    <link type="text/css" rel="stylesheet" href="~/lib/css/menu.css" />
+    <link type="text/css" rel="stylesheet" href="~/lib/css/calendar.css" />
+    <link type="text/css" rel="stylesheet" href="~/lib/css/shoppingCart.css" />
+    <style>
+        .link {
+	color: blue;
+    font-size:8pt;
+} 
+    </style>
+</head>
+<body style="width: 97%; font-family:Arial, Helvetica, sans-serif">
+    <form runat="server" class="mainBody">
+    <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
+    </asp:ScriptManager>
+    <table align="center">
+        <tr valign="top">
+            <td>
+                <table style="margin-left: auto; width: 95%; margin-right: auto; margin-top: 20px;
+                    border-collapse: collapse; border-right: black 1px solid; border-top: black 1px solid;
+                    border-left: black 1px solid; border-bottom: black 1px solid;table-layout: fixed" >
+                    <tr style="vertical-align: top;">
+                        <td style="width: 100%; height: 100%; vertical-align: top; padding-right: 10px;">
+                            <div class="mainBody" style="background-color: #ffffff; background-repeat: no-repeat;">
+                                <escWorks:PageTitle runat="server" ID="pageTitle" BackColor="#FFFFFF" />
+                                <br />
+                                <asp:ContentPlaceHolder runat="server" ID="mainBody" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <asp:Label runat="server" ID="lblStagingServer" CssClass="error" Text="" />
+                <br />
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
+

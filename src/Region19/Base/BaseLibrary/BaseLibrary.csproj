@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F92107C2-AC7E-45E2-A88F-EBB789D7F576}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>region4</RootNamespace>
+    <AssemblyName>escWebBase</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>escWebLibrary.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ModelPresentation|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ModelPresentation\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10618.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\..\..\..\Program Files (x86)\Microsoft Information Security\AntiXSS Library v4.2\NET35\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="AuthorizeNET, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AuthorizeNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Csla, Version=3.8.2.0, Culture=neutral, PublicKeyToken=93be5fdc093e4c30, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.LearningComponents, Version=1.3.0.2, Culture=neutral, PublicKeyToken=24e5ae139825747e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Microsoft.LearningComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.LearningComponents.Compression, Version=1.3.0.2, Culture=neutral, PublicKeyToken=24e5ae139825747e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Microsoft.LearningComponents.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.LearningComponents.Storage, Version=1.3.0.2, Culture=neutral, PublicKeyToken=24e5ae139825747e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Microsoft.LearningComponents.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Payflow_dotNet, Version=4.2.2.0, Culture=neutral, PublicKeyToken=14aa1e8d77f2a97c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Payflow_dotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.Design, Version=2015.2.623.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Telerik.Web.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2015.2.623.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2015.2.623.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ReferenceDlls\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObject\Assistance.cs" />
+    <Compile Include="BusinessObject\AssistanceDisplay.cs" />
+    <Compile Include="BusinessObject\Assistances.cs" />
+    <Compile Include="BusinessObject\AssistancesDisplay.cs" />
+    <Compile Include="BusinessObject\Audience.cs" />
+    <Compile Include="BusinessObject\Audiences.cs" />
+    <Compile Include="BusinessObject\Budget.cs" />
+    <Compile Include="BusinessObject\BudgetInfo.cs" />
+    <Compile Include="BusinessObject\Budgets.cs" />
+    <Compile Include="BusinessObject\ConfigurationInfo.cs" />
+    <Compile Include="BusinessObject\ConfigurationInfoList.cs" />
+    <Compile Include="BusinessObject\Database.cs" />
+    <Compile Include="BusinessObject\IcsFileBuilder.cs" />
+    <Compile Include="BusinessObject\Organization.cs" />
+    <Compile Include="BusinessObject\Organizations.cs" />
+    <Compile Include="BusinessObject\Region13User.cs" />
+    <Compile Include="BusinessObject\Room.cs" />
+    <Compile Include="BusinessObject\Rooms.cs" />
+    <Compile Include="BusinessObject\ScheduleInfo.cs" />
+    <Compile Include="BusinessObject\ScheduleInfoList.cs" />
+    <Compile Include="BusinessObject\SendEmail.cs" />
+    <Compile Include="BusinessObject\SessionInfo.cs" />
+    <Compile Include="BusinessObject\Site.cs" />
+    <Compile Include="BusinessObject\Sites.cs" />
+    <Compile Include="BusinessObject\User.cs" />
+    <Compile Include="BusinessObject\WaitingList.cs" />
+    <Compile Include="BusinessObject\WaitingListItem.cs" />
+    <Compile Include="Common\connectionService.cs" />
+    <Compile Include="Common\DataConnection.cs" />
+    <Compile Include="Common\GlobalVariables.cs" />
+    <Compile Include="escWeb\BasePages\Admin\Attendee\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\conference_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\multivenue_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\groupregistration_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\online_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\substitution_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\waitinglistremove_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\error\error_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\FileDisplay_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\proposal\proposals_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\registration\confirmation_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\registration\paymentvoucher_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\systemconsole_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\HttpsOnlyModule.cs" />
+    <Compile Include="escWeb\MasterPageNoServer.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\NamesProvider.cs" />
+    <Compile Include="escWeb\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\about\contact_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\browse_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\calendar_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\event_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\register\cart_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\register\checkout_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\register\complete_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\register\error_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\result_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\search_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\session_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\catalog\waitinglist_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\evalManager\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\evalManager\session_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\Instructor\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\Instructor\email_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\Instructor\instructor_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\Lib\collaboration\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\Security\signin_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\Security\signout_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Account\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Account\email_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Account\password_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Account\signup_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Evaluation\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Evaluation\eval_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\Evaluation\form_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\mycalendar\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\registration\cancel_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\registration\change_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\registration\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\subscriptions\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\transcripts\default_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\transcripts\edit_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\BasePages\ShoeBox\transcripts\personal_aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\global_aspx.cs" />
+    <Compile Include="escWeb\MasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWeb\PageMenu.cs" />
+    <Compile Include="escWeb\SiteObjects\baseObjectProvider.cs" />
+    <Compile Include="escWeb\SiteObjects\Menu.cs">
+    </Compile>
+    <Compile Include="escWeb\SiteObjects\PageRequestBuffer.cs" />
+    <Compile Include="escWeb\SiteObjects\PageTitle.cs" />
+    <Compile Include="escWeb\SiteObjects\ResourceUrl.cs" />
+    <Compile Include="escWeb\WCFServices\ConfirmNotification.svc.cs" />
+    <Compile Include="escWeb\WebServices\notification_asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="escWeb\WebServices\sitestatus_asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="escWorks\admin\datasource\2.0\DatasourceInfo.cs" />
+    <Compile Include="escWorks\admin\datasource\2.0\IDatasourceConsole.cs" />
+    <Compile Include="escWorks\bin\Components\Datasource.cs" />
+    <Compile Include="escWorks\bin\Configuration\CommonConfig.cs" />
+    <Compile Include="escWorks\bin\Configuration\Configuration.cs" />
+    <Compile Include="escWorks\bin\Configuration\Datasources.cs" />
+    <Compile Include="escWorks\bin\Configuration\Engines.cs" />
+    <Compile Include="escWorks\bin\Configuration\Module.cs" />
+    <Compile Include="escWorks\bin\Configuration\Permissions.cs" />
+    <Compile Include="escWorks\bin\Configuration\Sessions.cs" />
+    <Compile Include="escWorks\bin\GenericWebServiceProxy.cs" />
+    <Compile Include="escWorks\bin\Interfaces\IAdminModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\home\MainMenu.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\bin\Interfaces\IConfigFile.cs" />
+    <Compile Include="escWorks\bin\Interfaces\IEngine.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\bin\Interfaces\ILockingConfigFile.cs" />
+    <Compile Include="escWorks\reports\admin\ReportSchemaInfo.cs" />
+    <Compile Include="escWorks\reports\ReportInfo.cs" />
+    <Compile Include="escWorks\Strings.cs" />
+    <Compile Include="escWorks\system\engines\attendee\PaymentGrid.cs" />
+    <Compile Include="escWorks\system\engines\budget\1.0\AllocationGrid.cs" />
+    <Compile Include="escWorks\system\engines\budget\1.0\AllocationType.cs" />
+    <Compile Include="escWorks\system\engines\budget\1.0\Budget.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\BudgetControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\CheckControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\DropDown.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\GrayedListBox.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\IEngine.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexForm3\components\IFormControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\IModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexForm3\components\LabelControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\ListBoxControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\ListControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\MultiControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\MultiControl_DateBox.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\MultiControl_TextBox.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\MultiControl_TextBox_New.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\RadioButtonList.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\SListBoxControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\SListControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\TextControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\TextEditorControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\components\UploadControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\FileContainer.cs" />
+    <Compile Include="escWorks\system\engines\flexForm3\FileUploadData.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\BudgetControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\CheckControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\DropDown.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\GrayedListBox.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\IEngine.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexForm\components\IFormControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\IModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexForm\components\LabelControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\ListBoxControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\ListControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\MultiControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\MultiControl_DateBox.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\MultiControl_TextBox.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\MultiControl_TextBox_New.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\SListBoxControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\SListControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\TextControl.cs" />
+    <Compile Include="escWorks\system\engines\flexForm\components\TextEditorControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexGrid3.1\components\Component.cs" />
+    <Compile Include="escWorks\system\engines\flexGrid3.1\components\Enumeration.cs" />
+    <Compile Include="escWorks\system\engines\flexGrid3.1\components\IModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexGrid3\Grid.cs" />
+    <Compile Include="escWorks\system\engines\flexGrid3\IModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\flexGrid\components\Grid.cs" />
+    <Compile Include="escWorks\bin\Tools\SqlTools.cs" />
+    <Compile Include="escWorks\bin\Tools\Tools.cs" />
+    <Compile Include="escWorks\bin\Tools\XmlTools.cs" />
+    <Compile Include="escWorks\system\engines\flexGrid\components\IModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\scheduleGrid\components\view_aspx_cs_SchedulerGridView.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="escWorks\system\engines\security\default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\BasicWebPlayerBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\FramesetResources.Designer.cs">
+      <DependentUpon>FramesetResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\ChangeActivity.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\ClearContent.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\Content.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\Frameset.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\Hidden.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\MainFrames.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\NavClosed.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\NavOpen.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\Support\ChangeActivityHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\ContentHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\Encoding.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\FramesetHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\FramesetPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\Frameset\Support\FramesetQueryParam.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\FrmPageHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\HiddenHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\Log.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\PostableFrameHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\Rte1p2DataModelConverter.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\Rte2004DataModelConverter.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\RteDataModelConverter.cs" />
+    <Compile Include="LearningAPI\Frameset\Support\TocHelper.cs" />
+    <Compile Include="LearningAPI\Frameset\TOC.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\HttpModule.cs" />
+    <Compile Include="LearningAPI\LStoreHelper.cs" />
+    <Compile Include="LearningAPI\PageHelper.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LearningAPI\PortalUsers.cs" />
+    <Compile Include="LearningAPI\Schema.cs" />
+    <Compile Include="ObjectModel\ClockHourPurchase.cs" />
+    <Compile Include="ObjectModel\Collections\EventCollection.cs" />
+    <Compile Include="ObjectModel\Collections\SessionCollection.cs" />
+    <Compile Include="ObjectModel\ConferenceRegistration.cs" />
+    <Compile Include="escWorks\ObjectModel\IPayment.cs" />
+    <Compile Include="ObjectModel\GroupDiscount.cs" />
+    <Compile Include="ObjectModel\GroupRegistration.cs" />
+    <Compile Include="ObjectModel\Interfaces\ITranscriptItem.cs" />
+    <Compile Include="escWorks\ObjectModel\LocationData.cs" />
+    <Compile Include="ObjectModel\Object\Event\Conference.cs" />
+    <Compile Include="ObjectModel\Object\Event\MultiVenue.cs" />
+    <Compile Include="ObjectModel\Object\Loader\DatabaseHelper.cs" />
+    <Compile Include="ObjectModel\Object\SendEmail.cs" />
+    <Compile Include="ObjectModel\Object\Session\AttendeeInfo.cs">
+    </Compile>
+    <Compile Include="ObjectModel\Object\Session\HistoricalDataList.cs" />
+    <Compile Include="ObjectModel\Object\Session\HistoricalData.cs" />
+    <Compile Include="ObjectModel\Object\Session\SessionInfoList.cs" />
+    <Compile Include="ObjectModel\Object\Session\AttendeeInfoList.cs" />
+    <Compile Include="ObjectModel\Object\Session\ScheduleInfo.cs" />
+    <Compile Include="ObjectModel\Object\Session\SessionAttendee.cs" />
+    <Compile Include="ObjectModel\Object\Session\SessionAttendeeList.cs" />
+    <Compile Include="ObjectModel\Object\Session\SessionBase.cs" />
+    <Compile Include="ObjectModel\Object\Session\SessionInfo.cs" />
+    <Compile Include="ObjectModel\Object\Session\WaitingList.cs" />
+    <Compile Include="escWorks\ObjectModel\RoomSetup.cs" />
+    <Compile Include="ObjectModel\ScheduleHelper.cs" />
+    <Compile Include="ObjectModel\sessionRegistration.cs" />
+    <Compile Include="escWeb\SiteObjects\ShoppingCart.cs" />
+    <Compile Include="ObjectModel\TranscriptItem.cs" />
+    <Compile Include="escWeb\WebServices\locationservices_asmx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ObjectModel\Commerce\PaymentMethods.cs" />
+    <Compile Include="ObjectModel\CreditItem.cs" />
+    <Compile Include="ObjectModel\FiscalYear.cs" />
+    <Compile Include="ObjectModel\GroupMemberFee.cs" />
+    <Compile Include="ObjectModel\Item.cs" />
+    <Compile Include="ObjectModel\Interfaces\BaseInterface.cs" />
+    <Compile Include="ObjectModel\Interfaces\CalendarItem.cs" />
+    <Compile Include="ObjectModel\Interfaces\CartItem.cs" />
+    <Compile Include="escWeb\SiteVariables.cs" />
+    <Compile Include="ObjectModel\modelConstants.cs" />
+    <Compile Include="ObjectModel\ObjectProvider.cs" />
+    <Compile Include="ObjectModel\Object\HashCodes.cs" />
+    <Compile Include="ObjectModel\Object\Location\Location.cs" />
+    <Compile Include="ObjectModel\Object\Location\Organization.cs" />
+    <Compile Include="ObjectModel\Object\Location\Room.cs" />
+    <Compile Include="ObjectModel\Object\Location\Site.cs" />
+    <Compile Include="ObjectModel\Object\Object.cs" />
+    <Compile Include="ObjectModel\Object\Event\Event.cs" />
+    <Compile Include="ObjectModel\Object\Session\Attendee.cs" />
+    <Compile Include="ObjectModel\Object\Session\ScheduleItem.cs" />
+    <Compile Include="ObjectModel\Object\Session\Session.cs" />
+    <Compile Include="ObjectModel\PaymentItem.cs" />
+    <Compile Include="ObjectModel\PromoCode.cs" />
+    <Compile Include="ObjectModel\User\Subscriptions.cs" />
+    <Compile Include="ObjectModel\User\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Utilities\baseStoredProcedures.cs" />
+    <Compile Include="Utilities\Collections\TemplatedCollection.cs" />
+    <Compile Include="Utilities\ConnectionService.cs" />
+    <Compile Include="Utilities\Email\Email.cs" />
+    <Compile Include="Utilities\ErrorReporter.cs" />
+    <Compile Include="Utilities\Financial\CancelRegistration.cs" />
+    <Compile Include="Utilities\Financial\CreditCardProcessor.cs" />
+    <Compile Include="Utilities\Financial\ElectronicCheckProcessor.cs" />
+    <Compile Include="Utilities\Financial\ICreditCardTransaction.cs" />
+    <Compile Include="Utilities\JWT.cs" />
+    <Compile Include="Utilities\ReCaptchaClass.cs" />
+    <Compile Include="Utilities\Report\CalendarProvider.cs" />
+    <Compile Include="Utilities\Report\CommonReports.cs" />
+    <Compile Include="Utilities\Report\Report.cs" />
+    <Compile Include="Utilities\RSS\RSSSessionsBase.cs" />
+    <Compile Include="Utilities\RSS\RSSFeed.cs" />
+    <Compile Include="Utilities\Security\Membership.cs" />
+    <Compile Include="Utilities\Security\Roles.cs" />
+    <Compile Include="Web References\helpdesk\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\reportService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\calendar.cs" />
+    <Compile Include="WebControls\cartDisplay.cs" />
+    <Compile Include="WebControls\cartDisplaywithoutAmount.cs" />
+    <Compile Include="WebControls\ConferenceSessions.cs" />
+    <Compile Include="WebControls\SevenDayOutlook.cs" />
+    <Compile Include="WebControls\MultiVenueSessions.cs" />
+    <Compile Include="WebControls\Menu.cs" />
+    <Compile Include="WebControls\evaluation.cs" />
+    <Compile Include="WebControls\RegistrationHistory.cs" />
+    <Compile Include="WebControls\sessionSummary.cs" />
+    <Compile Include="WebControls\SimpleSearch.cs" />
+    <Compile Include="WebControls\UpcomingEvents.cs" />
+    <Compile Include="WebControls\WhoIsOnline\UserInfo.cs" />
+    <Compile Include="WebControls\WhoIsOnline\UserInfoCollection.cs" />
+    <Compile Include="WebControls\WhoIsOnline\WhoIsLooking.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObject\ItsBusinessObject.pfx" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://reports.escworks.net/reports/services/crserver.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\reportService\</RelPath>
+      <UpdateFromURL>http://reports.escworks.net/reports/services/crserver.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BaseLibrary_reportService_crServer</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.escweb.net/services/helpdesk/DataService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\helpdesk\</RelPath>
+      <UpdateFromURL>http://www.escweb.net/services/helpdesk/DataService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BaseLibrary_helpdesk_DataService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReferenceDlls\AntiXSSLibrary.dll" />
+    <Content Include="ReferenceDlls\AntiXSSLibrary.xml" />
+    <Content Include="Utilities\jquery\jquery-1.11.0.min.js" />
+    <EmbeddedResource Include="escWeb\BasePages\evalManager\evalManager.js" />
+    <EmbeddedResource Include="escWeb\BasePages\ShoeBox\subscriptions\Subscriptions.js" />
+    <EmbeddedResource Include="escWeb\Javascript\common.js" />
+    <Content Include="Known Issues.txt" />
+    <Content Include="ReferenceDlls\AjaxControlToolkit.dll" />
+    <Content Include="ReferenceDlls\AuthorizeNET.dll" />
+    <Content Include="ReferenceDlls\Csla.dll" />
+    <Content Include="ReferenceDlls\Microsoft.LearningComponents.Compression.dll" />
+    <Content Include="ReferenceDlls\Microsoft.LearningComponents.dll" />
+    <Content Include="ReferenceDlls\Microsoft.LearningComponents.Storage.dll" />
+    <Content Include="ReferenceDlls\Payflow_dotNet.dll" />
+    <Content Include="ReferenceDlls\Telerik.Web.UI.dll" />
+    <Content Include="ReferenceDlls\Telerik.Web.UI.Skins.dll" />
+    <Content Include="RevisionHistory.txt" />
+    <EmbeddedResource Include="LearningAPI\FramesetResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FramesetResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebControls\WhoIsOnline\WhoIsLooking.js" />
+    <None Include="escWebLibrary.snk" />
+    <None Include="objects.cd" />
+    <None Include="pages.cd" />
+    <None Include="Web References\reportService\crserver.disco" />
+    <None Include="Web References\helpdesk\DataService.disco" />
+    <None Include="Web References\helpdesk\DataService.wsdl" />
+    <None Include="Web References\helpdesk\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\reportService\crserver.wsdl" />
+    <None Include="Web References\reportService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="escWeb\BasePages\Support\" />
+    <Folder Include="ObjectModel\Object\Evaluation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
