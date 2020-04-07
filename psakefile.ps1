@@ -13,7 +13,7 @@ properties {
     $acceptanceTestAssembly = "escworks.AcceptanceTests.dll"
 	$projectConfig = $env:Configuration
     $version = $env:BuildVersion
-    $nunitPath = "$base_dir\tools\packages\NUnit.3.12.0\tools"
+    $nunitPath = "$source_dir\packages\NUnit.ConsoleRunner.3.11.1\tools"
     $nugetExe = Join-Path -Path $source_dir -ChildPath ".nuget\nuget.exe"
 
     $build_dir = "$base_dir\build"
