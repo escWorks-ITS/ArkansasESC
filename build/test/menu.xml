@@ -2,9 +2,9 @@
 <escWorksMenu id="1">
   <items>
     <item item_id="1" sort="1" name="Home" tooltip="Link: Home Page" href="default.aspx" target="_top" visible="True" />
-    <item item_id="2" sort="2" name="Search Types" tooltip="Search Types" href="" target="_top" visible="True">
+    <item item_id="2" sort="2" name="Search Options" tooltip="Link: View On-line Professional Development Catalog" href="" target="_top" visible="True">
       <items>
-        <item item_id="4" sort="89" name="Search by Keyword" tooltip="Link: Keyword Search Professional Development Catalog" href="search.aspx" target="_top" visible="True" />
+        <item item_id="4" sort="89" name="Search" tooltip="Link: Search Professional Development Catalog" href="search.aspx" target="_top" visible="True" />
         <!--<item item_id="5" sort="90" name="Search Sessions" tooltip="Link: Search Professional Development Catalog" href="catalog/search.aspx" target="_top" visible="True" />-->
         <!--<item item_id="11" sort="91" name="Browse Sessions" tooltip="Link: Browse Professional Development Catalog" href="catalog/browse.aspx" target="_top" visible="True" />-->
         <item item_id="12" sort="92" name="Calendar of Sessions" tooltip="Link: Calendar of Sessions" href="catalog/calendar.aspx" target="_top" visible="True" />
@@ -13,22 +13,25 @@
         <item item_id="19" sort="99" name="Session Detail" tooltip="--" href="catalog/session.aspx" target="_top" visible="False" />
         <!--<item item_id="34" sort="99" name="Online Sessions" tooltip="Link: Online Sessions" href="catalog/results.aspx?cmd=online" target="_top" visible="True" />-->
         <item item_id="111" sort="99" name="Conferences" tooltip="Link: Conferences" href="catalog/results.aspx?cmd=conference" target="_top" visible="True" />
+        <item item_id="112" sort="99" name="Search AESC Sessions" tooltip="Link: Search AESC Sessions" href="https://www.escweb.net/ar_esc/" target="_blank" visible="true" />
+        <item item_id="113" sort="99" name="Search ADE Sessions" tooltip="Link: Search ADE Sessions" href="https://www.escweb.net/ar_ade/" target="_blank" visible="true" />
       </items>
+    
     </item>
-    <item item_id="3" sort="3" name="User Account Information" tooltip="User Account Information" href="" target="_top" visible="True">
+    <item item_id="3" sort="3" name="My Account" tooltip="Link: My Account" href="" target="_top" visible="True">
       <items>
         <item item_id="14" sort="90" name="Professional Development Record" tooltip="Link: Professional Development Record" href="shoebox/transcripts/default.aspx" target="_top" visible="True">
           <items>
-            <item item_id="25" sort="99" name="Personal Record" tooltip="--" href="shoebox/transcripts/personal.aspx" target="_top" visible="False" />
+            <item item_id="25" sort="99" name="Personal Transcripts" tooltip="--" href="shoebox/transcripts/personal.aspx" target="_top" visible="False" />
           </items>
         </item>
-        <item item_id="15" sort="91" name="My Account" tooltip="Link: Manage your User Profile" href="shoebox/account/default.aspx" target="_top" visible="True">
+        <item item_id="15" sort="91" name="User Account" tooltip="Link: Manage your User Profile" href="shoebox/account/default.aspx" target="_top" visible="True">
           <items>
             <item item_id="20" sort="99" name="Manage Email" tooltip="--" href="shoebox/account/email.aspx" target="_top" visible="False" />
             <item item_id="21" sort="99" name="Manage Password" tooltip="--" href="shoebox/account/password.aspx" target="_top" visible="False" />
           </items>
         </item>
-        <item item_id="16" sort="92" name="Registration History/Certificates" tooltip="Link: Manage your Registration History" href="shoebox/registration/default.aspx" target="_top" visible="True">
+        <item item_id="16" sort="92" name="Registration/Certificate" tooltip="Link: Manage your registration history" href="shoebox/registration/default.aspx" target="_top" visible="True">
           <items>
             <item item_id="23" sort="99" name="Change Registration" tooltip="--" href="shoebox/registration/change.aspx" target="_top" visible="False" />
             <item item_id="24" sort="99" name="Cancel Registration" tooltip="--" href="shoebox/registration/cancel.aspx" target="_top" visible="False" />
@@ -43,7 +46,6 @@
         </item>
       </items>
     </item>
-    <item item_id="3" sort="4" name="Help &amp; How-To" tooltip="Link: Help &amp; How-To" href="help.aspx" target="_top" visible="True"/>
     <item item_id="26" sort="5" name="Instructor" tooltip="Link: Instructor Area" href="instructor/default.aspx" target="_top" visible="True">
       <roles>
         <role>Instructor</role>
@@ -55,25 +57,17 @@
         <role>evalAdmin</role>
       </roles>
     </item>
-    <item item_id="36" sort="8" name="Dashboard" tooltip="Link: Superintendent Dashboard" href="http://www.escweb.net/districtdashboard/?cid=tx_r19&amp;uid=|sid|" target="_blank" visible="True">
+
+    <item item_id="43" sort="11" name="Executive Dashboard" tooltip="Link: Executive Dashboard" href="Dashboard/SSOSignin.aspx" target="_blank" visible="True" secure="True">
       <roles>
-        <role>DashBoardSI</role>
-      </roles>
-    </item>
-    <item item_id="46" sort="99" name="Batch Invoicing" tooltip="Link: Batch Invoice" href="Barcode/PaymentID.aspx" target="_top" visible="True">
-      <roles>
-        <role>BatchInvoice</role>
-      </roles>
-    </item>
-    <item item_id="44" sort="99" name="Texas Dashboard" tooltip="Link: Texas Dashboard" href="Dashboard/SSOSignin.aspx" target="_blank" visible="True">
-      <roles>
-        <role>TexasDashboard</role>
-      </roles>
-    </item>
-    <item item_id="45" sort="99" name="Executive Dashboard" tooltip="Link: Executive Dashboard" href="Dashboard/ExecSSOSignin.aspx" target="_blank" visible="True">
-      <roles>
-        <role>ExecutiveDashboard</role>
+        <role>execdashboard</role>
       </roles>
     </item>
   </items>
+  <item item_id="36" sort="8" name="Dashboard" tooltip="Link: Superintendent Dashboard" href="http://www.escweb.net/districtdashboard/?cid=ar_esc&amp;uid=|sid|" target="_blank" visible="True">
+    <roles>
+      <role>DashBoardSI</role>
+    </roles>
+  </item>
+
 </escWorksMenu>
