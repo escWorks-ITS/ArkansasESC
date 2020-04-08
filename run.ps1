@@ -88,4 +88,4 @@ $parameters.GetEnumerator() | ForEach-Object {
 
 Invoke-Psake -buildFile ".\psakefile.ps1" -taskList $taskList -parameters $parameters -Verbose:$VerbosePreference
 
-if ($psake.build_success) { } else {pause;}
+if ($psake.build_success) {pause; } else {pause;}
