@@ -4,7 +4,7 @@ Set-StrictMode -Version latest
 Framework "4.6"
 
 properties {
-    $projectName = "tx_r19"
+    $projectName = "ar_esc"
     $base_dir = resolve-path .\
     $source_dir = "$base_dir\src"
     $project_dir = "$base_dir\src\$projectName"

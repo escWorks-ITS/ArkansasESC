@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<customers>
+
+  <customerID id="ar_ade">
+    <page color="#FFFFFF">
+      <header background-color="#ffffff" logo="lib/img/ar_ade/logo.png" logoLink="http://www.arkansased.gov/" logoTitle="Arkansas Department Of Education" space-color="#ffffff" height="158px" width="1032px" ></header>
+      <mainBody backgroundColor="#FFFFFF" pageTitleBackgroundColor="#FFFFFF" contentBackgroundColor="#FFFFFF" borderStyle="solid" borderWidth="0px" borderColor="#ffffff">
+        <menu backgroundColor="#4785c8" borderStyle="solid" borderColor="#4785c8" borderWidth="1px" menuHeight="540px">
+          <quickLink fontColor="#ffffff"></quickLink>
+          <quickLinkLogo linklogo = "lib/img/ar_ade/QuickLinks.jpg"></quickLinkLogo>
+          <pdfdownload fontColor="black" label="PDF Downloads"></pdfdownload>
+        </menu>
+        <slogan backgroundColor="#950b2c" fontColor="#ffffff" src="lib/img/nd_nesc/profdev.jpg" go="~/lib/img/ar_ade/buttons/gobutton.png" profDevBackColor="#0505a8" textLine1="Welcome to Professional Development Online Registration" textLine2=""/>
+        <flash backgroundColor="#dfdfdf" swf="pdflash.swf" html="advertisement.html"></flash>
+        <upcoming backgroundColor="#4785c8"></upcoming>
+        <contactus fontColor="#4785c8"></contactus>
+        <search searchSkin ="Outlook"></search>
+      </mainBody>
+      <footer backgroundColor="#244a74" fontColor="#ffffff" text="Four Capitol Mall Little Rock, AR 72201| phone 701-662-7650" />
+      <cssRoot>
+        <csses>
+          <css name="master" path="~/lib/css/ar_ade/masterStyle.css" />
+          <css name="pageTitle" path="~/lib/css/ar_ade/pageTitle.css" />
+          <css name="menu" path="~/lib/css/ar_ade/menu.css" />
+          <css name="calendar" path="~/lib/css/ar_ade/calendar.css" />
+          <css name="shoppingCart" path="~/lib/css/ar_ade/shoppingCart.css" />
+        </csses>
+      </cssRoot>
+    </page>
+  </customerID>
+  
+  
+
+  <customerID id="ar_esc">
+    <page color="#FFFFFF">
+      <header background-color="#496c93" logo="lib/img/ar_esc/logo.jpg" logoLink="https://www.escweb.net/ar_esc/" logoTitle="Arkansas Education Service Cooperatives" space-color="#ffffff"></header>
+      <mainBody backgroundColor="#FFFFFF" pageTitleBackgroundColor="#FFFFFF" contentBackgroundColor="#FFFFFF" borderStyle="solid" borderWidth="5px" borderColor="#c91e26">
+        <menu backgroundColor="#003399" borderStyle="solid" borderColor="#003399" borderWidth="1px" menuHeight="340px">
+          <quickLink fontColor="#f7e188"></quickLink>
+          <quickLinkLogo linklogo = "lib/img/ar_esc/QuickLinks.jpg"></quickLinkLogo>
+          <pdfdownload fontColor="black"  label="PDF Downloads"></pdfdownload>
+        </menu>
+        <slogan backgroundColor="#003399" fontColor="#ffffff" src="" go="~/lib/img/ar_esc/buttons/gobutton.png" profDevBackColor="#ffffff" textLine1="Welcome to Professional Development Online Registration" textLine2=""/>
+        <flash backgroundColor="#e5e5e5" swf="pdflash.swf" html="advertisement.html"></flash>
+        <upcoming backgroundColor="#e5e5e5"></upcoming>
+        <contactus fontColor="#c80032"></contactus>
+        <search searchSkin ="Outlook"></search>
+      </mainBody>
+      <!--<footer backgroundColor="#003965" fontColor="#FFFFFF" text="500 University Avenue West, Minot ND 58707" />-->
+      <footer backgroundColor="#003965" fontColor="#FFFFFF" text="Arkansas Education Service Cooperatives" />
+      <cssRoot>
+        <csses>
+          <css name="master" path="~/lib/css/ar_esc/masterStyle.css" />
+          <css name="pageTitle" path="~/lib/css/ar_esc/pageTitle.css" />
+          <css name="menu" path="~/lib/css/ar_esc/menu.css" />
+          <css name="calendar" path="~/lib/css/ar_esc/calendar.css" />
+          <css name="shoppingCart" path="~/lib/css/ar_esc/shoppingCart.css" />
+        </csses>
+      </cssRoot>
+    </page>
+  </customerID>
+</customers>
