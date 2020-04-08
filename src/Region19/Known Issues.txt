@@ -1,2 +1,0 @@
-1.  Payments could be duplicated if an attendee registers, cancels, and registers again.
-2. After creating an account the user will not be returned to their original site.
