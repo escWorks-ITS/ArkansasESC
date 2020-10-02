@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-04-08 18:54:23Z" end-time="2020-04-08 18:54:24Z" duration="0.988362">
+<test-run id="0" runstate="Runnable" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="4" engine-version="3.11.1.0" clr-version="4.0.30319.42000" start-time="2020-04-21 19:26:59Z" end-time="2020-04-21 19:27:02Z" duration="2.773971">
   <command-line><![CDATA["C:\Repos\ArkansasESC\src\packages\NUnit.ConsoleRunner.3.11.1\tools\nunit3-console.exe" C:\Repos\ArkansasESC\build\test\IntegrationTests.dll --workers=1 --noheader --result=C:\Repos\ArkansasESC\build\IntegrationTestAssembly.xml;format=nunit3]]></command-line>
-  <test-suite type="Assembly" id="0-1005" name="IntegrationTests.dll" fullname="C:\Repos\ArkansasESC\build\test\IntegrationTests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.071164" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
-    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17763.0" platform="Win32NT" cwd="C:\Repos\ArkansasESC" machine-name="BKIGOBADI-10L" user="ben.kigobadi" user-domain="REGIONIV" culture="en-US" uiculture="en-US" os-architecture="x64" />
+  <test-suite type="Assembly" id="0-1005" name="IntegrationTests.dll" fullname="C:\Repos\ArkansasESC\build\test\IntegrationTests.dll" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.163243" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
+    <environment framework-version="3.12.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Repos\ArkansasESC" machine-name="BCHAN-10L" user="bernie.chan" user-domain="REGIONIV" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
       <setting name="WorkDirectory" value="C:\Repos\ArkansasESC" />
@@ -14,15 +14,15 @@
       <setting name="RuntimeFramework" value="net-4.0" />
     </settings>
     <properties>
-      <property name="_PID" value="21888" />
+      <property name="_PID" value="22036" />
       <property name="_APPDOMAIN" value="domain-" />
     </properties>
-    <test-suite type="TestSuite" id="0-1006" name="UnitTests" fullname="UnitTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.044796" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
-      <test-suite type="TestFixture" id="0-1000" name="UnitTests" fullname="UnitTests.UnitTests" classname="UnitTests.UnitTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.039123" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
-        <test-case id="0-1003" name="UnitTestAuthorizePayment" fullname="UnitTests.UnitTests.UnitTestAuthorizePayment" methodname="UnitTestAuthorizePayment" classname="UnitTests.UnitTests" runstate="Runnable" seed="44923539" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.021950" asserts="1" />
-        <test-case id="0-1001" name="UnitTestHappyPath" fullname="UnitTests.UnitTests.UnitTestHappyPath" methodname="UnitTestHappyPath" classname="UnitTests.UnitTests" runstate="Runnable" seed="1752557290" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.000424" asserts="1" />
-        <test-case id="0-1002" name="UnitTestSadPath" fullname="UnitTests.UnitTests.UnitTestSadPath" methodname="UnitTestSadPath" classname="UnitTests.UnitTests" runstate="Runnable" seed="199850189" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.001558" asserts="1" />
-        <test-case id="0-1004" name="UnitTestValidatePOByDistrict" fullname="UnitTests.UnitTests.UnitTestValidatePOByDistrict" methodname="UnitTestValidatePOByDistrict" classname="UnitTests.UnitTests" runstate="Runnable" seed="1457822485" result="Passed" start-time="2020-04-08 18:54:24Z" end-time="2020-04-08 18:54:24Z" duration="0.000242" asserts="1" />
+    <test-suite type="TestSuite" id="0-1006" name="UnitTests" fullname="UnitTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.103673" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
+      <test-suite type="TestFixture" id="0-1000" name="UnitTests" fullname="UnitTests.UnitTests" classname="UnitTests.UnitTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.085514" total="4" passed="4" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="4">
+        <test-case id="0-1003" name="UnitTestAuthorizePayment" fullname="UnitTests.UnitTests.UnitTestAuthorizePayment" methodname="UnitTestAuthorizePayment" classname="UnitTests.UnitTests" runstate="Runnable" seed="1280704040" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.029681" asserts="1" />
+        <test-case id="0-1001" name="UnitTestHappyPath" fullname="UnitTests.UnitTests.UnitTestHappyPath" methodname="UnitTestHappyPath" classname="UnitTests.UnitTests" runstate="Runnable" seed="2015267459" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.000491" asserts="1" />
+        <test-case id="0-1002" name="UnitTestSadPath" fullname="UnitTests.UnitTests.UnitTestSadPath" methodname="UnitTestSadPath" classname="UnitTests.UnitTests" runstate="Runnable" seed="142199004" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.010978" asserts="1" />
+        <test-case id="0-1004" name="UnitTestValidatePOByDistrict" fullname="UnitTests.UnitTests.UnitTestValidatePOByDistrict" methodname="UnitTestValidatePOByDistrict" classname="UnitTests.UnitTests" runstate="Runnable" seed="1849050412" result="Passed" start-time="2020-04-21 19:27:02Z" end-time="2020-04-21 19:27:02Z" duration="0.000523" asserts="1" />
       </test-suite>
     </test-suite>
   </test-suite>

@@ -4840,6 +4840,66 @@
         <member name="M:Qlik.Engine.App.OnDestroySessionVariableByNameAsync(Qlik.Engine.Communication.IO.Response)">
             <summary /><param name="response" /><returns />
         </member>
+        <member name="M:Qlik.Engine.App.CreateBookmarkEx(Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.App.CreateBookmarkExAsync(Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.App.CreateBookmarkExAsync(Qlik.Engine.AsyncHandle,Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <param name="asyncHandle">Handle to asynchronous method request</param>
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.App.CreateBookmarkExAsync``1(Qlik.Engine.AsyncHandle,System.Func{Qlik.Engine.Communication.IO.Response,``0},Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <param name="asyncHandle">Handle to asynchronous method request</param>
+            <param name="onResult">Continuation function</param>
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.App.OnCreateBookmarkExAsync(Qlik.Engine.Communication.IO.Response)">
+            <summary /><param name="response" /><returns />
+        </member>
+        <member name="M:Qlik.Engine.App.SaveAs(System.String)">
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.App.SaveAsAsync(System.String)">
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.App.SaveAsAsync(Qlik.Engine.AsyncHandle,System.String)">
+             <param name="asyncHandle">Handle to asynchronous method request</param>
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.App.SaveAsAsync``1(Qlik.Engine.AsyncHandle,System.Func{Qlik.Engine.Communication.IO.Response,``0},System.String)">
+             <param name="asyncHandle">Handle to asynchronous method request</param>
+             <param name="onResult">Continuation function</param>
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.App.OnSaveAsAsync(Qlik.Engine.Communication.IO.Response)">
+            <summary /><param name="response" /><returns />
+        </member>
         <member name="M:Qlik.Engine.App.SearchSuggest(Qlik.Engine.SearchCombinationOptions,System.Collections.Generic.IEnumerable{System.String})">
             <summary><para>Returns search terms suggestions.</para></summary>
             <param name="options">Information about the search combinations.</param>
@@ -13531,6 +13591,60 @@
             <return>&lt;true or false&gt;</return>
             <remark>**qSuccess** is set to true if the operation is successful. </remark>
         </member>
+        <member name="M:Qlik.Engine.IApp.CreateBookmarkEx(Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.CreateBookmarkExAsync(Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.CreateBookmarkExAsync(Qlik.Engine.AsyncHandle,Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <param name="asyncHandle">Handle to asynchronous method request</param>
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.CreateBookmarkExAsync``1(Qlik.Engine.AsyncHandle,System.Func{Qlik.Engine.Communication.IO.Response,``0},Qlik.Engine.GenericBookmarkProperties,System.Collections.Generic.IEnumerable{System.String})">
+            <param name="asyncHandle">Handle to asynchronous method request</param>
+            <param name="onResult">Continuation function</param>
+            <summary><para>Creates a bookmark with softpatches.</para></summary>
+            <param name="prop">Properties for the object.</param>
+            <param name="objectIdsToPatch">Add softpatches for this objects if available. If empty all softpatches are added to the bookmark.</param>
+            <return>An instance of type <see  cref="T:Qlik.Engine.CreateBookmarkExResult"/>.</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.SaveAs(System.String)">
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.SaveAsAsync(System.String)">
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.SaveAsAsync(Qlik.Engine.AsyncHandle,System.String)">
+             <param name="asyncHandle">Handle to asynchronous method request</param>
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
+        <member name="M:Qlik.Engine.IApp.SaveAsAsync``1(Qlik.Engine.AsyncHandle,System.Func{Qlik.Engine.Communication.IO.Response,``0},System.String)">
+             <param name="asyncHandle">Handle to asynchronous method request</param>
+             <param name="onResult">Continuation function</param>
+             <summary><para>Save a copy of an app with a different name.</para>
+            <para>Can be used to save a session app as an ordinary app.</para></summary>
+             <param name="newAppName">&lt;Name of the saved app&gt;</param>
+             <return>&lt;Identifier of the saved app&gt;</return>
+        </member>
         <member name="M:Qlik.Engine.IApp.SearchSuggest(Qlik.Engine.SearchCombinationOptions,System.Collections.Generic.IEnumerable{System.String})">
             <summary><para>Returns search terms suggestions.</para></summary>
             <param name="options">Information about the search combinations.</param>
@@ -22013,6 +22127,9 @@
         <member name="P:Qlik.Engine.HyperCubeDef.ColumnOrder">
             <summary><para>The order of the columns.</para></summary>
         </member>
+        <member name="P:Qlik.Engine.HyperCubeDef.ExpansionState">
+            <summary><para>Expansion state per dimension for pivot mode ( <c>qMode</c> is P).</para></summary>
+        </member>
         <member name="M:Qlik.Engine.HyperCubeDef.#ctor">
             <summary>Creates an instance of the HyperCubeDef class</summary>
         </member>
@@ -22230,6 +22347,9 @@
         <member name="P:Qlik.Engine.NxAppLayout.Thumbnail">
             <summary><para>App thumbnail.</para></summary>
         </member>
+        <member name="P:Qlik.Engine.NxAppLayout.IsBDILiveMode">
+            <summary><para>If set to true, the app is in BDI Live mode.</para></summary>
+        </member>
         <member name="M:Qlik.Engine.NxAppLayout.#ctor">
             <summary>Creates an instance of the NxAppLayout class</summary>
         </member>
@@ -22317,6 +22437,10 @@
         <member name="P:Qlik.Engine.NxAttrExprDef.Attribute">
             <summary><para>If set to true, this measure will not affect the number of rows in the cube.</para></summary>
         </member>
+        <member name="P:Qlik.Engine.NxAttrExprDef.NumFormat">
+             <summary><para>Format of the field.</para>
+            <para>This parameter is optional.</para></summary>
+        </member>
         <member name="M:Qlik.Engine.NxAttrExprDef.#ctor">
             <summary>Creates an instance of the NxAttrExprDef class</summary>
         </member>
@@ -22337,6 +22461,13 @@
         </member>
         <member name="P:Qlik.Engine.NxAttrExprInfo.MaxText">
             <summary><para>String version of the maximum Value.</para></summary>
+        </member>
+        <member name="P:Qlik.Engine.NxAttrExprInfo.NumFormat">
+             <summary><para>Format of the field.</para>
+            <para>This parameter is optional.</para></summary>
+        </member>
+        <member name="P:Qlik.Engine.NxAttrExprInfo.IsAutoFormat">
+            <summary><para>This parameter is set to true if <c>qNumFormat</c> is set to <c>U</c> (unknown). The engine guesses the type of the field based on the field's expression.</para></summary>
         </member>
         <member name="M:Qlik.Engine.NxAttrExprInfo.#ctor">
             <summary>Creates an instance of the NxAttrExprInfo class</summary>
@@ -22390,6 +22521,9 @@
         </member>
         <member name="P:Qlik.Engine.NxBookmark.VariableItems">
             <summary><para>List of the variables in the app at the time the bookmark was created.</para></summary>
+        </member>
+        <member name="P:Qlik.Engine.NxBookmark.Patches">
+            <summary><para>Softpatches to be applied with this bookmark.</para></summary>
         </member>
         <member name="T:Qlik.Engine.NxCalcCond">
             <summary />
@@ -27978,6 +28112,15 @@
         <member name="P:Qlik.Engine.GetMediaListResult.Return">
             <summary />
         </member>
+        <member name="T:Qlik.Engine.CreateBookmarkExResult">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.CreateBookmarkExResult.Info">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.CreateBookmarkExResult.Return">
+            <summary />
+        </member>
         <member name="T:Qlik.Engine.GetDatabaseTablePreviewResult">
             <summary />
         </member>
@@ -28873,6 +29016,9 @@
         <member name="P:Qlik.Engine.IHyperCubeDef.ColumnOrder">
             <summary><para>The order of the columns.</para></summary>
         </member>
+        <member name="P:Qlik.Engine.IHyperCubeDef.ExpansionState">
+            <summary><para>Expansion state per dimension for pivot mode ( <c>qMode</c> is P).</para></summary>
+        </member>
         <member name="T:Qlik.Engine.IIf">
             <summary />
         </member>
@@ -29063,6 +29209,9 @@
         <member name="P:Qlik.Engine.INxAppLayout.Thumbnail">
             <summary><para>App thumbnail.</para></summary>
         </member>
+        <member name="P:Qlik.Engine.INxAppLayout.IsBDILiveMode">
+            <summary><para>If set to true, the app is in BDI Live mode.</para></summary>
+        </member>
         <member name="T:Qlik.Engine.INxAppProperties">
             <summary />
         </member>
@@ -29138,6 +29287,10 @@
         <member name="P:Qlik.Engine.INxAttrExprDef.Attribute">
             <summary><para>If set to true, this measure will not affect the number of rows in the cube.</para></summary>
         </member>
+        <member name="P:Qlik.Engine.INxAttrExprDef.NumFormat">
+             <summary><para>Format of the field.</para>
+            <para>This parameter is optional.</para></summary>
+        </member>
         <member name="T:Qlik.Engine.INxAttrExprInfo">
             <summary>Layout for NxAttrExprDef.</summary>
         </member>
@@ -29155,6 +29308,13 @@
         </member>
         <member name="P:Qlik.Engine.INxAttrExprInfo.MaxText">
             <summary><para>String version of the maximum Value.</para></summary>
+        </member>
+        <member name="P:Qlik.Engine.INxAttrExprInfo.NumFormat">
+             <summary><para>Format of the field.</para>
+            <para>This parameter is optional.</para></summary>
+        </member>
+        <member name="P:Qlik.Engine.INxAttrExprInfo.IsAutoFormat">
+            <summary><para>This parameter is set to true if <c>qNumFormat</c> is set to <c>U</c> (unknown). The engine guesses the type of the field based on the field's expression.</para></summary>
         </member>
         <member name="T:Qlik.Engine.INxAttributeDimValues">
             <summary />
@@ -29205,6 +29365,9 @@
         </member>
         <member name="P:Qlik.Engine.INxBookmark.VariableItems">
             <summary><para>List of the variables in the app at the time the bookmark was created.</para></summary>
+        </member>
+        <member name="P:Qlik.Engine.INxBookmark.Patches">
+            <summary><para>Softpatches to be applied with this bookmark.</para></summary>
         </member>
         <member name="T:Qlik.Engine.INxCalcCond">
             <summary />
@@ -34199,6 +34362,15 @@
         <member name="P:Qlik.Engine.IGetMediaListResult.Return">
             <summary />
         </member>
+        <member name="T:Qlik.Engine.ICreateBookmarkExResult">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.ICreateBookmarkExResult.Info">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.ICreateBookmarkExResult.Return">
+            <summary />
+        </member>
         <member name="T:Qlik.Engine.IGetDatabaseTablePreviewResult">
             <summary />
         </member>
@@ -34351,6 +34523,15 @@
         </member>
         <member name="P:Qlik.Engine.Size.cy">
             <summary><para>Number of pixels on the <c>y</c> axis.</para></summary>
+        </member>
+        <member name="T:Qlik.Engine.ExpansionData">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.ExpansionData.ExcludeList">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.ExpansionData.Pos">
+            <summary />
         </member>
         <member name="T:Qlik.Engine.LocaleInfo">
             <summary />
@@ -35024,6 +35205,27 @@
         </member>
         <member name="P:Qlik.Engine.IStringExpr.v">
             <summary><para>Expression evaluated to string.</para></summary>
+        </member>
+        <member name="T:Qlik.Engine.IExpansionData">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.IExpansionData.ExcludeList">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.IExpansionData.Pos">
+            <summary />
+        </member>
+        <member name="T:Qlik.Engine.PositionMark">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.PositionMark.DimName">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.PositionMark.ElemNo">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.PositionMark.ElemValues">
+            <summary />
         </member>
         <member name="T:Qlik.Engine.ILocaleInfo">
             <summary />
@@ -35810,6 +36012,21 @@
         <member name="P:Qlik.Engine.ISourceKeyRecord.Tables">
             <summary><para>Table the key belongs to.</para></summary>
         </member>
+        <member name="T:Qlik.Engine.IPositionMark">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.IPositionMark.DimName">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.IPositionMark.ElemNo">
+            <summary />
+        </member>
+        <member name="P:Qlik.Engine.IPositionMark.ElemValues">
+            <summary />
+        </member>
+        <member name="T:Qlik.Engine.Blob">
+            <summary />
+        </member>
         <member name="T:Qlik.Engine.ICalendarStrings">
             <summary />
         </member>
@@ -36074,6 +36291,9 @@
         <member name="P:Qlik.Engine.IPoint.y">
              <summary><para>y-coordinate in pixels.</para>
             <para>The origin is the top left of the screen.</para></summary>
+        </member>
+        <member name="T:Qlik.Engine.IBlob">
+            <summary />
         </member>
         <member name="T:Qlik.Engine.IFieldDefEx">
             <summary />
