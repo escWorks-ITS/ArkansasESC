@@ -24,7 +24,7 @@
         <tr valign="top">
             <td>
                 <table style="margin-left: auto; width: 1024px; margin-right: auto; margin-top: 20px;margin-top: 20px;  border-right: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-top: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-left: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-bottom: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; background-color: <%# logoSpaceColor %>">
-                    <%--border-collapse: collapse; border-right: <%# mainBodyBorderColor %><%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-top: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; 
+                    <%--test-border-collapse: collapse; border-right: <%# mainBodyBorderColor %><%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-top: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; 
                     border-left: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-bottom: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>;">--%>
                     <tr>
                         <td colspan="3" style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; background-color:  <%# logoBackgroundColor %>;">
