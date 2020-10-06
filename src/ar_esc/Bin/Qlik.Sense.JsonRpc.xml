@@ -85,7 +85,7 @@
         </member>
         <member name="M:Qlik.Sense.JsonRpc.ILocation.GetWebSocketSessionContainer(Qlik.Sense.JsonRpc.ISession)">
             <summary>
-            Method for retreiving a WebSocketSessionContainer based on the current location and the argument session.
+            Method for retrieving a WebSocketSessionContainer based on the current location and the argument session.
             </summary>
             <param name="session">Defines a specific app session, that can be connected to.</param>
             <returns>The WebSocketSessionContainer instance.</returns>
@@ -97,7 +97,7 @@
             <param name="userDirectory">User directory name</param>
             <param name="userId">User id</param>
             <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
             <param name="certificateCollection">Collection of certificates to use when connecting</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.ILocation.AsDirectConnectionToPersonalEditionAsync">
@@ -114,7 +114,7 @@
             <param name="proxySessionId">Id of proxy session</param>
             <param name="proxyPackageId">Id of proxy package</param>
             <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
             <param name="certificateCollection">Collection of certificates to use when connecting</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.ILocation.AsAnonymousUserViaProxyAsync(System.Boolean,System.Boolean)">
@@ -122,7 +122,7 @@
             Defining the location as a connection to Qlik Sense as an anonymous user
             </summary>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.ILocation.AsExistingSessionViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -131,7 +131,7 @@
             <param name="sessionId">The sessionId</param>
             <param name="cookieHeaderName">The name of the cookie specified in the QMC</param>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.ILocation.AsNtlmUserViaProxyAsync(System.Boolean,System.Net.NetworkCredential,System.Boolean)">
             <summary>
@@ -139,7 +139,14 @@
             </summary>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
             <param name="loginCredentials">Authentication with custom credentials</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.ILocation.AsJwtViaProxy(System.String,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using JWT Authentication
+            </summary>
+            <param name="key">The JWT key to use for authentication.</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.ILocation.AsStaticHeaderUserViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -148,7 +155,7 @@
             <param name="headerUserId">User id</param>
             <param name="headerAuthenticationHeaderName">Authentication header name need to be specified if different from default. See settings in the management console</param>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="T:Qlik.Sense.JsonRpc.IRpcConnection">
             <summary>
@@ -319,7 +326,7 @@
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Location.GetWebSocketSessionContainer(Qlik.Sense.JsonRpc.ISession)">
             <summary>
-            Method for retreiving a WebSocketSessionContainer based on the current location and the argument session.
+            Method for retrieving a WebSocketSessionContainer based on the current location and the argument session.
             </summary>
             <param name="session">Defines a specific app session, that can be connected to.</param>
             <returns>The IWebSocketSessionContainer instance.</returns>
@@ -331,7 +338,7 @@
             <param name="userDirectory">User directory name</param>
             <param name="userId">User id</param>
             <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
             <param name="certificateCollection">Collection of certificates to use when connecting</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Location.AsDirectConnectionToPersonalEditionAsync">
@@ -348,7 +355,7 @@
             <param name="proxySessionId">Id of proxy session</param>
             <param name="proxyPackageId">Id of proxy package</param>
             <param name="extendedSecurityEnvironment">Indicates if extendedSecurityEnvironment is enabled</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
             <param name="certificateCollection">Collection of certificates to use when connecting</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Location.AsAnonymousUserViaProxyAsync(System.Boolean,System.Boolean)">
@@ -356,7 +363,7 @@
             Defining the location as a connection to Qlik Sense as an anonymous user
             </summary>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Location.AsExistingSessionViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -365,7 +372,7 @@
             <param name="sessionId">The sessionId</param>
             <param name="cookieHeaderName">The name of the cookie specified in the QMC</param>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Location.AsNtlmUserViaProxyAsync(System.Boolean,System.Net.NetworkCredential,System.Boolean)">
             <summary>
@@ -373,7 +380,14 @@
             </summary>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
             <param name="loginCredentials">Authentication with custom credentials</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.Location.AsJwtViaProxy(System.String,System.Boolean)">
+            <summary>
+            Defining the location as a connection to Qlik Sense using JWT Authentication
+            </summary>
+            <param name="key">The JWT key to use for authentication.</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Location.AsStaticHeaderUserViaProxyAsync(System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -382,7 +396,37 @@
             <param name="headerUserId">User id</param>
             <param name="headerAuthenticationHeaderName">Authentication header name need to be specified if different from default. See settings in the management console</param>
             <param name="proxyUsesSsl">Indicates if proxy uses SSL</param>
-            <param name="certificateValidation">Indicates if invalid ceritficates should be ignored</param>
+            <param name="certificateValidation">Indicates if invalid certificates should be ignored</param>
+        </member>
+        <member name="T:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs">
+            <summary>
+            Contains Method invocation error attributes used to intercept a MethodInvocationException before its thrown.
+            </summary>
+            <remarks>Makes it possible to resend request if needed, this makes it possible to seamless mitigate errors on the fly.</remarks>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.#ctor(Qlik.Sense.JsonRpc.IRpcConnection,System.Threading.Tasks.TaskCompletionSource{Qlik.Sense.JsonRpc.Response},Qlik.Sense.JsonRpc.Request,Qlik.Sense.JsonRpc.MethodInvocationException)">
+            <summary>
+            
+            </summary>
+            <param name="session"></param>
+            <param name="taskCompletionSource"></param>
+            <param name="request"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.ResendRequest">
+            <summary>
+            Resends the Request, rebinding the response to the original requesting async method call
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.ErrorHandled">
+            <summary>
+            Indicator if the Error was handled or if an Exception should be thrown.
+            </summary>
+        </member>
+        <member name="P:Qlik.Sense.JsonRpc.MethodInvocationErrorEventArgs.InvocationError">
+            <summary>
+            The Error received from the Qlik Sense instance.
+            </summary>
         </member>
         <member name="T:Qlik.Sense.JsonRpc.MethodInvocationException">
             <summary>
@@ -461,7 +505,7 @@
         </member>
         <member name="T:Qlik.Sense.JsonRpc.Request">
             <summary>
-            Class representing a request to send on a web socket connectoin.
+            Class representing a request to send on a web socket connection.
             </summary>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.Request.ResetId">
@@ -580,7 +624,7 @@
         </member>
         <member name="T:Qlik.Sense.JsonRpc.RpcConnection">
             <summary>
-            RpcConnection is responsible for handling the JsonRpc traffic to and from a a Qlik Sense instance.
+            RpcConnection is responsible for handling the JsonRpc traffic to and from a Qlik Sense instance.
             </summary>
         </member>
         <member name="P:Qlik.Sense.JsonRpc.RpcConnection.Location">
@@ -695,10 +739,10 @@
         </member>
         <member name="P:Qlik.Sense.JsonRpc.RpcConnection.RetryCountLimit">
             <summary>
-            Maximum number of connection retry attemps performed when opening a websocket connection.
+            Maximum number of connection retry attempts performed when opening a websocket connection.
             </summary>
         </member>
-        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.OpenAsync">
+        <member name="M:Qlik.Sense.JsonRpc.RpcConnection.OpenAsync(System.Threading.CancellationToken)">
             <summary>
             Open a websocket connection to a Qlik Sense instance based on the location and session associated with the RpcConnection instance.
             </summary>
@@ -721,6 +765,13 @@
             Will catch all responses without registered receiver
             </summary>
         </member>
+        <member name="T:Qlik.Sense.JsonRpc.RpcConnection.ClientNotificationSeverity">
+            <summary>
+                notice  - FYI type, example session will be closed in X seconds.
+                warning - Something has gone wrong, but session can continue. Example: object you tried to modify is deleted.
+                fatal   - Serious error, page must be reloaded. Example session dies NOW, app doesn't exist etc.
+            </summary>
+        </member>
         <member name="E:Qlik.Sense.JsonRpc.RpcConnection.ResponseEvent">
             <summary>
             Event that is fired when a response is received on the web socket.
@@ -728,7 +779,7 @@
         </member>
         <member name="E:Qlik.Sense.JsonRpc.RpcConnection.CommunicationErrorEvent">
             <summary>
-            Event that fires when an exception occors on the web socket.
+            Event that fires when an exception occurs on the web socket.
             </summary>
         </member>
         <member name="M:Qlik.Sense.JsonRpc.RpcConnection.Deserialize``1(Newtonsoft.Json.Linq.JToken)">
