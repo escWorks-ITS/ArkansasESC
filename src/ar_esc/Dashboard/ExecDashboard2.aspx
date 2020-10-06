@@ -266,7 +266,7 @@
 			
 
                <iframe frameborder="0" width="99.7%" height="900px" id="iframe1" 
-                         src="https://qlik.escworks.app/qsticketprxy/sense/app/bc59defc-9e0e-4bc6-9802-76560c98bd42">
+                         src="https://qlik.escworks.app/sense/app/bc59defc-9e0e-4bc6-9802-76560c98bd42">
                   </iframe>
                 </h2>
                 <hr width="90%"/>
