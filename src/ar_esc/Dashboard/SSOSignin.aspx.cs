@@ -40,7 +40,7 @@ public partial class Dashboard_SSOSignin : region4.escWeb.BasePage
         {
             redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2454@ARESC.net", "ExecDashboard2.aspx");
             HttpContext.Current.Response.Redirect(redirectUrl);
-        }
+       }
 
         else if (!string.IsNullOrEmpty(SSOPortalURL) && CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2455)
         {
@@ -491,7 +491,7 @@ public partial class Dashboard_SSOSignin : region4.escWeb.BasePage
         Response.Redirect("https://qlik.escworks.app/iuygs6~kjas9/sense/app/bc59defc-9e0e-4bc6-9802-76560c98bd42?qlikTicket=" + ticket_response.Ticket); // change vitual proxy name per customer
 
 
-                                    
+
         ////LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
     }
 
