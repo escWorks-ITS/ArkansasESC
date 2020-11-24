@@ -2,12 +2,39 @@
     EnableEventValidation="false" MasterPageFile="~/MasterPage.master" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="mainBody">
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <style type="text/css">
+    .RadListBox .rlbSelected
+     {
+         background-color: BLACK !important;
+     }
+    </style> 
+    
     <script language="javascript" type="text/javascript">
         // Global variables
         // -------------------------
         // Written by: Andrew Lieng
         // -------------------------
+
+        $(document).ready(function () {
+            if ($(window).width() > 415) {
+                $('.horizontal').css("display", "visible");
+                $('.vertical').css("display", "none");
+                //$('.vertical').css("display", "visible");
+                $('#HorizontalSave').css("display", "visible");
+                $('#VerticalSave').css("display", "none");
+                //$('#VerticalSave').css("display", "visible");
+            }
+            else {
+                $('.vertical').css("display", "visible");
+                $('.horizontal').css("display", "none");
+                $('.hideList').css("display", "none");
+                $('#HorizontalSave').css("display", "none");
+                $('#VerticalSave').css("display", "visible");
+            }
+        });
+
         var http = createRequestObject();
         objElement = new Object();
         var responseUrl = "default.aspx";
@@ -76,6 +103,31 @@
             http.send(xmlString);
         }
 
+        function SaveSubscriptionMobile() {
+            var dd1 = document.getElementById('ctl00_mainBody_ddSubscribed');
+            //                var dd2 = document.getElementById('ctl00_mainBody_ddRecommended');
+
+            var xmlString = '<?xml version="1.0" encoding="utf-8"?>';
+            xmlString += '<xmlData>';
+
+            xmlString += '<Item><Subscribed>' + dd1.options[dd1.selectedIndex].value + '</Subscribed></Item>';
+            xmlString += '<Item><Recommended>1</Recommended></Item>';
+
+            var listBox2 = $find("<%= lsbSubscription4.ClientID %>");
+            var items = listBox2.get_items();
+
+            for (var i = 0; i < items.get_count() ; i++) {
+                xmlString += '<Item><Key>' + listBox2.getItem(i).get_value() + '</Key></Item>';
+            }
+
+            xmlString += '</xmlData>';
+
+            http.open('post', responseUrl + '?action=SaveSubscription', true);
+            //	http.setRequestHeader('Content-Type','text/xml');
+            http.onreadystatechange = handleSaveSubscription;
+            http.send(xmlString);
+        }
+
         function handleSaveSubscription() {
 
             // Loaded
@@ -106,8 +158,37 @@
         function Cancel() {
             top.location.href = "../Default.aspx";
         }
+
+        
+        var listbox;
+        function setListBoxDefaultTabIndex(sender) {
+            listbox = sender;
+            var $groupElement = $(listbox.get_element()).find('.rlbGroup');
+            if ($groupElement.attr('tabindex') === undefined) {
+                $groupElement.attr("tabindex", "0");
+               // $groupElement.attr(" background-color", "red");
+
+            }
+        }
+
+        function OnClientLoad(sender,args) {
+
+
+            var listbox = $find("<%= lsbSubscription1.ClientID %>");
+            if (listbox.get_items().get_count() == 0) {
+                listbox.get_element().style.backgroundColor = "Red";
+            }
+        }
+
+        function RestSubscriptionMobile()
+            {
+                 location.reload();
+            
+            }
+
     </script>
-    <table border="0" cellpadding="4" cellspacing="0" width="100%">
+<font color="white"> Hold down Shift and M key to bring into focus even when focus is lost and then navigate through arrow keys. Hit down or up arrow key to select the item. To move selected item to right side hold down Ctrl button and hit right arrow key and to move to left the selected item hold down Ctrl button and hit left arrow key. If arrow keys do not respond, please click Refresh button at the bottom of the page and try again. </font>    
+    <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%">
         <tr>
             <td class="mainBody">
                 Use the subscriptions area to request email notifications when new
@@ -116,17 +197,38 @@
             </td>
         </tr>
     </table>
+    <br />
     <div align="center">
-        <table>
+        <table role="presentation">
             <tr>
-                <td class="mainBody">
+                <td class="mainBody smallestFont">
                     Subjects
                 </td>
-                <td class="mainBody">
+                <td class="mainBody smallestFont hideList">
                     Subscription List
                 </td>
             </tr>
-            <tr>
+
+             <tr id="horizontal">
+                <td class="mainBody smallestFont horizontal">
+                    <telerik:RadListBox ID="lsbSubscription1" Width="330" Height="400" runat="Server"
+                        SelectionMode="Multiple" CssClass="mainBody smallFont optionHeight" AllowTransfer="true" AllowTransferOnDoubleClick="true"
+                        EnableDragAndDrop="true" TransferToID="lsbSubscription2" OnClientLoad="setListBoxDefaultTabIndex" RenderMode="Lightweight" >
+                        <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
+                        <ButtonSettings AreaWidth="100" Position="Right" RenderButtonText="true" ShowTransferAll="false" />
+                        <Localization  ToLeft="Remove" ToRight="Add" AllToLeft="Remove All" AllToRight="Add All"/>
+                    </telerik:RadListBox>
+                </td>
+                <td class="mainBody smallestFont horizontal"">
+                    <telerik:RadListBox ID="lsbSubscription2" Width="330" Height="400" runat="Server"
+                        SelectionMode="Multiple" CssClass="mainBody smallFont" AllowTransferOnDoubleClick="true"
+                        EnableDragAndDrop="true" RenderMode="Lightweight" OnClientLoad="setListBoxDefaultTabIndex">
+                    <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
+                    </telerik:RadListBox>
+                </td>
+            </tr>
+
+            <%--<tr>
                 <td class="mainBody">
                     <telerik:RadListBox ID="lsbSubscription1" Width="300" Height="250" runat="Server"
                         SelectionMode="Multiple" CssClass="mainBody" AllowTransfer="true" AllowTransferOnDoubleClick="true"
@@ -140,13 +242,36 @@
                         SelectionMode="Multiple" CssClass="mainBody" AllowTransferOnDoubleClick="true"
                         EnableDragAndDrop="true" />
                 </td>
+            </tr>--%>
+
+            <tr id="vertical">
+                <td class="mainBody smallestFont vertical">
+                    <telerik:RadListBox id="lsbSubscription3" Width="330" Height="400" runat="Server"
+                        SelectionMode="Multiple" CssClass="mainBody smallFont optionHeight" AllowTransfer="true" AllowTransferOnDoubleClick="true"
+                        EnableDragAndDrop="true" TransferToID="lsbSubscription4" RenderMode="Lightweight" OnClientLoad="setListBoxDefaultTabIndex">
+                        <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
+                        <ButtonSettings AreaWidth="100" Position="Bottom"  RenderButtonText="true" ShowTransferAll="false" />
+                        <Localization ToTop="Remove" ToBottom="Add" AllToTop="Remove All" AllToBottom="Add All" />                    
+                    </telerik:RadListBox>
+                </td>
             </tr>
+            <tr>
+                <td class="mainBody smallestFont vertical">
+                    Subscription List
+                    <telerik:RadListBox id="lsbSubscription4" Width="330" Height="400" runat="Server"
+                        SelectionMode="Multiple" CssClass="mainBody smallFont" AllowTransferOnDoubleClick="true"
+                        EnableDragAndDrop="true"  RenderMode="Lightweight" OnClientLoad="setListBoxDefaultTabIndex">
+                    <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
+                </telerik:RadListBox>
+                </td>
+            </tr>
+
             <tr>
                 <td height="10">
                 </td>
             </tr>
             <tr>
-                <td class="mainBody" colspan="2">
+                <td class="mainBody smallestFont" colspan="2">
                     <font color="red"><span id="SaveStatus"></span></font>
                 </td>
             </tr>
@@ -193,10 +318,20 @@ runat="server"></asp:Label><asp:DropDownList
             </tr>
             <tr>
                 <td class="mainBody" align="left" colspan="2">
+                    <input type="button" name="btnCancel" value="Cancel" class="formInput btn btn-ARESCblue btn-lg" style="width: 140px; font-size:small" onclick="top.location.href = '../../Default.aspx';" tabindex="0" />
+                    <input type="button" id="HorizontalSave" name="btnSave" value="Save Subscriptions" class="formInput btn btn-ARESCblue btn-lg" style="width: 140px; font-size:small" onclick="SaveSubscription()" tabindex="0" />
+                    <input type="button" id="VerticalSave" name="btnSaveMobile" value="Save Subscriptions" class="formInput btn btn-ARESCblue btn-lg" style="width: 140px; font-size:small" onclick="SaveSubscriptionMobile()" tabindex="0" />
+                      <input type="button" id="btnRefresh" name="btnRefresh" value="Refresh" class="formInput btn btn-ARESCblue btn-lg" style="width: 140px; font-size: small" onclick="RestSubscriptionMobile()" tabindex="0" />
+                   <%-- <input type="button" name="btnCancel" value="Cancel" class="Button" onclick="top.location.href='../../Default.aspx';" />
+                    <input type="button" name="btnSave" value="Save Subscriptions" class="Button" onclick="SaveSubscription()" />--%>
+                </td>
+            </tr>
+            <%--<tr>
+                <td class="mainBody" align="left" colspan="2">
                     <input type="button" name="btnCancel" value="Cancel" class="Button" onclick="top.location.href='../../Default.aspx';" />
                     <input type="button" name="btnSave" value="Save Subscriptions" class="Button" onclick="SaveSubscription()" />
                 </td>
-            </tr>
+            </tr>--%>
             <tr>
                 <td class="mainBody" colspan="3">
                 </td>

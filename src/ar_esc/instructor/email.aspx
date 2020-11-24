@@ -1,9 +1,11 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="email.aspx.cs" Inherits="instructor_email" MasterPageFile="~/MasterPage.master" %>
 
-<asp:Content runat="server" ContentPlaceHolderID="mainBody">
+<asp:Content runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
 
     <asp:Panel runat="server" ID="panelEmail">
-        <table width="100%">
+        <table role="presentation" width="100%">
             <tr>
                 <td colspan="2">
                     <asp:Label runat="server" ID="lblSessionID" Font-Bold="True" /></td>

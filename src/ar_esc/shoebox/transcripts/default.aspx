@@ -1,8 +1,10 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="shoebox_transcripts_default"
     MasterPageFile="~/MasterPage.master" EnableEventValidation="false" %>
 
-<asp:Content runat="server" ContentPlaceHolderID="mainBody">
-    <table border="0" width="100%">
+<asp:Content runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
+    <table role="presentation" border="0" width="100%">
         <tr>
             <td>
                 Transcripts allow you to track the amount of credit you have received from professional
@@ -20,22 +22,27 @@
                         <td width="300" valign="top">
                             <b>Official Record</b>
                             <br />
-                            <span style="font-size: 8pt;">An official transcript cannot be altered. It contains
+                            <span class="smallestFont">An official transcript cannot be altered. It contains
                                 a record of the
                                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName%>
                                 that you have attended at
                                 <%# region4.escWeb.SiteVariables.customer_name %>. </span>
                             <br />
                             <br />
-                            <asp:PlaceHolder ID="pOfficial" runat="Server">Year of Record:<br>
-                                <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="DropDownList">
+                            <asp:PlaceHolder ID="pOfficial" runat="Server"><span class="smallestFont">Year of Record:</span><br>
+<%--                                <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="DropDownList">
+                                </asp:DropDownList>--%>
+                                <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="form-control fullWidth smallFont" style="height: 28px">
                                 </asp:DropDownList>
-                                &nbsp;&nbsp;<asp:Button ID="btnOfficialTranscript" runat="Server" Text="Go" CssClass="Button"
-                                    Style="width: 40px;"></asp:Button>
+                                &nbsp;&nbsp;
+                                <br /><asp:Button ID="btnOfficialTranscript" runat="Server" Text="Go" CssClass="formInput btn btn-ARESCblue btn-lg"
+                                Style="width: 170px; font-size:small" ToolTip="Click here to go to official transcript."></asp:Button>
+                                    <%--<asp:Button ID="btnOfficialTranscript" runat="Server" Text="Go" CssClass="Button"--%>
+                                    <%--Style="width: 40px;"></asp:Button>--%>
                             </asp:PlaceHolder>
-                            <asp:PlaceHolder ID="pOfficialFailure" runat="Server"><font size="1" color="#363636">
+                            <asp:PlaceHolder ID="pOfficialFailure" runat="Server"><span class="smallestFont" style="color: #363636">
                                 <i>There are not currently any credits on file for you. Therefore, your official transcript
-                                    cannot be viewed at this time. </i></font></asp:PlaceHolder>
+                                    cannot be viewed at this time. </i></span></asp:PlaceHolder>
                         </td>
                     </tr>
                     <tr>
@@ -57,18 +64,21 @@
                         <td width="300" valign="top">
                             <b>Personal Record</b>
                             <br>
-                            <span style="font-size: 8pt;">A personal transcript can be altered. It contains a record
+                            <span class="smallestFont">A personal transcript can be altered. It contains a record
                                 of
                                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName%>
                                 that you have attended at
                                 <%# region4.escWeb.SiteVariables.customer_name %>
                                 as well as events that you have entered. This transcript is managed online.
                             </span>
-                            <br>
-                            <br>
-                            <asp:Button ID="btnPersonalTranscript" runat="Server" Text="Manage Transcript" CssClass="formInput"
-                                Style="width: 150px;" ToolTip="Click here to manage your personal transcript.">
+                            <br />
+                            <br />
+                            <asp:Button ID="btnPersonalTranscript" runat="Server" Text="Manage Personal Record" CssClass="formInput btn btn-ARESCblue btn-lg"
+                                Style="width: 170px; font-size:small" ToolTip="Click here to manage your personal transcript.">
                             </asp:Button>
+<%--                            <asp:Button ID="btnPersonalTranscript" runat="Server" Text="Manage Transcript" CssClass="formInput"
+                                Style="width: 150px;" ToolTip="Click here to manage your personal transcript.">
+                            </asp:Button>--%>
                         </td>
                     </tr>
                     <tr>
@@ -82,7 +92,7 @@
                         </td>
                     </tr>
                 </table>
-                <table border="0" cellpadding="5" width="100%">
+                <table role="presentation" border="0" cellpadding="5" width="100%">
                     <tr>
                         <td width="65%">
                             <i>Portfolio uses Adobe Acrobat&nbsp;&reg; to produce your transcript. If you do not

@@ -1,7 +1,9 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="change.aspx.cs" Inherits="shoebox_registration_change"
     MasterPageFile="~/MasterPage.master" %>
 
-<asp:Content runat="server" ContentPlaceHolderID="mainBody">
+<asp:Content runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
     <asp:Panel runat="server" ID="pChangeDetail" Visible="false">
         This is the change registration page. It allows you to change your current registration
         to a
@@ -19,7 +21,7 @@
         <asp:Label runat="server" ID="lblDescription" CssClass="mainBodySmall" />
         <br />
         <br />
-        <table class="mainBody">
+        <table role="presentation" class="mainBody">
             <tr>
                 <td>
                     Current
@@ -55,10 +57,23 @@
         </table>
         <br />
         <br />
-        <asp:Button runat="server" ID="btnSubmit" Text="Change Registration" 
+
+            <div class="row">
+                <div class="col-6 col-sm-6">
+                    <div>
+                        <asp:Button id="btnSubmit" Text="Change Registration" runat="server" class="formInput btn btn-ARESCblue btn-lg" style="width: 160px; height:30px; font-size:small" />
+                    </div>
+                </div>
+
+                <div class="col-3 col-sm-4">
+                    <input type="button" onclick="javascript: history.back()" title="Previous Page" value="Previous Page" class="formInput btn btn-ARESCgrey btn-lg" style="width: 160px; height:30px; font-size:small" />
+                </div>
+            </div>
+
+<%--        <asp:Button runat="server" ID="btnSubmit" Text="Change Registration" 
             CssClass="formInput" />
         <input type="button" onclick="javascript:history.back()" title="Previous Page" value="Previous Page"
-            class="formInput" />
+            class="formInput" />--%>
     </asp:Panel>
     <asp:Panel runat="server" ID="pSuccess" Visible="false">
   

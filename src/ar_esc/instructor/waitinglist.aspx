@@ -1,11 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="waitinglist.aspx.cs" Inherits="instructor_waitinglist"
     MasterPageFile="~/masterpage.master" %>
 
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="mainBody">
-    <table cellspacing="2" cellpadding="4" width="100%">
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
+    <table role="presentation" cellspacing="2" cellpadding="4" width="100%">
         <tr>
             <td align="center" style="height: 59px">
-                <table cellpadding="2" cellspacing="2" border="0">
+                <table role="presentation" cellpadding="2" cellspacing="2" border="0">
                     <tr>
                         <td>
                             <img src="../lib/img/waitinglist.gif" />

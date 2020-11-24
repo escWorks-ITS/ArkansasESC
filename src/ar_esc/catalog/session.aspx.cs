@@ -12,7 +12,7 @@ using escWeb.ar_esc.ObjectModel;
 
 public partial class catalog_session : region4.escWeb.BasePages.Catalog.session_aspx
 {
-
+    public string server = string.Empty;
     protected override void OnLoad(EventArgs e)
     {
         contentsTable.Visible = contentsTable1.Visible = true;

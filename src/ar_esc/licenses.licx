@@ -1,2 +1,7 @@
+Telerik.Web.UI.RadTabStrip, Telerik.Web.UI, Version=2019.1.215.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
+Telerik.Web.UI.RadListBox, Telerik.Web.UI, Version=2019.1.215.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
+Telerik.Web.UI.RadToolTip, Telerik.Web.UI, Version=2019.1.215.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
+Telerik.Web.UI.RadRating, Telerik.Web.UI, Version=2019.1.215.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
+Telerik.Web.UI.RadAjaxManager, Telerik.Web.UI, Version=2019.1.215.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
 Telerik.Web.UI.RadGrid, Telerik.Web.UI, Version=2015.3.1111.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
 Telerik.Web.UI.RadDropDownList, Telerik.Web.UI, Version=2015.3.1111.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4
