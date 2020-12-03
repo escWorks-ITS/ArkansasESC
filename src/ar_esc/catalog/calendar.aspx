@@ -189,7 +189,7 @@
     });
 </script>
 
-           <div id="displayButton" style="display: none;">
+<%--           <div id="displayButton" style="display: none;">
              <div class='container'>
                <div class='row'>
                     <div class='col-xs-2'><a class='monthButton btn' id='one'></a></div>
@@ -210,35 +210,82 @@
                     <div class='col-xs-2'><a class='monthButton btn' id='twelve'></></a></div>
                </div>
              </div>
-           </div>
+           </div>--%>
 
 <div class="CalendarDesktop">
-<table role="presentation" width="100%" style="border-collapse: collapse;">
-
-<tr>
-    <td><asp:Label ID="Labelcoop"
-text="Co-op:"
-AssociatedControlID="ddlcooperative"
-runat="server"></asp:Label>
-        <asp:DropDownList ID="ddlcooperative" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddlcooperative_SelectedIndexChanged"></asp:DropDownList>
-    </td>
-    <td><asp:Label ID="Labeldistrict"
-text="District:"
-AssociatedControlID="ddldistrict"
-runat="server"></asp:Label>
-        <asp:DropDownList ID="ddldistrict" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrict_SelectedIndexChanged"></asp:DropDownList>
-    </td>
-</tr>
-<br />
-<tr>
-<td colspan="2"><escWorks:Calendar runat="server" ID="cal1" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
-</tr>
-</table>
+    <table role="presentation" width="100%" style="border-collapse: collapse;">
+        <tr>
+            <td><asp:Label ID="Labelcoop"
+        text="Co-op:"
+        AssociatedControlID="ddlcooperative"
+        runat="server"></asp:Label>
+                <asp:DropDownList ID="ddlcooperative" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddlcooperative_SelectedIndexChanged"></asp:DropDownList>
+            </td>
+            <td><asp:Label ID="Labeldistrict"
+        text="District:"
+        AssociatedControlID="ddldistrict"
+        runat="server"></asp:Label>
+                <asp:DropDownList ID="ddldistrict" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrict_SelectedIndexChanged"></asp:DropDownList>
+            </td>
+        </tr>
+        <br />
+        <tr>
+        <td colspan="2"><escWorks:Calendar runat="server" ID="cal1" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
+        </tr>
+    </table>
 </div>
-    <br />
+    
+<br />
+
 <div class="CalendarMobile col-sm-12 col-lg-5" style="float:right">
+    <table role="presentation" width="100%" style="border-collapse: collapse;">
+        <tr>
+            <td><asp:Label ID="LabelcoopMobile"
+        text="Co-op:"
+        AssociatedControlID="ddlcooperativeMobile"
+        runat="server"></asp:Label>
+                <asp:DropDownList ID="ddlcooperativeMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddlcooperativeMobile_SelectedIndexChanged"></asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="LabeldistrictMobile"
+        text="District:"
+        AssociatedControlID="ddldistrictMobile"
+        runat="server"></asp:Label>
+                <asp:DropDownList ID="ddldistrictMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrictMobile_SelectedIndexChanged"></asp:DropDownList>
+            </td>
+        </tr>
+        <%--<tr>
+        <td colspan="2"><escWorks:Calendar runat="server" ID="Cal1" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
+        </tr>--%>
+    </table>
+    <br />
+
+    <div id="displayButton" style="display: none;">
+        <div class='container'>
+            <div class='row'>
+                <div class='col-xs-2'><a class='monthButton btn' id='one'></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='two'></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='three'></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='four'></a></div>
+            </div>
+            <div class='row'>
+                <div class='col-xs-2'><a class='monthButton btn' id='five'></></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='six'></></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='seven'></></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='eight'></></a></div>
+            </div>
+            <div class='row'>
+                <div class='col-xs-2'><a class='monthButton btn' id='nine'></></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='ten'></></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='eleven'></></a></div>
+                <div class='col-xs-2'><a class='monthButton btn' id='twelve'></></a></div>
+            </div>
+        </div>
+    </div>
+<br />
     <div><h3 style="line-height:1.6">
-        <escWorks:UpcomingEventsRegion12 runat="server" ID="UpcomingEvents" ItemsToDisplay="100" IsMobile="true" />
+        <escWorks:UpcomingEvents runat="server" ID="UpcomingEvents" ItemsToDisplay="100" IsMobile="true" />
         </h3>
     </div>
 </div>

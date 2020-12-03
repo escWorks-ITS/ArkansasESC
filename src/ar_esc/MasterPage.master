@@ -71,7 +71,7 @@
    
     <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script>--%>
 </head>
-<body style="width: 100%">
+<body style="width: 100%;">
     <p id="main" tabindex="-1"><a class="skip-to-content-link" href="#MainBody">
     Skip to content
     </a><br /><br />

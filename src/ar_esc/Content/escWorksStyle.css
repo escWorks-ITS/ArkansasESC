@@ -405,9 +405,9 @@ see 'MasterPage.master' */
 /* Shopping Cart; originally located in pageTitle.css
 Home, Registration Cart, and Item Count above search */
 .pageTitleText {
-	font-weight: bold;
+	/*font-weight: bold;*/
 	color: black;
-	font-size: 20px;
+	font-size: 12px;
 	font-family: Verdana;
 }
 
@@ -590,3 +590,15 @@ a {
     .skip-to-content-link:focus {
         transform: translateY(0%);
     }
+
+div.col-5.border a {
+    color: darkblue;
+}
+
+.breakoutheader {
+    color: black !important;
+}
+
+#SaveStatus {
+    color: darkred !important;
+}

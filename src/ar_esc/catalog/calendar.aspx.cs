@@ -40,9 +40,16 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
                 base._calendar.Location = "12861";
                 Labelcoop.Visible = false;
                 ddlcooperative.Visible = false;
+
+                LabelcoopMobile.Visible = false;
+                ddlcooperativeMobile.Visible = false;
+
                 Labeldistrict.Visible = false;
                 ddldistrict.Visible = false;
-             
+
+                LabeldistrictMobile.Visible = false;
+                ddldistrictMobile.Visible = false;
+
             }
         }
         if (calendar == null)
@@ -100,15 +107,25 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
         {
             selectedCooperative = this.CurrentUser.Location.Site.Organization.OrganizationID.ToString();
             if(!IsPostBack)
+            { 
                 GetCooperatives(ddlcooperative, true, Convert.ToInt32(selectedCooperative));
+                GetCooperatives(ddlcooperativeMobile, true, Convert.ToInt32(selectedCooperative));
+            }
             else
+            { 
                 GetCooperatives(ddlcooperative, true, Convert.ToInt32(ddlcooperative.SelectedValue == "" ? "0" : ddlcooperative.SelectedValue));
+                GetCooperatives(ddlcooperativeMobile, true, Convert.ToInt32(ddlcooperativeMobile.SelectedValue == "" ? "0" : ddlcooperativeMobile.SelectedValue));
+            }
         }
+
         else
         {
             GetCooperatives(ddlcooperative, true, ddlcooperative.SelectedValue == "" ? 0 : Convert.ToInt32(ddlcooperative.SelectedValue));
+            GetCooperatives(ddlcooperativeMobile, true, ddlcooperativeMobile.SelectedValue == "" ? 0 : Convert.ToInt32(ddlcooperativeMobile.SelectedValue));
         }
         GetSite(ddldistrict, ddldistrict.SelectedValue == "" ? 0 : Convert.ToInt32(ddldistrict.SelectedValue));
+        GetSite(ddldistrictMobile, ddldistrictMobile.SelectedValue == "" ? 0 : Convert.ToInt32(ddldistrictMobile.SelectedValue));
+
         if (!IsPostBack)
         {
             if (location != "")
@@ -117,12 +134,18 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
                 {
                     ddldistrict.SelectedIndex = 0;
                     ddlcooperative.SelectedValue = location;
+
+                    ddldistrictMobile.SelectedIndex = 0;
+                    ddlcooperativeMobile.SelectedValue = location;
                 }
                 else if (isCoop == "0")
                 {
-
+                    
                     ddldistrict.SelectedValue = location;
                     ddlcooperative.SelectedIndex = 0;
+
+                    ddldistrictMobile.SelectedValue = location;
+                    ddlcooperativeMobile.SelectedIndex = 0;
                 }
                 else
                 {
@@ -130,12 +153,23 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
                         ddlcooperative.SelectedValue = location;
                     else
                         ddldistrict.SelectedValue = location;
+
+                    if (ddlcooperativeMobile.Items.FindByValue(location) != null)
+                        ddlcooperativeMobile.SelectedValue = location;
+                    else
+                        ddldistrictMobile.SelectedValue = location;
                 }
 
                 if (location == "999" || ConfigurationManager.AppSettings["stemOrgId"].Contains(location))
+                { 
                     ddldistrict.Enabled = false;
+                    ddldistrictMobile.Enabled = false;
+                }
                 else
+                { 
                     ddldistrict.Enabled = true;
+                    ddldistrictMobile.Enabled = true;
+                }
             }
         }
     }
@@ -145,13 +179,21 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
 
         HttpContext.Current.Response.Redirect("calendar.aspx?location=" + ddldistrict.SelectedValue + "&iscooperative=0" + "&date=" + date);
     }
+    protected void ddldistrictMobile_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        HttpContext.Current.Response.Redirect("calendar.aspx?location=" + ddldistrictMobile.SelectedValue + "&iscooperative=0" + "&date=" + date);
+    }
 
     protected void ddlcooperative_SelectedIndexChanged(object sender, EventArgs e)
     {
         
         HttpContext.Current.Response.Redirect("calendar.aspx?location=" + ddlcooperative.SelectedValue + "&iscooperative=1" + "&date=" + date);
     }
+    protected void ddlcooperativeMobile_SelectedIndexChanged(object sender, EventArgs e)
+    {
 
+        HttpContext.Current.Response.Redirect("calendar.aspx?location=" + ddlcooperativeMobile.SelectedValue + "&iscooperative=1" + "&date=" + date);
+    }
     public void GetSite(DropDownList list,int site_id)
     {
         list.Items.Clear();
