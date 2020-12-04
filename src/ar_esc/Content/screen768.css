@@ -63,7 +63,7 @@ body {
     }
 
     #summerhead {
-        background-image: url("../lib/img/header.jpg") !important;
+        background-image: url("../lib/img/header_iPad.jpg") !important;
         height: 60px !important;
         background-size: contain;
         background-color: #ffffff;
@@ -586,4 +586,12 @@ a:hover.tooltips span {
             color: white !important;
             text-decoration: underline;
         }
+
+    tr.rgRow td span {
+        color: darkred !important;
+    }
+
+    tr.rgAltRow td span {
+        color: darkred !important;
+    }
 } 

@@ -9,12 +9,12 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.HtmlControls;
 using System.Data.SqlClient;
+using region4.WebControls;
 
 public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calendar_aspx
 {
     protected string date = string.Empty;
     protected string mode = string.Empty;
-
     protected override void AssignControls()
     {
         //Calendar Control
@@ -101,7 +101,8 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
         string isCoop = LegacyCode.Strings.GetSafeString("iscooperative", LegacyCode.Strings.StringType.QueryString, "");
         date = LegacyCode.Strings.GetSafeString("date", LegacyCode.Strings.StringType.QueryString, DateTime.Today.Month.ToString() + "/1/" + DateTime.Today.Year.ToString());
         mode = LegacyCode.Strings.GetSafeString("mode", LegacyCode.Strings.StringType.QueryString, "");
-        
+        //cal2 = cal1;
+
         string selectedCooperative = string.Empty;
         if (this.CurrentUser.UserID != 0 && location.Length ==0)
         {
@@ -181,6 +182,8 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
     }
     protected void ddldistrictMobile_SelectedIndexChanged(object sender, EventArgs e)
     {
+        Session["location"] = ddldistrictMobile.SelectedValue;
+        Session["iscoop"] = "0";
         HttpContext.Current.Response.Redirect("calendar.aspx?location=" + ddldistrictMobile.SelectedValue + "&iscooperative=0" + "&date=" + date);
     }
 
@@ -191,7 +194,8 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
     }
     protected void ddlcooperativeMobile_SelectedIndexChanged(object sender, EventArgs e)
     {
-
+        Session["location"] = ddlcooperativeMobile.SelectedValue;
+        Session["iscoop"] = "1";
         HttpContext.Current.Response.Redirect("calendar.aspx?location=" + ddlcooperativeMobile.SelectedValue + "&iscooperative=1" + "&date=" + date);
     }
     public void GetSite(DropDownList list,int site_id)

@@ -88,6 +88,7 @@
 </div>
 </asp:Panel>
 </div>
+    <br />
 <%--    <div style="float: right; width: 784px; margin-bottom: 5px;">
         <div id="searchbox">
             <asp:Panel ID="Panel1" DefaultButton="btnSearch" runat="server">
@@ -103,11 +104,11 @@
             <div class="container" style="border: 1px solid black;">
             <div class="row" style="background-color: #ebebeb;">
                 <div class="col-sm-12 col-lg-8 text-left">
-<%--                    <label id="slick-slide00"><span style="display:none">Aria</span></label> 
+                    <label id="slick-slide00"><span style="display:none">Aria</span></label> 
                     <label id="slick-slide01"><span style="display:none">Aria</span></label> 
                     <label id="slick-slide02"><span style="display:none">Aria</span></label> 
                     <label id="slick-slide03"><span style="display:none">Aria</span></label> 
-                    <label id="slick-slide04"><span style="display:none">Aria</span></label> --%>
+ 
                     <div class="ad-items" id="divAdItems" runat="server" style="width: 500px; height: 300px">
                     </div>
 <%--                        <a href="about/contact.aspx" style="text-decoration: none; color: #000000;"><font size="3" color="#cb2027"><b>CONTACT US</b></font></a>

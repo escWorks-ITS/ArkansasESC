@@ -461,12 +461,12 @@ a:hover.tooltips span {
 
  #pageheader {
     padding-left: 10px;
-	border: 1px solid black;;
+	border: 1px solid black;
 	width: 100%;
     font-size:  small;
-	border: 1px solid black;; 
+	border: 1px solid black; 
 	height: 75px; 
-	color: rgb(0, 0, 0); 
+	color: white !important; 
 	line-height: 5px !important; 
 	padding-left: 10px; 
 	font-size: 12px;
@@ -500,6 +500,7 @@ a:hover.tooltips span {
     #headerFont {
         font-size: 16px;
         line-height:normal;
+        color: white !important;
     }
 
     #chkFree::before {
@@ -578,7 +579,7 @@ a:hover.tooltips span {
     .monthButton {
         text-decoration: none;
         padding: 2px 6px 2px 6px;
-        background-color: #007bff;
+        background-color: #003399;
         font-size: 14px !important;
         color: white !important;
         margin: 4px 2px;
@@ -678,4 +679,19 @@ a:hover.tooltips span {
             text-decoration: underline;
         }
 
+    span {
+        color: black !important;
+    }
+
+    b {
+        color: #0000EE !important;
+    }
+
+    tr td span {
+        color: white !important;
+    }
+
+    tr td label span {
+        color: black !important;
+    }
 } 

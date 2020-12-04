@@ -7,6 +7,8 @@
     }
 </style>
 
+<label for="formLabel" style="display: none;">formLabel</label>
+
  <div class="container">
         <div class="row" style="width:90%">
             <div id="searchCriteriaDesktop"> 

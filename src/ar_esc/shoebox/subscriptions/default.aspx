@@ -309,7 +309,7 @@ runat="server"></asp:Label><asp:DropDownList
             </tr>
             <tr>
                 <td class="mainBody" align="left" colspan="3">
-                    <font size="1" color="Gray"><i>(Recommended Events are based upon your prior participation.)</i></font>
+                    <font size="1" color="black"><i>(Recommended Events are based upon your prior participation.)</i></font>
                 </td>
             </tr>
             <tr>

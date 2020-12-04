@@ -114,17 +114,14 @@ a.upcomingLink
     color:#000000;
 }
 
-.breakoutheader
-{
-	font-size: 12pt;
-	font-weight: bold;
-	color: white; 
-	text-align: left;
-	font-family: Tahoma, Helvetica, sans-serif; 
-	background-color:#659A66;
-
-	
-	}
+.breakoutheader {
+    font-size: 12pt;
+    font-weight: bold;
+    color: white !important;
+    text-align: left;
+    font-family: Tahoma, Helvetica, sans-serif;
+    background-color: #003399;
+}
 
 .breakoutAltRow
 {background-color: #CCCCCC;

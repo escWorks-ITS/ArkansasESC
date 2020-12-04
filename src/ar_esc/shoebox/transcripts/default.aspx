@@ -22,7 +22,7 @@
                         <td width="300" valign="top">
                             <b>Official Record</b>
                             <br />
-                            <span class="smallestFont">An official transcript cannot be altered. It contains
+                            <span class="smallestFont" style="color: black !important">An official transcript cannot be altered. It contains
                                 a record of the
                                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName%>
                                 that you have attended at
@@ -64,7 +64,7 @@
                         <td width="300" valign="top">
                             <b>Personal Record</b>
                             <br>
-                            <span class="smallestFont">A personal transcript can be altered. It contains a record
+                            <span class="smallestFont" style="color: black !important">A personal transcript can be altered. It contains a record
                                 of
                                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName%>
                                 that you have attended at

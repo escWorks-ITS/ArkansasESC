@@ -182,12 +182,12 @@ td {
 /* Controls appearance of breakout session headings */
 .breakoutheader {
 	text-align: left;
-	color: white;
+	color: white !important;
 	font-family: Verdana, sans-serif;
 	font-size: 12pt;
 	font-weight: bold;
 	/*background-color: rgb(101, 154, 102);*/
-    background-color: #800800;
+    background-color: #003399;
 }
 
 /* Controls the color of the cells displayed in the Conference Breakout view (alt row should mean alternate color, but all gray) */
@@ -596,9 +596,13 @@ div.col-5.border a {
 }
 
 .breakoutheader {
-    color: black !important;
+    color: white !important;
 }
 
 #SaveStatus {
+    color: darkred !important;
+}
+
+span.mainBodyBold {
     color: darkred !important;
 }

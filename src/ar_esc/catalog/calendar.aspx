@@ -5,6 +5,8 @@
     <script type="text/javascript">
     $(document).ready(function () {
 
+        alert('<%=Session["location"] %>');
+        alert('<%=Session["iscoop"] %>');
         window.onorientationchange = function () { location.reload() };
 
         $('span ul').wrap('<div class="outer"/>').contents().unwrap();
@@ -171,7 +173,10 @@
         if (monthNames[currentMonth] != 'Break') {
             $("#twelve").text(monthNames[currentMonth]);
             currentMonth++;
-            $("#twelve").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //$("#twelve").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#twelve").prop("href", "?location='<%=Session["location"] %>'" + "&iscooperative=" + '<%=Session["iscoop"] %>' + "&month=" + currentMonth + "&year=" + whatYear);
+            //$("#twelve").prop("href", "?location=99&iscooperative=1&date=12/1/2020");
+
         }
         else {
             currentMonth = 0;
@@ -255,13 +260,37 @@
                 <asp:DropDownList ID="ddldistrictMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrictMobile_SelectedIndexChanged"></asp:DropDownList>
             </td>
         </tr>
-        <%--<tr>
-        <td colspan="2"><escWorks:Calendar runat="server" ID="Cal1" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
+<%--        <tr>
+        <td colspan="2"><escWorks:Calendar runat="server" ID="cal2" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
         </tr>--%>
     </table>
     <br />
+               <div id="displayButton" style="display: none;">
+             <div class='container'>
+               <div class='row'>
+                    <div class='col-xs-2'><a class='monthButton btn' id='one'></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='two'></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='three'></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='four'></a></div>
+               </div>
+               <div class='row'>
+                    <div class='col-xs-2'><a class='monthButton btn' id='five'></></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='six'></></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='seven'></></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='eight'></></a></div>
+                </div>
+               <div class='row'>
+                    <div class='col-xs-2'><a class='monthButton btn' id='nine'></></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='ten'></></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='eleven'></></a></div>
+                    <div class='col-xs-2'><a class='monthButton btn' id='twelve'></></a></div>
+               </div>
+             </div>
+           </div>
 
-    <div id="displayButton" style="display: none;">
+    <br />
+
+    <%--<div id="displayButton" style="display: none;">
         <div class='container'>
             <div class='row'>
                 <div class='col-xs-2'><a class='monthButton btn' id='one'></a></div>
@@ -282,7 +311,7 @@
                 <div class='col-xs-2'><a class='monthButton btn' id='twelve'></></a></div>
             </div>
         </div>
-    </div>
+    </div>--%>
 <br />
     <div><h3 style="line-height:1.6">
         <escWorks:UpcomingEvents runat="server" ID="UpcomingEvents" ItemsToDisplay="100" IsMobile="true" />

@@ -9,13 +9,14 @@
 
 /* RESPONSIVE BASE CONTAINER & GRID WIDTH - 1004px +
 ----------------------------------------------------*/
-#basecontainer {
-    clear: both; 
-    width: 100%; 
+    #basecontainer {
+        clear: both;
+        width: 100%;
     }
 
-.basegridwidth {
-    width: 1004px;
+    .basegridwidth {
+        width: 1004px;
+        border: 5px solid #c91e26;
     }
     
 .contentwidth {

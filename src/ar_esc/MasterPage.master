@@ -130,6 +130,8 @@
                 $("#Greetings").show();
                 $("#MobileGreetings").show();
             }
+
+            $('input.rgValue').attr('id', 'formLabel');
         }
 
 
@@ -365,15 +367,15 @@
                 <div class="contentgrid homegrid">
                     <div class="contentarea">
                         <div id="leftMenu" class="colcontentblockleft StandardCBStyle" style="width:21%;" >                   
-                                                    <table role="presentation" border="0" cellpadding="0" style="background-color:<%# menuBackgroundColor %>;">
+                            <table role="presentation" border="0" cellpadding="0" style="background-color:<%# menuBackgroundColor %>;">
                                  <tr><td><h1><span style="display: none;">escWorks</span></h1><br /></td></tr>
 <%--	                        <tr><td width="100%" style="background-color:<%# menuBackgroundColor %>; padding:10px; font-family:'Open Sans', Helvetica, Arial, sans-serif;"><h2><font color="#800800">Quick</font><font color="#800800">Links</font></h2><br /></td></tr>--%>
                             <tr><td><img border='0' src="<%# BasePage.PathToRoot %><%# linklogo %>" align='left'
                                              alt="quicklinks.jpg" hspace="0" vspace="0" /></td></tr>
                                 <tr>
                                     <td width='100%' valign="top" style="background-color:<%# menuBackgroundColor %>;">
-                                        <!--<img border='3' style="border-color: #F8EDCD;" src="<%# BasePage.PathToRoot %>lib/img/1-ql_header1.jpg"
-                                            align='left' alt="1-ql_header.jpg" hspace="0" vspace="0" width="211px" />-->
+<%--                                        <img border='3' style="border-color: #F8EDCD;" src="<%# BasePage.PathToRoot %>lib/img/1-ql_header1.jpg"
+                                            align='left' alt="1-ql_header.jpg" hspace="0" vspace="0" width="211px" />--%>
                                         <escWorks:MenuV3 runat="server" id="menu2" DisplayAllItems="true" />
                                          <%--<escWorks:MenuV2 runat="server" id="menu2" DisplayAllItems="true" DisplayCreateNewLink="true" DisplayMessage="true" />--%>
                                         <%--<escWorks:MenuV2 runat="server" ID="MenuV1" DisplayAllItems="true" />--%>
