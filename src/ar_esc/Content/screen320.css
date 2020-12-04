@@ -620,6 +620,7 @@ a:hover.tooltips span {
         font-size: 14.11px;
         font-weight:normal;
         font-family: Arial;
+        color: #212529 !important;
     }
 
     #displayButton {
