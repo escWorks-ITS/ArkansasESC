@@ -1,12 +1,12 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="calendar.aspx.cs" Inherits="catalog_calendar" Title="Untitled Page" %>
+<%@ Register TagPrefix="myControl" Namespace="escWeb.ar_esc.ObjectModel" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="mainBody" Runat="Server"><a name="MainBody"></a>
     <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
     <br /><br />
     <script type="text/javascript">
     $(document).ready(function () {
 
-        alert('<%=Session["location"] %>');
-        alert('<%=Session["iscoop"] %>');
+ 
         window.onorientationchange = function () { location.reload() };
 
         $('span ul').wrap('<div class="outer"/>').contents().unwrap();
@@ -40,15 +40,17 @@
 
         if (monthNames[currentMonth] != 'Break') {
             $("#one").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#one").text(monthNames[currentMonth]);
             currentMonth++;
-            $("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //$("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#two").text(monthNames[currentMonth]);
@@ -174,7 +176,7 @@
             $("#twelve").text(monthNames[currentMonth]);
             currentMonth++;
             //$("#twelve").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
-            $("#twelve").prop("href", "?location='<%=Session["location"] %>'" + "&iscooperative=" + '<%=Session["iscoop"] %>' + "&month=" + currentMonth + "&year=" + whatYear);
+			$("#twelve").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %> &date=12/1/" + whatYear);
             //$("#twelve").prop("href", "?location=99&iscooperative=1&date=12/1/2020");
 
         }
@@ -183,7 +185,7 @@
             whatYear = nextYear;
             $("#twelve").text(monthNames[currentMonth]);
             currentMonth++;
-            $("#twelve").prop("href", "?month=" + currentMonth + "&year=" + nextYear);
+            //$("#twelve").prop("href", "?month=" + currentMonth + "&year=" + nextYear);
         }
 
         $(".monthButton").click(function () {
@@ -314,7 +316,7 @@
     </div>--%>
 <br />
     <div><h3 style="line-height:1.6">
-        <escWorks:MobileCalendar runat="server" ID="MobileCalendar"  />
+        <myControl:MobileCalendar2 runat="server" ID="MobileCalendar"  />
         </h3>
     </div>
 </div>
