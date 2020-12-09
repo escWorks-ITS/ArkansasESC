@@ -6,7 +6,6 @@
     <script type="text/javascript">
     $(document).ready(function () {
 
- 
         window.onorientationchange = function () { location.reload() };
 
         $('span ul').wrap('<div class="outer"/>').contents().unwrap();
@@ -42,157 +41,180 @@
             $("#one").text(monthNames[currentMonth]);
             //currentMonth++;
             //$("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
-			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
+			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#one").text(monthNames[currentMonth]);
-            currentMonth++;
+            //currentMonth++;
             //$("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
 			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#two").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#two").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#two").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#two").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#two").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#two").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#two").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#two").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#three").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#three").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#three").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#three").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#three").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#three").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#three").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#three").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#four").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#four").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#four").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#four").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#four").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#four").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#four").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#four").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#five").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#five").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#five").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#five").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#five").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#five").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#five").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#five").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#six").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#six").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#six").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#six").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#six").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#six").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#six").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#six").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#seven").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#seven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#seven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#seven").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#seven").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#seven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#seven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#seven").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#eight").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#eight").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#eight").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#eight").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#eight").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#eight").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#eight").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#eight").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#nine").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#nine").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#nine").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#nine").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#nine").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#nine").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#nine").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#nine").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#ten").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#ten").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#ten").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#ten").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#ten").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#ten").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#ten").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#ten").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#eleven").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#eleven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#eleven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#eleven").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#eleven").text(monthNames[currentMonth]);
-            currentMonth++;
-            $("#eleven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            //currentMonth++;
+            //$("#eleven").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
+            $("#eleven").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         if (monthNames[currentMonth] != 'Break') {
             $("#twelve").text(monthNames[currentMonth]);
-            currentMonth++;
+            //currentMonth++;
             //$("#twelve").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
-			$("#twelve").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %> &date=12/1/" + whatYear);
+			//$("#twelve").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %> &date=12/1/" + whatYear);
             //$("#twelve").prop("href", "?location=99&iscooperative=1&date=12/1/2020");
-
+            $("#twelve").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
             whatYear = nextYear;
             $("#twelve").text(monthNames[currentMonth]);
-            currentMonth++;
+            //currentMonth++;
             //$("#twelve").prop("href", "?month=" + currentMonth + "&year=" + nextYear);
+            $("#twelve").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
 
-        $(".monthButton").click(function () {
-            $('.monthButton').removeClass('selected');
-            sessionStorage.setItem('mthSelected', $(this).attr("id"));
-        });
-        $('#' + sessionStorage.getItem('mthSelected')).addClass('selected');
+        $("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
+
+        //$(".monthButton").click(function () {
+        //    $('.monthButton').removeClass('selected');
+        //    sessionStorage.setItem('mthSelected', $(this).attr("id"));
+        //});
+        //$('#' + sessionStorage.getItem('mthSelected')).addClass('selected');
     });
 </script>
 
@@ -251,7 +273,7 @@
         text="Co-op:"
         AssociatedControlID="ddlcooperativeMobile"
         runat="server"></asp:Label>
-                <asp:DropDownList ID="ddlcooperativeMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddlcooperativeMobile_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddlcooperativeMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallestFont" OnSelectedIndexChanged ="ddlcooperativeMobile_SelectedIndexChanged"></asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -259,7 +281,7 @@
         text="District:"
         AssociatedControlID="ddldistrictMobile"
         runat="server"></asp:Label>
-                <asp:DropDownList ID="ddldistrictMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrictMobile_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddldistrictMobile" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallestFont" OnSelectedIndexChanged ="ddldistrictMobile_SelectedIndexChanged"></asp:DropDownList>
             </td>
         </tr>
 <%--        <tr>

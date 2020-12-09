@@ -17,7 +17,7 @@
                             <div class="col-12 col-sm-12" style="padding-left: 30px !important;">
                                 <%--<span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-R10Blue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
                                 <br /><br />--%>
-                                <label id="searchLabel" for="search"><span><b>Search: </b></span></label>
+                                <label id="searchLabel" for="search"><span style="color: black !important;"><b>Search: </b></span></label>
                                 
                                 <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control fullWidth smallFont" aria-labelledby="searchLabel"/>&nbsp;&nbsp;
                             </div>
@@ -30,7 +30,7 @@
                             </div>--%>
                             <div class="col-12 col-sm-12" style="padding-left: 30px !important;">
                             <asp:PlaceHolder ID="plESC" runat="server">
-                            <asp:Label ID="Labelorg" text="<b>Co-op:&nbsp;&nbsp;</b>"
+                            <asp:Label ID="Labelorg" style="color: black !important;" text="<b>Co-op:&nbsp;&nbsp;</b>"
                                 AssociatedControlID="ddOrganizationId"
                                 runat="server"></asp:Label>
                         <asp:DropDownList ID="ddOrganizationId" runat="Server" Width="100%" CssClass="form-control fullWidth smallFont">
@@ -41,10 +41,10 @@
                         <div class="row">
                             <div class="col-12 col-sm-12" style="padding-left: 15px !important;">
                                 <div class="col-12 col-sm-3">
-                                    <asp:CheckBox ID="chkFree" runat="server" Text="&nbsp;&nbsp;Free" Font-Size="X-Small" />
+                                    <asp:CheckBox ID="chkFree" runat="server" Text="&nbsp;&nbsp;Free" style="color: black !important;" Font-Size="X-Small" />
                                 </div>
                                 <div class="col-12 col-sm-3">
-                                    <asp:CheckBox ID="chkWeekend" runat="server" Text="&nbsp;&nbsp;Weekend" Font-Size="X-Small" />
+                                    <asp:CheckBox ID="chkWeekend" runat="server" Text="&nbsp;&nbsp;Weekend" style="color: black !important;" Font-Size="X-Small" />
                                 </div>
                             </div>
                         </div>

@@ -29,7 +29,7 @@
                                 <%# region4.escWeb.SiteVariables.customer_name %>. </span>
                             <br />
                             <br />
-                            <asp:PlaceHolder ID="pOfficial" runat="Server"><span class="smallestFont">Year of Record:</span><br>
+                            <asp:PlaceHolder ID="pOfficial" runat="Server"><span style="color: black !important;" class="smallestFont">Year of Record:</span><br>
 <%--                                <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="DropDownList">
                                 </asp:DropDownList>--%>
                                 <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="form-control fullWidth smallFont" style="height: 28px">
@@ -45,7 +45,7 @@
                                     cannot be viewed at this time. </i></span></asp:PlaceHolder>
                         </td>
                     </tr>
-                    <tr>
+<%--                    <tr>
                         <td width="300" height="8">
                             <img src="/global/img/trans.gif" alt="" height="8" border="0" />
                         </td>
@@ -54,7 +54,7 @@
                         <td width="300" height="1" bgcolor="#cccccc" background="/global/img/dash_h.gif">
                             <img src="/global/img/trans.gif" alt="" height="1" border="0" />
                         </td>
-                    </tr>
+                    </tr>--%>
                     <tr>
                         <td width="300" height="8">
                             <img src="/global/img/trans.gif" alt="" height="8" border="0" />
@@ -74,7 +74,7 @@
                             <br />
                             <br />
                             <asp:Button ID="btnPersonalTranscript" runat="Server" Text="Manage Personal Record" CssClass="formInput btn btn-ARESCblue btn-lg"
-                                Style="width: 170px; font-size:small" ToolTip="Click here to manage your personal transcript.">
+                                Style="width: 180px; font-size:small" ToolTip="Click here to manage your personal transcript.">
                             </asp:Button>
 <%--                            <asp:Button ID="btnPersonalTranscript" runat="Server" Text="Manage Transcript" CssClass="formInput"
                                 Style="width: 150px;" ToolTip="Click here to manage your personal transcript.">

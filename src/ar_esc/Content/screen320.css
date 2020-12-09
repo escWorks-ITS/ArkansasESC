@@ -615,12 +615,19 @@ a:hover.tooltips span {
         display:  block;
     }
 
-    .upcomingContent {
+    /*.upcomingContent {
         line-height: 20px;
         font-size: 14.11px;
         font-weight:normal;
         font-family: Arial;
         color: #212529 !important;
+    }*/
+
+    .upcomingContent {
+        line-height: 20px;
+        color: black !important;
+        font-size: 10px;
+        /*font-weight: bold;*/
     }
 
     #displayButton {
@@ -684,12 +691,12 @@ a:hover.tooltips span {
         color: black !important;
     }
 
-    b {
+    /*b {
         color: #0000EE !important;
-    }
+    }*/
 
     tr td span {
-        color: white !important;
+        color: darkred !important;
     }
 
     tr td label span {
@@ -706,6 +713,10 @@ a:hover.tooltips span {
 
     #findSession {
         width: 300px;
+    }
+
+    #escBorder {
+        outline: 0 !important;
     }
 
 } 

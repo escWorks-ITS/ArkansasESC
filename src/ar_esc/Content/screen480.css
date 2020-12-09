@@ -651,4 +651,7 @@ a:hover.tooltips span {
             text-decoration: underline;
         }
 
+    #escBorder {
+        outline: 0 !important;
+    }
 } 

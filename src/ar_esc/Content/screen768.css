@@ -595,4 +595,15 @@ a:hover.tooltips span {
     tr.rgAltRow td span {
         color: darkred !important;
     }
+
+    .upcomingContent {
+        line-height: 20px;
+        color: black !important;
+        font-size: 10px;
+        /*font-weight: bold;*/
+    }
+
+    #escBorder {
+        outline: 0 !important;
+    }
 } 

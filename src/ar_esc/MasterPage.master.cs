@@ -15,6 +15,7 @@ using System.Xml;
 public partial class MasterPage : region4.escWeb.MasterPage
 {
     protected string pageBackgroundColor;
+    protected string escBorder = "";
     protected string BannerTheme;
     protected string PushyMenu;
     protected string logo;
@@ -117,6 +118,7 @@ public partial class MasterPage : region4.escWeb.MasterPage
                 {
                     BannerTheme = "summerhead";
                     PushyMenu = "/lib/img/pushy.png";
+                    escBorder = "id='escBorder' style = 'outline: 5px solid #c91e26;'";
                 }
                 else
                 {
@@ -186,6 +188,7 @@ public partial class MasterPage : region4.escWeb.MasterPage
                 {
                     BannerTheme = "summerhead";
                     PushyMenu = "/lib/img/pushy.png";
+                    escBorder = "style = 'border: 5px solid #c91e26'";
                 }
                 else
                 {

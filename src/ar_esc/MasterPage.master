@@ -80,7 +80,7 @@
     </asp:ScriptManager>
 
             <div id="basecontainer">
-        <div class="basegridwidth">
+        <div class="basegridwidth" <%# escBorder %>>
 
             <div class="header" id="<%# BannerTheme %>" >
                 <div class="logo">
@@ -374,7 +374,7 @@
                                 </tr>
                                 <tr>
                                     <td class="mlabel" align="left" style="color : <%# pdfDownloadFontColor %>; background-color: white;">
-                                        <br /><h3>PDF Downloads</h3><br /><br />
+                                        <br /><strong>PDF Downloads</strong><br /><br />
                                     </td>
                                 </tr>
                                 <tr>
@@ -488,12 +488,14 @@
                            alt="Powered by escWorks Logo" border="0" /></a>
                 </div>--%>
             </div>
-                                                                <asp:Panel ID="panelFooter" runat="server" Visible="false">
-                                <span style="color: white !important">footer</span>
+                            <asp:Panel ID="panelFooter" runat="server" Visible="false">
+                                <div class="basegridwidth">
+                                <%--<span style="color: white !important">footer</span>--%>
                                 <div style="background-color:#245a95 !important; width:100%; height:60px">
                                     <div style="padding: 5px;" align="center";>
-                                <span style="font-size: 14px;"><font color="#ffffff">Four Capitol Mall,  Little Rock, AR 72201    |    Phone: 501-682-447    |    <a href="https://goo.gl/maps/3jwm6wmvgRr" >  <font color="#ffffff">Map & Directions</font></a></font></span></div>
-                            </div>
+                                <span style="font-size: 14px;"><font color="#ffffff">Four Capitol Mall,  Little Rock, AR 72201    |    Phone: 501-682-447    |    <a style="text-decoration: underline;" href="https://goo.gl/maps/3jwm6wmvgRr" ><font color="#ffffff">Map & Directions</font></a></font></span></div>
+                                </div>
+                                </div>
                             </asp:Panel>
                 <div style="padding: 5px;" align="center">
                     <a title="escWorks.NET" href="http://www.escworks.com">

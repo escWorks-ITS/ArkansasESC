@@ -179,7 +179,6 @@ public partial class Search : System.Web.UI.UserControl
 
             grdSearch.DataSource = SessionInfoList.DoSearch(true, false, chkFree.Checked, chkWeekend.Checked, this.txtSearch.Text.Trim(), orgId);
             grdSearchMobile.DataSource = SessionInfoList.DoSearch(true, false, chkFree.Checked, chkWeekend.Checked, this.txtSearch.Text.Trim(), orgId);
-
         }
         else
         {

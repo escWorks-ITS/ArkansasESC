@@ -162,6 +162,9 @@
 
     .upcomingContent {
         line-height : 20px;
+        color: black !important;
+        font-size: 10px;
+        /*font-weight: bold;*/
     }
 
     .rlbList {

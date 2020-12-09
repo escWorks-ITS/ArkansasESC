@@ -27,8 +27,11 @@ public partial class catalog_calendar : region4.escWeb.BasePages.Catalog.calenda
         string location = LegacyCode.Strings.GetSafeString("location", LegacyCode.Strings.StringType.QueryString, "");
 
         if (location == "" && ConfigurationManager.AppSettings["CustomerSiteId"] == "ar_ade")
+        { 
             location = "12861";
-       
+            Session["location"] = location;
+        }
+
         if (this.CurrentUser.UserID != 0 && location.Length==0 && !IsPostBack)
         {
             base._calendar.Location = this.CurrentUser.Location.Site.Organization.OrganizationID.ToString();          

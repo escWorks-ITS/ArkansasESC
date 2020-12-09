@@ -107,7 +107,7 @@ upcomingSessionHeader2
 	
 	font-size: 10pt;
 	font-weight: bold;
-	color: #ffffff;
+	color: black !important;
 	text-align: left;
 	font-family: Tahoma, Helvetica, sans-serif; 
 
@@ -116,6 +116,8 @@ upcomingSessionHeader2
 a.upcomingLink {
     /*color:#000000;*/
     color: black !important;
+    font-size:10px;
+    font-weight: bold;
     text-decoration: underline;
 }
 
@@ -136,7 +138,7 @@ a.upcomingLink {
 {
 	font-size: 8pt;
 	font-weight: bold;
-	color: #ffffff !important;
+	color: black !important;
 	text-align: right;
 }
 .mlabel              
