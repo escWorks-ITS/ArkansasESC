@@ -2,11 +2,11 @@
     MasterPageFile="~/MasterPage.master" %>
 
 <%@ Register TagPrefix="ucontrol" TagName="UploadFile" Src="~/lib/Controls/UploadFile.ascx" %>
-<asp:Content runat="server" ID="content1" ContentPlaceHolderID="mainBody">
+<asp:Content runat="server" ID="content1" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css" rel="stylesheet" />
-    <%-- <link type="text/css" rel="stylesheet" href="lib/css/escWorksStyle.css" />--%>
+    <%--<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css" rel="stylesheet" />--%>
+     <link type="text/css" rel="stylesheet" href="lib/css/escWorksStyle.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
     <script type="text/javascript">
@@ -43,13 +43,13 @@
     </script>
     <br />
 
-    <div class="row">
-        <div class="col-sm-12 col-lg-12 sidenav">
-            <div id="pageheader" style="background-color: #003399 !important;">
+<%--    <div class="row">
+        <div class="col-xs-12 col-lg-12 sidenav">
+            <div id="pageheader" style="background-color: <%# sloganBackgroundColor %> !important;">
                 <span id="headerFont">Welcome to Professional Development Online Registration</span>                 
             </div>
         </div>
-    </div>
+    </div>--%>
 
 <%--    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:<%# logoSpaceColor %>">
         <tr>
@@ -67,27 +67,37 @@
         </tr>
     </table>--%>
 
-<div id="searchbox">
-        <asp:Panel ID="Panel1" DefaultButton="btnSearch" runat="server">
-        <%--<span style="font-weight: bold; font-size: 1.3em;"><label for="findSession">Search by Session ID or Keyword</label>
-        </span>--%>
 
+<%--<div id="searchbox">--%>
+        <asp:Panel ID="Panel1" DefaultButton="btnSearch" runat="server">
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-12 sidenav">
+            <div id="pageheader" style="background-color: <%# sloganBackgroundColor %> !important;">
+                <span id="headerFont">Welcome to Professional Development Online Registration</span>                 
+            </div>
+        </div>
+    </div>
+<div id="searchBox2" style="border: 1px solid black;">
 <div class="row">
     <div class="col-xs-12 col-sm-12">
-        <span style="font-weight: bold; font-size: 1.3em;"><label for="findSession">Search by Session ID or Keyword</label></span>     
+        <span id="searchText" style="font-weight: bold; font-size: 1.3em; padding-left: 20px;"><label for="findSession">Search by Session ID or Keyword</label></span>     
     </div>
 </div>
-<div class="row">
-    <div class="col-6 col-sm-8">
-                        <input type="text" name="findSession" id="findSession" class="form-control fullWidth smallFont" style="height:32px;"/>
-                        <%--<asp:Button runat="server" ID="btnSearch" OnClientClick="FindSession();return false;" Text="Search" CssClass="formInput btn btn-primary btn-lg" Style="width: 170px; font-size:small" />--%>
-                    </div>   
-                    <div class="col-2 col-sm-3">
-                        <asp:Button runat="server" ID="btnSearch" OnClientClick="FindSession();return false;" Text="Search" CssClass="formInput btn btn-ARESCBlue btn-lg" Style="width: 140px; font-size:small" />
-                    </div>       
+    <div class="row">
+        <div class="col-xs-1 col-sm-8">
+            <input type="text" name="findSession" id="findSession" class="form-control fullWidth smallFont" style="height:32px; margin-left: 20px !important;"/>
+        </div>   
+        <div class="col-xs-2 col-sm-3">
+            <div style="padding-left: 20px;"><asp:Button runat="server" ID="btnSearch" OnClientClick="FindSession();return false;" Text="Search" CssClass="formInput btn btn-ARESCblue btn-lg" Style="width: 110px; font-size:small; background-color: #0275d8; color: white;" /></div>
+        </div>       
+    </div>
+    <br />
+</div>
 </div>
 </asp:Panel>
-</div>
+<%--</div>--%>
     <br />
 <%--    <div style="float: right; width: 784px; margin-bottom: 5px;">
         <div id="searchbox">
@@ -101,7 +111,7 @@
         </div>
     </div>--%>
 
-            <div class="container" style="border: 1px solid black;">
+            <div class="container" style="border: 1px solid black; margin-left: -30px !important; width:102%">
             <div class="row" style="background-color: #ebebeb;">
                 <div class="col-sm-12 col-lg-8 text-left">
                     <label id="slick-slide00"><span style="display:none">Aria</span></label> 
@@ -132,7 +142,7 @@
                     </div>
 
 
-                <div class="col-sm-12 col-lg-4" style="float:right; border-left: 0 1px 1px 1px solid black;">
+                <div class="col-sm-12 col-lg-4" style="float:right; border-left: 0 1px 1px 1px solid black; background-color:<%# upcomingBackgroundColor %>;">
                             <div><h3 style="line-height:1.6;">
                                 <br />
                             <escWorks:UpcomingEvents runat="server" ID="UpcomingEvents1" ItemsToDisplay="9" />

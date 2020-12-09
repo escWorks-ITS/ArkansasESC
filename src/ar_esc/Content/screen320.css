@@ -65,8 +65,8 @@ body {
     }
 
     #summerhead2 {
-        background-image: url("../lib/img/TSBVI320.jpg") !important;
-        height: 79px !important;
+        background-image: url("../lib/img/ar_ade/logo320.png") !important;
+        height: 85px !important;
         background-size: cover;
         background-color: #ffffff;
         -webkit-transition: all .2s ease;
@@ -460,7 +460,7 @@ a:hover.tooltips span {
 }
 
  #pageheader {
-    padding-left: 10px;
+    padding-left: 450px !important;
 	border: 1px solid black;
 	width: 100%;
     font-size:  small;
@@ -695,4 +695,17 @@ a:hover.tooltips span {
     tr td label span {
         color: black !important;
     }
+
+    #searchBox2 {
+        margin-left: -40px;
+    }
+
+    .searchButton {
+        padding-left: 20px;
+    }
+
+    #findSession {
+        width: 300px;
+    }
+
 } 

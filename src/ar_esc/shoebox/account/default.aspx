@@ -45,7 +45,7 @@ runat="server"></asp:Label></strong>
 
         <button type="button" class="btn btn-ARESCBlue btn-lg" onclick="location.href='../account/email.aspx'">Change Primary Email</button>  
 <%--    <button type="button" class="btn btn-info btn-lg"" onclick="location.href='../account/password.aspx/OnChangePassword()'">Change Password</button>--%>
-<asp:LinkButton ID="btnChangePassword" runat="server" OnClick="OnChangePassword"><button type="button" class="btn btn-ARESCGrey btn-lg">Change Password</button></asp:LinkButton>
+<asp:LinkButton ID="btnChangePassword" runat="server" OnClick="OnChangePassword"><button type="button" class="btn btn-ARESCBlue btn-lg">Change Password</button></asp:LinkButton>
 <br /><br />
 
             <%--<tr>

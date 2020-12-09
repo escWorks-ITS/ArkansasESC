@@ -548,7 +548,7 @@ a:hover.tooltips span {
 }*/
 
     #pageheader {
-        padding-left: 10px;
+        padding-left: 10px !important;
         padding-top: 1px;
         border: 1px solid black;
         width: 100%;

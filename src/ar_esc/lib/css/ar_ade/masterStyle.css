@@ -18,9 +18,13 @@
 	font-family : Verdana;
 	font-size: 8pt;
 }
-.mainBodySmall
-{
-	font-size: 8pt;
+
+span.mainBodyBold {
+    color: black !important;
+}
+
+.mainBodySmall {
+    font-size: 8pt;
 }
 
 .link
@@ -109,9 +113,10 @@ upcomingSessionHeader2
 
 }
 
-a.upcomingLink  
-{
-    color:#000000;
+a.upcomingLink {
+    /*color:#000000;*/
+    color: black !important;
+    text-decoration: underline;
 }
 
 .breakoutheader {
@@ -131,7 +136,7 @@ a.upcomingLink
 {
 	font-size: 8pt;
 	font-weight: bold;
-	color: #ffffff;
+	color: #ffffff !important;
 	text-align: right;
 }
 .mlabel              
@@ -217,4 +222,8 @@ div#escWorksSimpleSearch .headerAscending
 div#escWorksSimpleSearch .headerDescending
 {
 		background:transparent url(..\img\sort_desc.gif) no-repeat scroll right center;
+}
+
+span.welcomemessage {
+    color: black !important;
 }

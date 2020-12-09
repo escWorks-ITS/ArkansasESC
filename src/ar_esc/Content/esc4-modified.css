@@ -14,8 +14,7 @@ float:left;
 
 
 #summerhead {
-    background-image: url("../lib/img/header.jpg");
-    /*background-color: #11347d;*/
+    background-image: url("../lib/img/header_old.jpg");
     height: 85px;
     position: relative;
     background-repeat: no-repeat;
@@ -23,12 +22,13 @@ float:left;
     -moz-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease;
+    /*display: none;*/
 }
 
 #summerhead2 {
-    background-image: url("../lib/standard/img/tsbvi_banner_checkout.jpg");
+    background-image: url("../lib/img/ar_ade/logo.png");
     /*background-color: #11347d;*/
-    height: 85px;
+    height: 150px;
     position: relative;
     background-repeat: no-repeat;
     -webkit-transition: all .2s ease;
