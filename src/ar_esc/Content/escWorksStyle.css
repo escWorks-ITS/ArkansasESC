@@ -445,7 +445,6 @@ Also contains gradient background or image background information; originally fr
     height: auto;
     color: rgb(0, 0, 0);
     line-height: 50px;
-    padding-left: 10px;
     font-size: 12px;
     font-weight: bold;
     font-size: x-small;
@@ -459,10 +458,10 @@ Also contains gradient background or image background information; originally fr
 
 /* Search box appearance including size, borders, font (originally in page-styles.css); Text controlled in Default.aspx;*/
 #searchbox {
-	/*padding-left: 10px;*/
-	/*border: 1px solid black;*/;
-	width: 100%;
-    font-size:  small;
+    /*padding-left: 10px;*/
+    /*border: 1px solid black;*/;
+    width: 100%;
+    font-size: small;
 }
 
 

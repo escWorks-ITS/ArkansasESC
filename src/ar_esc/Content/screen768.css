@@ -74,8 +74,9 @@ body {
     }
 
     #summerhead2 {
-        background-image: url("../lib/standard/img/tsbvi_banner_iPad.png") !important;
-        height: 60px !important;
+        /*background-image: url("../lib/standard/img/tsbvi_banner_iPad.png") !important;*/
+        background-image: url("../lib/img/ar_ade/logo.png");
+        height: 98px !important;
         background-size: contain;
         background-color: #ffffff;
         -webkit-transition: all .2s ease;
@@ -463,7 +464,7 @@ a:hover.tooltips span {
 }
 
  #pageheader {
-    padding-left: 10px;
+    padding-left: 165px !important;
     padding-right: 10px;
 	/*/*border: 1px solid black;*/
 	width: 100%;
@@ -484,8 +485,8 @@ a:hover.tooltips span {
 }
 
  #searchbox {
-	padding-left: 10px;
-	/*/*border: 1px solid black;*/;*/
+	padding-left: 165px !important;
+	/*border: 1px solid black;*/
 	width: 100%;
     font-size:  small;
 }

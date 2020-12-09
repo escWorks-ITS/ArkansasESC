@@ -18,6 +18,11 @@
 	font-family : Verdana;
 	font-size: 8pt;
 }
+
+span.mainBodyBold {
+    color: black !important;
+}
+
 .mainBodySmall
 {
 	font-size: 8pt;
@@ -108,6 +113,13 @@ upcomingSessionHeader2
 	font-family: Tahoma, Helvetica, sans-serif; 
 
 }
+
+a.upcomingLink {
+    /*color:#000000;*/
+    color: #3437EB !important;
+    text-decoration: underline;
+}
+
 .breakoutheader {
     font-size: 12pt;
     font-weight: bold;
@@ -212,3 +224,20 @@ div#escWorksSimpleSearch .headerDescending
 {
 		background:transparent url(..\img\sort_desc.gif) no-repeat scroll right center;
 }
+
+/*#findSession {
+    margin-left: 390px;
+    width: 200px;
+}*/
+
+/*#searchText {
+    margin-left: 390px;
+}*/
+
+/*#btnSearch {
+    margin-left: 10px !important;
+    z-index: 999;
+}*/
+
+
+

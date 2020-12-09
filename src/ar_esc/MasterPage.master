@@ -60,8 +60,8 @@
     <script type="text/javascript" src='<%#ResolveUrl("~/lib/js/jquery.watermark.js") %>'></script>
     <script type="text/javascript" src='<%#ResolveUrl("~/lib/js/jquery.pushy.js") %>'></script>
 
-<%--    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>escWorks</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%--<title>escWorks</title>--%>
     <link type="text/css" rel="stylesheet" href="<%# cssMaster %>" />
     <link type="text/css" rel="stylesheet"  href="<%# cssPageTitle%>" />
     <link type="text/css" rel="stylesheet" href="<%# cssMenu %>" />
@@ -69,7 +69,7 @@
     <link type="text/css" rel="stylesheet" href="<%# cssShoppingCart %>" />
     <link type="text/css" rel="stylesheet" href="~/lib/css/page-styles.css" />
    
-    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script>--%>
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script>
 </head>
 <body style="width: 100%;">
     <p id="main" tabindex="-1"><a class="skip-to-content-link" href="#MainBody">
@@ -82,8 +82,7 @@
             <div id="basecontainer">
         <div class="basegridwidth">
 
-            <div class="header" id="summerhead">
-
+            <div class="header" id="<%# BannerTheme %>" >
                 <div class="logo">
                 </div>
                 
@@ -256,8 +255,9 @@
     <!-- Pushy Menu -->
     <nav class="pushy pushy-right">
         <div class="menu-title">
-            <img src="<%#ResolveUrl("~/lib/img/pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>
-            </div>
+         <%--<img src="<%#ResolveUrl("~/lib/img/pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>--%>
+             <img src="<%# PushyMenu %>" alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;" />          
+        </div>
 
                                    <ul>
                                 <li>
@@ -348,6 +348,9 @@
             <div class="contentwidth" style="width:99%">
                 <div class="contentgrid homegrid">
                     <div class="contentarea">
+<%--                        <div>
+            <a title="<%# logoTitle %>"  href="<%# logoLink %>">
+                <img src="<%# BasePage.PathToRoot %><%# logo %>"  alt="AESC Logo" style ="border: none;" /></a></div>--%>
                         <div id="leftMenu" class="colcontentblockleft StandardCBStyle" style="width:21%;" >                   
                             <table role="presentation" border="0" cellpadding="0" style="background-color:<%# menuBackgroundColor %>;">
                                  <tr><td><h1><span style="display: none;">escWorks</span></h1><br /></td></tr>
@@ -358,14 +361,14 @@
                                     <td width='100%' valign="top" style="background-color:<%# menuBackgroundColor %>;">
 <%--                                        <img border='3' style="border-color: #F8EDCD;" src="<%# BasePage.PathToRoot %>lib/img/1-ql_header1.jpg"
                                             align='left' alt="1-ql_header.jpg" hspace="0" vspace="0" width="211px" />--%>
-                                        <escWorks:MenuV3 runat="server" id="menu2" DisplayAllItems="true" />
-                                         <%--<escWorks:MenuV2 runat="server" id="menu2" DisplayAllItems="true" DisplayCreateNewLink="true" DisplayMessage="true" />--%>
-                                        <%--<escWorks:MenuV2 runat="server" ID="MenuV1" DisplayAllItems="true" />--%>
+                                        <myMenu:MenuV3 runat ="server" ID="MenuV2" DisplayAllItems =" true"  />
+                                        <%--<escWorks:MenuV2 runat="server" id="menu2" DisplayAllItems="true" DisplayCreateNewLink="true" DisplayMessage="true" />
+                                        <escWorks:MenuV2 runat="server" ID="MenuV1" DisplayAllItems="true" />--%>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <td style="background-color: <%# menuBackgroundColor %>">
+                                    <td style="background-color: <%# menuBackgroundColor %>;">
                                         <br />
                                     </td>
                                 </tr>
@@ -389,30 +392,30 @@
 
                                  </div>
 
-                     
-                            
+                          
 
                  <div id="DetailsBody" class="col-12 col-sm-10 col-lg-9" style="height: auto; vertical-align: top; width: 100% !important">                         
                            
-                            
-                              <escWorks:PageTitle runat="server" ID="pageTitle" BackColor="#FFFFFF"/>
+                                  <escWorks:PageTitle runat="server" ID="pageTitle" BackColor="<%# pageTitleBackgroundColor %>" />
+                              <%--<escWorks:PageTitle runat="server" ID="pageTitle" BackColor="#FFFFFF"/>--%>
                                     <br />
                                     <br />
                             <asp:ContentPlaceHolder runat="server" ID="mainBody">
                                 
                             </asp:ContentPlaceHolder></div>
                         
-                            <asp:Panel ID="panelFooter" runat="server" Visible="false">
-                                <div style="background-color:#245a95; width:1024px; height:45px">
-                                <div style ="float: left; width: 22%; background-color: #244a74; height:45px">&nbsp;</div>  
-                                <div style="float:left; width:25%;"><font size="3" color="white"/> Four Capitol Mall<br /> Little Rock, AR 72201</div>
-                                <div style="float:left; width:25%;">Phone:501-682-4475</div>
-                                <div style="float:right; width:25%; color='#fff"><a href="https://goo.gl/maps/3jwm6wmvgRr" >  <font color="#ffffff">Map & Directions</font></a></div>
+<%--                            <asp:Panel ID="panelFooter" runat="server" Visible="false">
+                                <span style="color: white !important">footer</span>
+                                <div style="background-color:#245a95 !important; width:100%; height:60px">
+                                    <div style="padding: 5px;" align="center";>
+                                <span style="font-size: 14px;"><font color="#ffffff">Four Capitol Mall,  Little Rock, AR 72201    |    Phone: 501-682-447    |    <a href="https://goo.gl/maps/3jwm6wmvgRr" >  <font color="#ffffff">Map & Directions</font></a></font></span></div>
                             </div>
-                            </asp:Panel>
+                            </asp:Panel>--%>
 
 	                    </div> 
+
                     </div>
+
                 </div>
             
 
@@ -485,6 +488,13 @@
                            alt="Powered by escWorks Logo" border="0" /></a>
                 </div>--%>
             </div>
+                                                                <asp:Panel ID="panelFooter" runat="server" Visible="false">
+                                <span style="color: white !important">footer</span>
+                                <div style="background-color:#245a95 !important; width:100%; height:60px">
+                                    <div style="padding: 5px;" align="center";>
+                                <span style="font-size: 14px;"><font color="#ffffff">Four Capitol Mall,  Little Rock, AR 72201    |    Phone: 501-682-447    |    <a href="https://goo.gl/maps/3jwm6wmvgRr" >  <font color="#ffffff">Map & Directions</font></a></font></span></div>
+                            </div>
+                            </asp:Panel>
                 <div style="padding: 5px;" align="center">
                     <a title="escWorks.NET" href="http://www.escworks.com">
                         <img src="<%# BasePage.PathToRoot %>lib/standard/img/escWorks_LOGO_PoweredBy.jpg"

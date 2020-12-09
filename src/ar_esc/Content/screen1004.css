@@ -27,7 +27,7 @@
         padding-left: 10px;
         padding-top: 1px;
         border: 1px solid black;
-        width: 100%;
+        width: 765px !important;
         font-size: 20px !important;
         height: 50px;
         color: rgb(0, 0, 0);
@@ -41,7 +41,7 @@
     }
 
  #searchbox {
-	padding-left: 10px;
+	padding-left: 10px !important;
     padding-top: 5px;
     padding-bottom: 15px;
 	border: 1px solid black;
@@ -226,5 +226,9 @@
         background-color: #6C757D !important;
         color: white !important;
         text-decoration: underline;
+    }
+
+    #searchBox2 {
+        margin-left: -45px;
     }
 }
