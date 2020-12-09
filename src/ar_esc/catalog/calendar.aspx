@@ -314,7 +314,7 @@
     </div>--%>
 <br />
     <div><h3 style="line-height:1.6">
-        <escWorks:UpcomingEvents runat="server" ID="UpcomingEvents" ItemsToDisplay="100" IsMobile="true" />
+        <escWorks:MobileCalendar runat="server" ID="MobileCalendar"  />
         </h3>
     </div>
 </div>
