@@ -694,13 +694,21 @@ a:hover.tooltips span {
     /*b {
         color: #0000EE !important;
     }*/
-
-    tr td span {
+    
+    /*tr td span {
         color: darkred !important;
-    }
+    }*/
+
+    /*span {
+        color: White !important;
+    }*/
 
     tr td label span {
         color: black !important;
+    }
+
+    tr td span {
+        color: white !important;
     }
 
     #searchBox2 {

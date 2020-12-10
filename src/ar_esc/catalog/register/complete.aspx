@@ -28,7 +28,7 @@
     <div style="padding-left: 12px;">
     <div class="row">
         <div class="col-12 col-sm-12" style="padding-left : 0">
-            <span style="font-size:14px;">You may visit your </span><a href="~/shoebox/registration/default.aspx" runat="server" class="link smallFont">Registration History</a><span style="font-size:14px;"> to print a confirmation page for each <%# Resources.Names.Session %> for which you are registered.</span>
+            <span style="font-size:14px;">You may visit your </span><a href="~/shoebox/registration/default.aspx" runat="server" class="link smallestFont">Registration History</a><span style="font-size:14px;"> to print a confirmation page for each <%# Resources.Names.Session %> for which you are registered.</span>
         </div>
     </div>
     <br />

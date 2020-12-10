@@ -116,15 +116,15 @@ public partial class MasterPage : region4.escWeb.MasterPage
             {
                 if (region4.escWeb.SiteVariables.CustomerSiteId == "ar_esc")
                 {
-                    BannerTheme = "summerhead";
-                    PushyMenu = "/lib/img/pushy.png";
+                    BannerTheme = "summerhead";                   
+                    PushyMenu = "~/lib/img/pushy.png";
                     escBorder = "id='escBorder' style = 'outline: 5px solid #c91e26;'";
                 }
                 else
                 {
                     BannerTheme = "summerhead2";
                     //PushyMenu = "ResolveUrl('~/lib/img/ar_ade/logo320pushy.png')";
-                    PushyMenu = "/lib/img/ar_ade/logo320pushy.png";
+                    PushyMenu = "~/lib/img/ar_ade/logo320pushy.png";
                 }
                 reader.ReadToFollowing("page");
                 pageBackgroundColor = reader.GetAttribute("color");

@@ -256,7 +256,16 @@
     <nav class="pushy pushy-right">
         <div class="menu-title">
          <%--<img src="<%#ResolveUrl("~/lib/img/pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>--%>
-             <img src="<%# PushyMenu %>" alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;" />          
+             <%--<img src="ResolveUrl(<%# PushyMenu %>)" alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;" />--%>          
+        
+        <% if(BannerTheme == "summerhead"){%>
+            <img src="<%#ResolveUrl("~/lib/img/pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>
+        <%}%>
+
+        <% if(BannerTheme == "summerhead2"){%>
+            <img src="<%#ResolveUrl("~/lib/img/ar_ade/logo320pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>
+        <%}%>
+        
         </div>
 
                                    <ul>
@@ -281,6 +290,14 @@
                                         <li><a style="color: white !important;" href="<%#ResolveUrl("~/search.aspx") %>">Search</a></li>
                                         <li><a style="color: white !important;" href="<%#ResolveUrl("~/catalog/calendar.aspx") %>">Calendar of Sessions</a></li>
                                         <li><a style="color: white !important;" href="<%#ResolveUrl("~/catalog/results.aspx?cmd=conference") %>">Conferences</a></li>
+                                        
+                                        <% if(BannerTheme == "summerhead"){%>
+                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_ade/") %>">Search ADE Sessions</a></li>
+                                        <%}%>
+
+                                        <% if(BannerTheme == "summerhead2"){%>
+                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_esc/") %>">Search AESC Sessions</a></li>
+                                        <%}%>
                                     </ul>
                                 </li>
                                 <li>
