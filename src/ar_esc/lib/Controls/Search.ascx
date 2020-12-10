@@ -22,6 +22,7 @@
                                 <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control fullWidth smallFont" aria-labelledby="searchLabel"/>&nbsp;&nbsp;
                             </div>
                         </div>
+                <asp:PlaceHolder ID="plESC" runat="server">
                         <div class="row">
 <%--                            <div class="col-6 col-sm-6">
                                 <div style="padding-left: 15px !important;">
@@ -29,13 +30,13 @@
                                 </div>
                             </div>--%>
                             <div class="col-12 col-sm-12" style="padding-left: 30px !important;">
-                            <asp:PlaceHolder ID="plESC" runat="server">
+                            <%--<asp:PlaceHolder ID="plESC" runat="server">--%>
                             <asp:Label ID="Labelorg" style="color: black !important;" text="<b>Co-op:&nbsp;&nbsp;</b>"
                                 AssociatedControlID="ddOrganizationId"
                                 runat="server"></asp:Label>
                         <asp:DropDownList ID="ddOrganizationId" runat="Server" Width="100%" CssClass="form-control fullWidth smallFont">
                         </asp:DropDownList>
-                        </asp:PlaceHolder>
+                        <%--</asp:PlaceHolder>--%>
                                 </div>
                         </div>
                         <div class="row">
@@ -48,6 +49,7 @@
                                 </div>
                             </div>
                         </div>
+                </asp:PlaceHolder>
                         <div class="row">
                             <br /><br />
                             <div class="col-6 col-sm-6">

@@ -41,7 +41,7 @@
             $("#one").text(monthNames[currentMonth]);
             //currentMonth++;
             //$("#one").prop("href", "?month=" + currentMonth + "&year=" + whatYear);
-			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + currentMonth + "/1/" + whatYear);
+			$("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
         else {
             currentMonth = 0;
@@ -208,7 +208,7 @@
             $("#twelve").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
         }
 
-        $("#one").prop("href", "?location=<%=Session["location"] %>" + "&iscooperative=<%=Session["iscoop"] %>&date=" + ++currentMonth + "/1/" + whatYear);
+        $('#one').click();
 
         //$(".monthButton").click(function () {
         //    $('.monthButton').removeClass('selected');
