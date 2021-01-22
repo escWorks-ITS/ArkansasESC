@@ -71,16 +71,19 @@
 <%--<div id="searchbox">--%>
 <div style="margin-left: 40px;">
         <asp:Panel ID="Panel1" DefaultButton="btnSearch" runat="server">
-                
+              
 <div class="container">
-
+<%--<div style="border: 1px solid black; padding-left: 45px;">--%>
     <div class="row">
-        <div class="col-xs-12 col-lg-12 sidenav">
+        <%--<div class="col-xs-12 col-lg-12 sidenav">--%>
+        <div class="col-xs-12 col-sm-12">
             <div id="pageheader" style="background-color: <%# sloganBackgroundColor %> !important;">
                 <span id="headerFont">Welcome to Professional Development Online Registration</span>                 
             </div>
         </div>
     </div>
+<%--</div>--%>
+
 <div id="searchBox2" style="border: 1px solid black; margin-left: -45px;">
 <div class="row">
     <div class="col-xs-12 col-sm-12">
