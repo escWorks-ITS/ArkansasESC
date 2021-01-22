@@ -10,7 +10,7 @@
                 <table role="presentation" cellpadding="2" cellspacing="2" border="0">
                     <tr>
                         <td>
-                            <img src="../lib/img/waitinglist.gif" />
+                            <img src="../lib/img/waitinglist.gif" alt="Waiting List"/>
                         </td>
                         <td class="FormInput" style="vertical-align: bottom; color: #343434;">
                             <b>Waiting List Manager</b>
