@@ -111,18 +111,18 @@
     <div class="row">
        <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
 
-                <div style="padding-left: 13px;">
+                <div style="padding-left: 13px;" class="mainBodyBig">
                 <b>
                     <%# region4.escWeb.SiteVariables.ObjectProvider.SessionNameCapitalized %>
                     ID:</b><br />
-                <asp:Label runat="server" class="mainBodySmall" ID="lblSessionID" />
+                <asp:Label runat="server" class="mainBodySmall mainBodyBig" ID="lblSessionID" />
                     </div>
         </div>
         <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
-                <div style="padding-left: 13px;">
+                <div style="padding-left: 13px;" class="mainBodyBig">
                 <b>Credits Available: </b>
                 <br />
-                <asp:Label runat="server" ID="lblCredits" />
+                <asp:Label runat="server" ID="lblCredits" class="mainBodyBig" />
                     </div>
         </div>
       </div>
@@ -131,15 +131,15 @@
         <div class="row">
        <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
 
-                <div style="padding-left: 13px;">
+                <div style="padding-left: 13px;" class="mainBodyBig">
                 <b>Seats Filled:</b><br />
-                <asp:Label runat="server" ID="lblSeatsFilled" />
+                <asp:Label runat="server" ID="lblSeatsFilled" class="mainBodyBig" />
                     </div>
         </div>
         <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
-                <div style="padding-left: 13px;">
+                <div style="padding-left: 13px;" class="mainBodyBig">
                 <b>Fee:</b><br />
-                <asp:Label runat="server" ID="lblFee" />
+                <asp:Label runat="server" ID="lblFee" class="mainBodyBig" />
                     </div>
         </div>
       </div>
@@ -148,15 +148,15 @@
         <div class="row">
        <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
 
-                <div style="padding-left: 13px;">
+                <div style="padding-left: 13px;" class="mainBodyBig">
                 <b>Contact Person:</b><br />
-                <asp:Label runat="server" ID="lblContactPerson" />
+                <asp:Label runat="server" ID="lblContactPerson" class="mainBodyBig" />
                     </div>
         </div>
-        <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
+        <div class="form-group col-xs-12 col-sm-6 mainBodySmall" class="mainBodyBig">  
                 <div style="padding-left: 13px;">
                 <b>Instructor(s):</b><br />
-                <asp:Label runat="server" ID="lblInstructors" />
+                <asp:Label runat="server" ID="lblInstructors" class="mainBodyBig" />
                 </div>
         </div> 
         

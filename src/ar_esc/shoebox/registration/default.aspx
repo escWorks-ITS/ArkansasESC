@@ -76,17 +76,18 @@
             hidField.value = args.get_tab().get_value();
         }
 
-        var tabStrip;
-        function onClientTabLoad(sender) {
-            radTabStrip.focus();
+        //var tabStrip;
+        //function onClientTabLoad(sender) {
+        //    radTabStrip.focus();
 
-        }
+        //}
 
     </script>
 
 <div style="margin-top: -3px;"><font style="color: white !important"> Hold down Shift and M key to bring into focus then navigate through arrow keys and hit enter.</font></div>
 <div class="col-12 col-sm-10 col-lg-12" style="height: 100%; vertical-align: top;padding-left:0px;">
-    <telerik:RadTabStrip ID="radTabStrip" AutoPostBack="true" runat="server" OnClientTabSelected="OnTabSelected"  SelectedIndex="0" RenderMode="Auto" TabIndex="0" OnClientLoad="onClientTabLoad">
+    <%--<telerik:RadTabStrip ID="radTabStrip" AutoPostBack="true" runat="server" OnClientTabSelected="OnTabSelected"  SelectedIndex="0" RenderMode="Auto" TabIndex="0" OnClientLoad="onClientTabLoad">--%>
+    <telerik:RadTabStrip ID="radTabStrip" AutoPostBack="true" runat="server" OnClientTabSelected="OnTabSelected"  SelectedIndex="0" RenderMode="Lightweight"  OnClientLoad="onClientTabLoad">
                 <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
         <Tabs>
             <telerik:RadTab runat="server" Text="Upcoming Events" Value="FutureEvents" Selected="true" TabIndex="0">

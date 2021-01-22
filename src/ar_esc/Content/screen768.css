@@ -615,4 +615,12 @@ a:hover.tooltips span {
     #escBorder {
         outline: 0 !important;
     }
+
+    .mainBodyBig {
+        font-size: 10pt !important;
+    }
+
+    div.sessionsummary {
+        font-size: 11pt !important;
+    }
 } 
