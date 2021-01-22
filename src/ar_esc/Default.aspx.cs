@@ -259,7 +259,7 @@ public partial class _Default : region4.escWeb.BasePages.default_aspx
 
             if (IsMobileBrowser())
             {
-                hyperLink.ImageWidth = new Unit(330);
+                hyperLink.ImageWidth = new Unit(315);
                 hyperLink.ImageHeight = new Unit(218);
             }
             else

@@ -234,4 +234,8 @@
     #searchBox2 {
         margin-left: -45px;
     }
+
+    span.welcomemessage {
+        color: black !important;
+    }
 }

@@ -74,7 +74,7 @@
 <body style="width: 100%;">
     <p id="main" tabindex="-1"><a class="skip-to-content-link" href="#MainBody">
     Skip to content
-    </a><br /><br />
+    </a><br />
     <form runat="server" class="mainBody">
     <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
     </asp:ScriptManager>
@@ -119,6 +119,8 @@
             }
 
             $('input.rgValue').attr('id', 'formLabel');
+            $("[name='ctl00$mainBody$cal1$ctl06']").attr('id', 'formLabel_month');
+            $("[name='ctl00$mainBody$cal1$ctl07']").attr('id', 'formLabel_year');
         }
 
 

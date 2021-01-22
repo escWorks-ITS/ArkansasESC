@@ -90,7 +90,8 @@ public partial class catalog_session : region4.escWeb.BasePages.Catalog.session_
 
         row.Attributes.Add("style", "font-weight:bold");
 
-        row.Cells[0].InnerText = "Date"; 
+        row.Cells[0].InnerText = "Date";
+        row.Cells[0].Width = Unit.Pixel(80).ToString();
         row.Cells[1].InnerText = "Time"; 
         row.Cells[2].InnerText = "Location";
         row.Cells[2].Width = Unit.Pixel(420).ToString();

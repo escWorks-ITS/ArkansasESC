@@ -256,6 +256,9 @@
         runat="server"></asp:Label>
                 <asp:DropDownList ID="ddldistrict" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrict_SelectedIndexChanged"></asp:DropDownList>
             </td>
+            <label for="ctl00_mainBody_cal1"><span style="display:none">Aria</span></label>
+<label for="formLabel_month" style="display: none;">formLabel_month</label>
+<label for="formLabel_year" style="display: none;">formLabel_year</label>
         </tr>
         <br />
         <tr>
@@ -337,6 +340,7 @@
         </div>
     </div>--%>
 <br />
+    <div><h2 style="display: none; color: red">H2</h2></div>
     <div><h3 style="line-height:1.6">
         <myControl:MobileCalendar2 runat="server" ID="MobileCalendar"  />
         </h3>

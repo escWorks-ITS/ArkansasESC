@@ -107,7 +107,8 @@ h2.mainBodyBold
 /*color of the #Items link, reg hist/cert sections */
 .link {
 	color: blue;
-	font-family: Verdana
+	font-family: Verdana;
+    font-size: 12px !important;
 } 
 
 /*???*/
@@ -168,7 +169,7 @@ body {
 /* Quicklinks font family,page footer font family and size; possibly row 2 font size Controls all text on Conference display table */
 td {
 	font-family: Arial;
-	font-size: 10pt;
+	font-size: 10pt !important;
 }
 
 /* "Upcoming Sessions" text (Heading)*/
@@ -518,7 +519,7 @@ Also contains gradient background or image background information; originally fr
 }
 .tableCellHeader {
 	color: blue;
-	font-size: 8pt;
+	font-size: 10pt !important;
 	font-family: Verdana;
 }
 .notInMonth {
@@ -575,6 +576,7 @@ a {
     left: 50%;
     position: absolute;
     transform: translateY(-100%);
+    z-index: 999;
 }
 
 .skip-to-content-link {

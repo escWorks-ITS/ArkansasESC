@@ -17,8 +17,8 @@
                             <div class="col-12 col-sm-12" style="padding-left: 30px !important;">
                                 <%--<span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-R10Blue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
                                 <br /><br />--%>
-                                <label id="searchLabel" for="search"><span style="color: black !important;"><b>Search: </b></span></label>
-                                
+                                <%--<label id="searchLabel" for="search"><span style="color: black !important;"><b>Search: </b></span></label>--%>
+                                <label for="ctl00_mainBody_Search1_btnSearch" id="searchLabel" >Search</label>
                                 <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control fullWidth smallFont" aria-labelledby="searchLabel"/>&nbsp;&nbsp;
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                             <asp:Label ID="Labelorg" style="color: black !important;" text="<b>Co-op:&nbsp;&nbsp;</b>"
                                 AssociatedControlID="ddOrganizationId"
                                 runat="server"></asp:Label>
-                        <asp:DropDownList ID="ddOrganizationId" runat="Server" Width="100%" CssClass="form-control fullWidth smallFont">
+                        <asp:DropDownList ID="ddOrganizationId" runat="Server" Height="33px" Width="100%" CssClass="form-control fullWidth smallFont">
                         </asp:DropDownList>
                         <%--</asp:PlaceHolder>--%>
                                 </div>

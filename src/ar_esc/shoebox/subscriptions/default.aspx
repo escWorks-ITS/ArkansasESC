@@ -9,6 +9,10 @@
      {
          background-color: BLACK !important;
      }
+    .buttonColor
+     {
+         color: black !important;
+     }
     </style> 
     
     <script language="javascript" type="text/javascript">
@@ -191,9 +195,9 @@
     <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%">
         <tr>
             <td class="mainBody">
-                Use the subscriptions area to request email notifications when new
+                <span style="font-size: 14px;">Use the subscriptions area to request email notifications when new
                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName %>
-                of interest are made available.
+                of interest are made available.</span>
             </td>
         </tr>
     </table>
@@ -202,10 +206,10 @@
         <table role="presentation">
             <tr>
                 <td class="mainBody smallestFont">
-                    Subjects
+                    <span style="font-size: 14px;">Subjects</span>
                 </td>
                 <td class="mainBody smallestFont hideList">
-                    Subscription List
+                    <span style="font-size: 14px;">Subscription List</span>
                 </td>
             </tr>
 
@@ -216,7 +220,7 @@
                         EnableDragAndDrop="true" TransferToID="lsbSubscription2" OnClientLoad="setListBoxDefaultTabIndex" RenderMode="Lightweight" >
                         <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
                         <ButtonSettings AreaWidth="100" Position="Right" RenderButtonText="true" ShowTransferAll="false" />
-                        <Localization  ToLeft="Remove" ToRight="Add" AllToLeft="Remove All" AllToRight="Add All"/>
+                        <Localization  ToLeft="Remove" ToRight="Add" AllToLeft="Remove All" AllToRight="Add All"  />
                     </telerik:RadListBox>
                 </td>
                 <td class="mainBody smallestFont horizontal"">
@@ -250,7 +254,7 @@
                         SelectionMode="Multiple" CssClass="mainBody smallFont optionHeight" AllowTransfer="true" AllowTransferOnDoubleClick="true"
                         EnableDragAndDrop="true" TransferToID="lsbSubscription4" RenderMode="Lightweight" OnClientLoad="setListBoxDefaultTabIndex">
                         <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
-                        <ButtonSettings AreaWidth="100" Position="Bottom"  RenderButtonText="true" ShowTransferAll="false" />
+                        <ButtonSettings AreaWidth="100" Position="Bottom" RenderButtonText="true" ShowTransferAll="false" />
                         <Localization ToTop="Remove" ToBottom="Add" AllToTop="Remove All" AllToBottom="Add All" />                    
                     </telerik:RadListBox>
                 </td>
@@ -280,7 +284,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="mainBody" align="left" colspan="2">
+                <td class="mainBody" align="left" colspan="2" style="font-size:13px;">
                     <asp:Label ID="SubscriptionStatusLabel"
 text="Subscription status:&nbsp;&nbsp;"
 AssociatedControlID="ddSubscribed"
@@ -296,7 +300,7 @@ runat="server"></asp:Label><asp:DropDownList ID="ddSubscribed" runat="Server"
                 </td>
             </tr>
             <tr>
-                <td class="mainBody" align="left" colspan="2">
+                <td class="mainBody" align="left" colspan="2" style="font-size:13px;">
                     <asp:Label ID="EventByEmailLabel"
 text="Would you like to receive Recommended Events by email?&nbsp;&nbsp;"
 AssociatedControlID="ddRecommended"
@@ -309,7 +313,7 @@ runat="server"></asp:Label><asp:DropDownList
             </tr>
             <tr>
                 <td class="mainBody" align="left" colspan="3">
-                    <font size="1" color="black"><i>(Recommended Events are based upon your prior participation.)</i></font>
+                    <font size="2" color="black"><i>(Recommended Events are based upon your prior participation.)</i></font>
                 </td>
             </tr>
             <tr>

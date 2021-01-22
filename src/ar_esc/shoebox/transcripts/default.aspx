@@ -7,12 +7,12 @@
     <table role="presentation" border="0" width="100%">
         <tr>
             <td>
-                Transcripts allow you to track the amount of credit you have received from professional
+                <span style="font-size: 14px;">Transcripts allow you to track the amount of credit you have received from professional
                 development
                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName %>
                 at
                 <%# region4.escWeb.SiteVariables.customer_name %>. All of this data is aggregated
-                into a printable format that can be used as proof of credit.
+                into a printable format that can be used as proof of credit.</span>
                 <br />
                 <br />
                 <table border="0" cellpadding="0" cellspacing="0">
@@ -29,11 +29,14 @@
                                 <%# region4.escWeb.SiteVariables.customer_name %>. </span>
                             <br />
                             <br />
-                            <asp:PlaceHolder ID="pOfficial" runat="Server"><span style="color: black !important;" class="smallestFont">Year of Record:</span><br>
+                            
+                            <asp:PlaceHolder ID="pOfficial" runat="Server"><span style="color: black !important;" class="smallestFont">Year of Record:</span><br />
 <%--                                <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="DropDownList">
                                 </asp:DropDownList>--%>
+                                <label for="ctl00_mainBody_ddOfficialYear"><span style="display:none">Aria</span></label>
                                 <asp:DropDownList ID="ddOfficialYear" runat="server" CssClass="form-control fullWidth smallFont" style="height: 28px">
                                 </asp:DropDownList>
+
                                 &nbsp;&nbsp;
                                 <br /><asp:Button ID="btnOfficialTranscript" runat="Server" Text="Go" CssClass="formInput btn btn-ARESCblue btn-lg"
                                 Style="width: 170px; font-size:small" ToolTip="Click here to go to official transcript."></asp:Button>
@@ -95,10 +98,10 @@
                 <table role="presentation" border="0" cellpadding="5" width="100%">
                     <tr>
                         <td width="65%">
-                            <i>Portfolio uses Adobe Acrobat&nbsp;&reg; to produce your transcript. If you do not
+                            <span style="font-size: 14px;"><i>Portfolio uses Adobe Acrobat&nbsp;&reg; to produce your transcript. If you do not
                                 have Adobe Acrobat Reader&nbsp;&reg; installed on your computer, you will need to
                                 download a version (free of charge) from <a href="http://www.adobe.com/" target="_blank"
-                                    class="PageLink">Adobe</a>. </i>
+                                    class="PageLink">Adobe</a>. </i></span>
                         </td>
                         <td nowrap>
                             <a href="http://www.adobe.com/products/acrobat/readstep2.html" target="_blank">

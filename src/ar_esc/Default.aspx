@@ -69,7 +69,9 @@
 
 
 <%--<div id="searchbox">--%>
+<div style="margin-left: 40px;">
         <asp:Panel ID="Panel1" DefaultButton="btnSearch" runat="server">
+                
 <div class="container">
 
     <div class="row">
@@ -79,7 +81,7 @@
             </div>
         </div>
     </div>
-<div id="searchBox2" style="border: 1px solid black;">
+<div id="searchBox2" style="border: 1px solid black; margin-left: -45px;">
 <div class="row">
     <div class="col-xs-12 col-sm-12">
         <span id="searchText" style="font-weight: bold; font-size: 1.3em; padding-left: 20px;"><label for="findSession">Search by Session ID or Keyword</label></span>     
@@ -143,10 +145,10 @@
 
 
                 <div class="col-sm-12 col-lg-4" style="float:right; border-left: 0 1px 1px 1px solid black; background-color:<%# upcomingBackgroundColor %>;">
-                            <div><h3 style="line-height:1.6;">
+                            <div><h2 style="line-height:1.6;">
                                 <br />
                             <escWorks:UpcomingEvents runat="server" ID="UpcomingEvents1" ItemsToDisplay="9" />
-                            </h3></div>
+                            </h2></div>
 
                     </div>
 
@@ -195,8 +197,7 @@
     </div>--%>
                         </div>
             </div>
-
-
+    </div>
     <br />
     <script type="text/javascript" src="lib/js/swfobject.js"> 
     </script>

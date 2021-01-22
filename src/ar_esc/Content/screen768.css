@@ -547,11 +547,20 @@ a:hover.tooltips span {
     }
 
     .mainBodyBold {
-         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     }
 
     .upcomingLink {
          font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+         font-size: 14px;
+    }
+
+    .upcomingSessionFooter {
+        text-align: right;
+        /*color: rgb(200, 0, 50);*/
+        color: #C80032 !important;
+        font-size: 14pt !important;
+        font-weight: bold;
     }
 
     .btn-ARESCblue {
@@ -599,7 +608,7 @@ a:hover.tooltips span {
     .upcomingContent {
         line-height: 20px;
         color: black !important;
-        font-size: 10px;
+        font-size: 14px;
         /*font-weight: bold;*/
     }
 
