@@ -27,15 +27,15 @@
         padding-left: 10px;
         padding-top: 1px;
         border: 1px solid black;
-        width: 350px !important;
+        width: 725px !important;
         font-size: 20px !important;
         height: 50px;
         color: rgb(0, 0, 0);
         /*line-height: 50px;*/
         /*font-weight: bold;*/
         float: left;
-        background-image: url(../lib/img/tableheadbkgrnd-blue.gif) !important;
-    background-repeat: repeat-x;
+        /*background-image: url(../lib/img/tableheadbkgrnd-blue.gif) !important;
+    background-repeat: repeat-x;*/
         background-color: #11347d !important;
         color: #fff;
     }
