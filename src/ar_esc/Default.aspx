@@ -17,6 +17,14 @@
                 autoplay: true,
                 autoplaySpeed: 4000
             });
+
+            if ($(window).width() < 376) {
+            $('#pageheader').css('width', '305px');
+            }
+
+            if ($(window).width() < 424 && $(window).width() >377) {
+            $('#pageheader').css('width', '343px');
+            }
         });
     </script>
 
@@ -87,12 +95,12 @@
 <div id="searchBox2" style="border: 1px solid black; margin-left: -45px;">
 <div class="row">
     <div class="col-xs-12 col-sm-12">
-        <span id="searchText" style="font-weight: bold; font-size: 1.3em; padding-left: 20px;"><label for="findSession">Search by Session ID or Keyword</label></span>     
+        <span id="searchText" style="font-weight: bold; font-size: 1.3em; padding-left: 20px;" class="padLeft"><label for="findSession">Search by Session ID or Keyword</label></span>     
     </div>
 </div>
     <div class="row">
         <div class="col-xs-1 col-sm-8">
-            <input type="text" name="findSession" id="findSession" class="form-control fullWidth smallFont" style="height:32px; margin-left: 20px !important;"/>
+            <input type="text" name="findSession" id="findSession" class="form-control fullWidth smallFont" style="height:32px; width:90%; margin-left: 20px !important;"/>
         </div>   
         <div class="col-xs-2 col-sm-3">
             <div style="padding-left: 20px;"><asp:Button runat="server" ID="btnSearch" OnClientClick="FindSession();return false;" Text="Search" CssClass="formInput btn btn-ARESCblue btn-lg" Style="width: 110px; font-size:small; background-color: #0275d8; color: white;" /></div>

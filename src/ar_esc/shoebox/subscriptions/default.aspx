@@ -191,7 +191,7 @@
             }
 
     </script>
-<font color="white"> Hold down Shift and M key to bring into focus even when focus is lost and then navigate through arrow keys. Hit down or up arrow key to select the item. To move selected item to right side hold down Ctrl button and hit right arrow key and to move to left the selected item hold down Ctrl button and hit left arrow key. If arrow keys do not respond, please click Refresh button at the bottom of the page and try again. </font>    
+<span class="smallHiddenText"><font color="white"> Hold down Shift and M key to bring into focus even when focus is lost and then navigate through arrow keys. Hit down or up arrow key to select the item. To move selected item to right side hold down Ctrl button and hit right arrow key and to move to left the selected item hold down Ctrl button and hit left arrow key. If arrow keys do not respond, please click Refresh button at the bottom of the page and try again. </font></span>    
     <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%">
         <tr>
             <td class="mainBody">

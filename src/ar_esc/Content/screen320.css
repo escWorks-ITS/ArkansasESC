@@ -464,7 +464,8 @@ a:hover.tooltips span {
         /*padding-left: 450px !important;*/
         border: 1px solid black;
         /*width: 100%;*/
-        width: 343px !important;
+        /*width: 343px !important;*/
+        width: 343px;
         font-size: small;
         border: 1px solid black;
         height: 75px;
@@ -729,4 +730,11 @@ a:hover.tooltips span {
         outline: 0 !important;
     }
 
+    .padLeft {
+        margin-left: -12px !important;
+    }
+
+    .smallHiddenText {
+        font-size: 8px;
+    }
 } 
