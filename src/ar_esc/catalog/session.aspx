@@ -68,8 +68,8 @@
                 </asp:Panel>
                 <br />
               
-                <asp:Label runat="server" ID="lblDescription" CssClass="mainBodySmall" /><br /><br />
-                <asp:Label runat="server" ID="lblSuccessFactor" CssClass="mainBodySmall" />
+                <asp:Label runat="server" ID="lblDescription" CssClass="mainBodyBig" /><br /><br />
+                <asp:Label runat="server" ID="lblSuccessFactor" CssClass="mainBodyBig" />
                   
                 </div>
             </div>
@@ -85,7 +85,7 @@
              
                 <br />
                 <div>
-                    <asp:Label runat="server" ID="lblWebComments" CssClass="leftIndent mainBodySmall" />
+                    <asp:Label runat="server" ID="lblWebComments" CssClass="leftIndent mainBodyBig" />
                 </div>
            
              </div>
@@ -115,14 +115,14 @@
                 <b>
                     <%# region4.escWeb.SiteVariables.ObjectProvider.SessionNameCapitalized %>
                     ID:</b><br />
-                <asp:Label runat="server" class="mainBodySmall mainBodyBig" ID="lblSessionID" />
+                <asp:Label runat="server" class="mainBodyBig" ID="lblSessionID" />
                     </div>
         </div>
         <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
                 <div style="padding-left: 13px;" class="mainBodyBig">
                 <b>Credits Available: </b>
                 <br />
-                <asp:Label runat="server" ID="lblCredits" class="mainBodyBig" />
+                <asp:Label runat="server" ID="lblCredits" Cssclass="mainBodyBig" />
                     </div>
         </div>
       </div>
@@ -166,8 +166,8 @@
        <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  
 
                 <div style="padding-left: 13px;">
-                <b><asp:Label runat="server" ID="lblAudience" CssClass="mainBody" Text="Audiences:" /></b>&nbsp;<br />
-                <asp:Label runat="server" ID="lblAudiences" />
+                <b><asp:Label runat="server" ID="lblAudience" CssClass="mainBody mainBodyBig" Text="Audiences:" /></b>&nbsp;<br />
+                <asp:Label runat="server" ID="lblAudiences" CssClass="mainBodyBig" />
                     </div>
         </div>
         <div class="form-group col-xs-12 col-sm-6 mainBodySmall">  

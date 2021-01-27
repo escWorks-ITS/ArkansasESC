@@ -238,4 +238,28 @@
     span.welcomemessage {
         color: black !important;
     }
+
+    a.upcominglink {
+        font-size: 13px !important;
+    }
+
+    span.upcomingContent {
+        font-size: 13px !important;
+    }
+
+    div.sessionsummary {
+        font-size : 14px !important;
+    }
+
+    .mainBodyBig {
+        font-size: 12px !important;
+    }
+
+    div.sessionsummary {
+        font-size: 11pt !important;
+    }
+
+    span#ct100_mainbody_lblWebComments.leftIndent.mainBodySmall {
+        font-size: 16px !important;
+    }
 }
