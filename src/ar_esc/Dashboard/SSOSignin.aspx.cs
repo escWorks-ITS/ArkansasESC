@@ -144,334 +144,333 @@ public partial class Dashboard_SSOSignin : region4.escWeb.BasePage
 
     */
 
-        string SSOPortalURL = System.Web.Configuration.WebConfigurationManager.AppSettings["SSOPortal"];
-        string redirectUrl;
+        //string SSOPortalURL = System.Web.Configuration.WebConfigurationManager.AppSettings["SSOPortal"];
+        //string redirectUrl;
 
 
         TicketRequest ticket_request = null;
         TicketResponse ticket_response = null;
 
-
-        if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2452)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2452@aresc.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2452",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2453)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2453@aresc.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2453",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2454)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2454@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2454",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2455)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2455@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2455",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2456)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2456@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2456",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2457)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2457@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2457",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2458)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2458@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2458",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2459)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2459@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2459",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2460)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2460@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2460",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2461)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2461@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2461",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2462)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXEcARESC2462@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXEcARESC2462",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2463)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2463@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2463",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2464)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2464@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2464",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2465)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2465@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2465",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2466)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2466@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2466",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2467)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2467@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2467",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2577)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2577@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2577",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2846)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2846@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC2846",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 12861)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC12861@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC12861",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-
-        }
-
-        else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 25896)
-        {
-            //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC25896@ARESC.net", "ExecDashboard2.aspx");
-            //HttpContext.Current.Response.Redirect(redirectUrl);
-
-            ticket_request = TicketRequestFromConfiguration(new TicketBody
-            {
-                UserDirectory = "R04QLIK",
-                //  UserId = "collin.kruger",
-                UserId = "EXECARESC25896",
-                Attributes = new KeyValuePair<string, string>[0]
-            });
-
-        }
-
-
-
         try
         {
-            //ticket_request = Requests.TicketRequestFromConfiguration(new TicketBody
-            //{
-            //    UserDirectory = "R04QLIK",
-            //    //  UserId = "collin.kruger",
-            //    UserId = "texasdashboard6",
-            //    Attributes = new KeyValuePair<string, string>[0]
-            //});
 
-            ticket_response = region4.Utilities.Qlik.Qlik.GetTicket(ticket_request, "iuygs6~kjas9");
+            if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2452)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2452@aresc.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
 
-            if (String.IsNullOrWhiteSpace(ticket_response.Ticket))
-                throw new Exception("Unexpected response from QlikSense");
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2452",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2453)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2453@aresc.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2453",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2454)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2454@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2454",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2455)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2455@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2455",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2456)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2456@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2456",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2457)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2457@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2457",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2458)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2458@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2458",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2459)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2459@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2459",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2460)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2460@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2460",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2461)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2461@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2461",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2462)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXEcARESC2462@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXEcARESC2462",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2463)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2463@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2463",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2464)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2464@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2464",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2465)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2465@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2465",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2466)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2466@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2466",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2467)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2467@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2467",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2577)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2577@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2577",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 2846)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC2846@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC2846",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+            }
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 12861)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC12861@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC12861",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+
+
+            }
+
+            else if (CurrentUser.IsInRole("execdashboard") && CurrentUser.Location.OrganizationId == 25896)
+            {
+                //redirectUrl = EncodeSSOPortalUrl(SSOPortalURL, "EXECARESC25896@ARESC.net", "ExecDashboard2.aspx");
+                //HttpContext.Current.Response.Redirect(redirectUrl);
+
+                ticket_request = TicketRequestFromConfiguration(new TicketBody
+                {
+                    UserDirectory = "R04QLIK",
+                    //  UserId = "collin.kruger",
+                    UserId = "EXECARESC25896",
+                    Attributes = new KeyValuePair<string, string>[0]
+                });
+            }
+
+
+                //ticket_request = Requests.TicketRequestFromConfiguration(new TicketBody
+                //{
+                //    UserDirectory = "R04QLIK",
+                //    //  UserId = "collin.kruger",
+                //    UserId = "texasdashboard6",
+                //    Attributes = new KeyValuePair<string, string>[0]
+                //});
+
+                ticket_response = region4.Utilities.Qlik.Qlik.GetTicket(ticket_request, "iuygs6~kjas9");
+
+                if (String.IsNullOrWhiteSpace(ticket_response.Ticket))
+                    throw new Exception("Unexpected response from QlikSense");
+            
         }
         catch (Exception EX)
         {

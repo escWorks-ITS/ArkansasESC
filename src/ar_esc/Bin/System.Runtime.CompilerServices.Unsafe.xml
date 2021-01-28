@@ -157,6 +157,13 @@
       <returns>
         <see langword="true" /> if <paramref name="left" /> is less than <paramref name="right" />; otherwise, <see langword="false" />.</returns>
     </member>
+    <member name="M:System.Runtime.CompilerServices.Unsafe.IsNullRef``1(``0@)">
+      <param name="source" />
+      <typeparam name="T" />
+    </member>
+    <member name="M:System.Runtime.CompilerServices.Unsafe.NullRef``1">
+      <typeparam name="T" />
+    </member>
     <member name="M:System.Runtime.CompilerServices.Unsafe.Read``1(System.Void*)">
       <summary>Reads a value of type <typeparamref name="T" /> from the given location.</summary>
       <param name="source">The location to read from.</param>
@@ -181,8 +188,9 @@
       <returns>The size of an object of type <typeparamref name="T" />.</returns>
     </member>
     <member name="M:System.Runtime.CompilerServices.Unsafe.SkipInit``1(``0@)">
-      <param name="value" />
-      <typeparam name="T" />
+      <summary>Bypasses definite assignment rules for a given value.</summary>
+      <param name="value">The uninitialized object.</param>
+      <typeparam name="T">The type of the uninitialized object.</typeparam>
     </member>
     <member name="M:System.Runtime.CompilerServices.Unsafe.Subtract``1(``0@,System.Int32)">
       <summary>Subtracts an element offset from the given reference.</summary>
