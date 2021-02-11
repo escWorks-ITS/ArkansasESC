@@ -106,13 +106,13 @@
 
             if (profile == null || profile == '') {
                 $("#SignIn").show();
-                $("#CreateNewAccount").show();
+                $(".CreateNewAccount").show();
                 $("#SignOut").hide();
                 $("#Greetings").hide();
                 $("#MobileGreetings").hide();
             } else {
                 $("#SignIn").hide();
-                $("#CreateNewAccount").hide();
+                $(".CreateNewAccount").hide();
                 $("#SignOut").show();
                 $("#Greetings").show();
                 $("#MobileGreetings").show();
@@ -280,8 +280,19 @@
                                     <a style="background-color : #003399; color: white !important; font-weight:bold;">Sign In/Out / Create New Account</a>
                                     <ul>
                                         <li id="SignIn"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signin.aspx?ReturnUrl=/default.aspx") %> ">Sign In</a></li>
-                                        <li id="SignOut"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signout.aspx") %> ">Sign Out</a></li>
-                                        <li id="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/account/signup.aspx") %>">Create New Account</a></li>  
+                                        <li id="SignOut"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signout.aspx") %> ">Sign Out</a></li>                                      
+                                               
+                                        <% if(BannerTheme == "summerhead"){%>
+<%--                                        <li class="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_esc/shoebox/account/signup.aspx?ReturnUrl=%2far_esc%2fdefault.aspx") %> ">Create New Account</a></li>  --%>
+                                            <li class="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("https://www.escweb.net/ar_esc/shoebox/account/signup.aspx?ReturnUrl=%2far_esc%2fdefault.aspx") %> ">Create New Account</a></li>  
+                                        <%}%>
+
+                                        <% if(BannerTheme == "summerhead2"){%>
+                                            <%--<li class="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_ade/shoebox/account/signup.aspx?ReturnUrl=%2far_ade%2fdefault.aspx") %> ">Create New Account</a></li>--%>  
+                                            <li class="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("https://www.escweb.net/ar_ade/shoebox/account/signup.aspx?ReturnUrl=%2far_ade%2fdefault.aspx") %> ">Create New Account</a></li>
+                                        <%}%>
+
+                                        <%--<li id="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/account/signup.aspx?ReturnUrl=/default.aspx") %> ">Create New Account</a></li>  --%>
                                         <li id="Greetings"><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/account/default.aspx") %>">Hello, <%= Session["UserFirstName"] %></a></li>                 
                                         <p id="profileValue" style="display:none"><%= Session["profile"] %></p>
                                     </ul>
@@ -294,11 +305,13 @@
                                         <li><a style="color: white !important;" href="<%#ResolveUrl("~/catalog/results.aspx?cmd=conference") %>">Conferences</a></li>
                                         
                                         <% if(BannerTheme == "summerhead"){%>
-                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_ade/") %>">Search ADE Sessions</a></li>
+                                            <%--<li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_ade/") %>">Search ADE Sessions</a></li>--%>
+                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://www.escweb.net/ar_ade/") %>">Search ADE Sessions</a></li>
                                         <%}%>
 
                                         <% if(BannerTheme == "summerhead2"){%>
-                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_esc/") %>">Search AESC Sessions</a></li>
+                                            <%--<li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_esc/") %>">Search AESC Sessions</a></li>--%>
+                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://www.escweb.net/ar_esc/") %>">Search AESC Sessions</a></li>
                                         <%}%>
                                     </ul>
                                 </li>
@@ -314,7 +327,7 @@
                                 <li>
                                     <a style="background-color : #003399; color: white !important; font-weight:bold;">Help</a>
                                     <ul>
-<%--                                        <li><a href="<%#ResolveUrl("~/help.aspx") %>" id="Help">Help &amp; How-To</a></li>--%>
+<%--                                        <li><a href="<%#ResolveUrl("~/help.aspx") %>" id="Help">Help &amp; How-To</a></li>
                                         <li><a class="ContactUs" style="color: white !important;" href="<%#ResolveUrl("~/about/contact.aspx") %>">Contact Us</a></li> 
                                         <%--<li><a href="<%#ResolveUrl("~/quickRegister.aspx") %>">Quick Sign Up</a></li>--%>
                                         <%--<li><a href="<%#ResolveUrl("~/help.aspx") %>">Test</a></li>--%>

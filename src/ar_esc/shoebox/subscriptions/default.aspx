@@ -195,7 +195,7 @@
     <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%">
         <tr>
             <td class="mainBody">
-                <span style="font-size: 14px;">Use the subscriptions area to request email notifications when new
+                <span style="font-size: 14px; color: black !important;">Use the subscriptions area to request email notifications when new
                 <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName %>
                 of interest are made available.</span>
             </td>
@@ -206,10 +206,10 @@
         <table role="presentation">
             <tr>
                 <td class="mainBody smallestFont">
-                    <span style="font-size: 14px;">Subjects</span>
+                    <span style="font-size: 14px; color: black !important;">Subjects</span>
                 </td>
                 <td class="mainBody smallestFont hideList">
-                    <span style="font-size: 14px;">Subscription List</span>
+                    <span style="font-size: 14px; color: black !important;">Subscription List</span>
                 </td>
             </tr>
 
@@ -261,7 +261,7 @@
             </tr>
             <tr>
                 <td class="mainBody smallestFont vertical">
-                    Subscription List
+                    <span style="font-size: 14px; color: black !important;">Subscription List</span>
                     <telerik:RadListBox id="lsbSubscription4" Width="330" Height="400" runat="Server"
                         SelectionMode="Multiple" CssClass="mainBody smallFont" AllowTransferOnDoubleClick="true"
                         EnableDragAndDrop="true"  RenderMode="Lightweight" OnClientLoad="setListBoxDefaultTabIndex">

@@ -268,4 +268,19 @@
         color: white !important;
     }
 
+    span.rlbbuttontext {
+        background-color: white !important;
+        color: black !important;
+        font-size: 14px !important;
+    }
+
+    span.rlbbuttonicon.rlbicontransferdown::before {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    span.rlbbuttonicon.rlbicontransferup::before {
+        background-color: white !important;
+        color: black !important;
+    }
 }

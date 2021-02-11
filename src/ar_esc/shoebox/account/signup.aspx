@@ -325,7 +325,7 @@ runat="server"></asp:Label></strong>
         </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlRegion"
                         CssClass="error" ErrorMessage="Region is a required field" ForeColor="#A80000"></asp:RequiredFieldValidator>
-                    <cc1:CascadingDropDown ID="CascadingDropDown1" runat="server" TargetControlID="ddlRegion" Category="Org" PromptText="Please select a region..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GetRegions" />
+                    <cc1:CascadingDropDown ID="CascadingDropDown1" runat="server" TargetControlID="ddlRegion" Category="Org" PromptText="Choose your service coop/school group." ServicePath="~/services/locationservice.asmx" ServiceMethod="GetRegions" />
                 </div>
             </div>
 
@@ -396,8 +396,8 @@ runat="server"></asp:Label>
                             :</strong> 
             <asp:DropDownList ID="ddlSchool" runat="server" CssClass="form-control smallFont form-input" Height="32" /><br />
                     <cc1:CascadingDropDown ID="CascadingDropDown3" runat="server" TargetControlID="ddlSchool" ParentControlID="ddlDistrict" PromptText="Please select a school..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GetSchoolsFromDistricts" Category="Room" />
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ControlToValidate="ddlSchool"
-                        CssClass="error" ErrorMessage="Campus is a required field" InitialValue="" ForeColor="#A80000"></asp:RequiredFieldValidator>
+<%--                    <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ControlToValidate="ddlSchool"
+                        CssClass="error" ErrorMessage="Campus is a required field" InitialValue="" ForeColor="#A80000"></asp:RequiredFieldValidator>--%>
             </div>
         </div>
 

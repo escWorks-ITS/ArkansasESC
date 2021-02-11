@@ -13,8 +13,10 @@
         <item item_id="19" sort="99" name="Session Detail" tooltip="--" href="catalog/session.aspx" target="_top" visible="False" />
         <!--<item item_id="34" sort="99" name="Online Sessions" tooltip="Link: Online Sessions" href="catalog/results.aspx?cmd=online" target="_top" visible="True" />-->
         <item item_id="111" sort="99" name="Conferences" tooltip="Link: Conferences" href="catalog/results.aspx?cmd=conference" target="_top" visible="True" />
-        <item item_id="112" sort="99" name="Search AESC Sessions" tooltip="Link: Search AESC Sessions" href="https://dev-www.escweb.net/ar_esc/" target="_blank" visible="true" />
-        <item item_id="113" sort="99" name="Search ADE Sessions" tooltip="Link: Search ADE Sessions" href="https://dev-www.escweb.net/ar_ade/" target="_blank" visible="true" />
+        <!--<item item_id="112" sort="99" name="Search AESC Sessions" tooltip="Link: Search AESC Sessions" href="https://dev-www.escweb.net/ar_esc/" target="_blank" visible="true" />
+        <item item_id="113" sort="99" name="Search ADE Sessions" tooltip="Link: Search ADE Sessions" href="https://dev-www.escweb.net/ar_ade/" target="_blank" visible="true" />-->
+        <item item_id="112" sort="99" name="Search AESC Sessions" tooltip="Link: Search AESC Sessions" href="https://www.escweb.net/ar_esc/" target="_blank" visible="true" />
+        <item item_id="113" sort="99" name="Search ADE Sessions" tooltip="Link: Search ADE Sessions" href="https://www.escweb.net/ar_ade/" target="_blank" visible="true" />
       </items>
     
     </item>
