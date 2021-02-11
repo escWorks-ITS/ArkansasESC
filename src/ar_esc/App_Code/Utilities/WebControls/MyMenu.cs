@@ -189,7 +189,7 @@ namespace region4.escWorks.WebControls
                 :
                 String.Format("<a id=\"ASignIn\" href=\"{0}security/signin.aspx?ReturnUrl={1}\" class=\"signInLink\">{2}</a>", currentPage.PathToRoot, HttpContext.Current.Request.Path + HttpContext.Current.Server.UrlEncode((HttpContext.Current.Request.QueryString.ToString().Length > 0) ? "?" + HttpContext.Current.Request.QueryString.ToString() : ""), SignInText);
 
-           // anon += String.Format("<a id=\"NewUser\" href=\"{0}\"><font size=\"2\"><i>{1}</i></font></a></center>", currentPage.PathToRoot + "shoebox/account/signup.aspx?ReturnUrl=%2f" + customerId + "%2fdefault.aspx", "Click here to create an account");
+            anon += String.Format("<a id=\"NewUser\" href=\"{0}\"><font size=\"2\"><i>{1}</i></font></a></center>", currentPage.PathToRoot + "shoebox/account/signup.aspx?ReturnUrl=%2f" + customerId + "%2fdefault.aspx", "Click here to create an account");
             
 
 

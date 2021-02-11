@@ -25,14 +25,14 @@
 		<div align="center">
 			<br>
 			<form id="aspnetForm" method="post" runat="server">
-				<table cellspacing="0" cellpadding="0" align="center" border="0" style="WIDTH:550px;BORDER-COLLAPSE:collapse;HEIGHT:250px">
+				<table role="presentation" cellspacing="0" cellpadding="0" align="center" border="0" style="WIDTH:550px;BORDER-COLLAPSE:collapse;HEIGHT:250px">
 					<tr>
 						<td class="LayoutRule" colspan="3" width="1"><img src="/global/img/trans.gif" border="0" width="1" height="1" alt="Transparent Gif"></td>
 					</tr>
 					<tr>
 						<td class="LayoutRule" width="1"><img src="/global/img/trans.gif" border="0" width="1" height="1" alt="Transparent Gif"></td>
 						<td class="LayoutContent">
-							<table cellpadding="0" cellspacing="5" width="100%" height="100%">
+							<table role="presentation" cellpadding="0" cellspacing="5" width="100%" height="100%">
 								<tbody>
 									<tr>
 										<td bgcolor="#ffffff">&nbsp;<img src="/global/img/ico/32/Evaluation.gif" width="32" height="32" alt="" border="0"

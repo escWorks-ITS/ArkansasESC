@@ -11,14 +11,12 @@ using System.Web.UI.HtmlControls;
 
 public partial class security_signin : region4.escWeb.BasePages.Security.signin_aspx
 {
-
     protected override void AssignControlsToBase()
     {
         base._errorMessage = this.lblMessage;
         base._txtPassword = this.txtPassword;
         base._txtUserName = this.txtUserName;
     }
-
     protected override string NoEmailGiven { get { return Resources.security.noUserName; } }
 
     protected override string NoPasswordGiven { get { return Resources.security.noPassword; } }

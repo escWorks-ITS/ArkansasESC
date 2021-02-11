@@ -2,14 +2,38 @@
     MasterPageFile="~/masterpage.master" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
-<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="mainBody">
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+
+  <style>
+    .rtsSelected, .rtsSelected span
+        {
+           background:url(../Images/btnUpdate.jpg) no-repeat 0 100%  !important;
+           background-color: #6C757D !important;
+           text-align: center;
+           color:white;
+           
+        }
+
+  .RadTabStrip_Telerik li a.slected {
+    background:url(../Images/btnUpdate.jpg) no-repeat 0 100%  !important;
+           background-color: #6C757D !important;
+           text-align: center;
+           color:white;
+  }
+
+    </style>
+    
     <script type="text/javascript" language="javascript">
         function OnTabSelected(sender, args) {
             var hidField = document.getElementById("<%=hiddenFieldTabValue.ClientID%>");
             hidField.value = args.get_tab().get_value();
         }
     </script>
-    <telerik:RadTabStrip ID="radTabStrip" AutoPostBack="true" runat="server" OnClientTabSelected="OnTabSelected" >
+
+    <font color="white"> Hold down Shift and M key to bring into focus anytime even in the event focus is lost and then navigate through arrow keys and hit enter.</font>
+    <telerik:RadTabStrip ID="radTabStrip" AutoPostBack="true" runat="server" OnClientTabSelected="OnTabSelected" RenderMode="Lightweight">
+        <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
         <Tabs>
             <telerik:RadTab runat="server" Text="Upcoming Events" Value="FutureEvents" Selected="true">
             </telerik:RadTab>

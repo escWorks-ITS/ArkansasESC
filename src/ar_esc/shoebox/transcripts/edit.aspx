@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="edit.aspx.cs" Inherits="shoebox_transcripts_edit" MasterPageFile="~/MasterPage.master" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<asp:Content runat="server"  ContentPlaceHolderID="mainBody">
+<asp:Content runat="server"  ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
 <script type="text/javascript">
 function CheckForOther(ddlControl)
 	{
@@ -20,7 +22,7 @@ function CheckForOther(ddlControl)
 		}
 	}
 </script>
-<table style="border-collapse: collapse; border: 1px; border-color: Gray; vertical-align: top;">
+<table role="presentation" style="border-collapse: collapse; border: 1px; border-color: Gray; vertical-align: top;">
         <tr>
             <td colspan="2" valign="top">
                 <asp:Label ID="TitleLabel"
