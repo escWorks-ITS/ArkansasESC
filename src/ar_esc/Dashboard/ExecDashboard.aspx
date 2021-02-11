@@ -322,7 +322,7 @@
                 <section>
       <p></p><h2 align="center">About the Exective Dashboard...</h2>
        <h4 align="center"><em>Executive Dashboard requires an HTML 5 compatible browser such as Chrome (the preferred choice), Firefox, or Internet Explorer 10 or higher</em></h4>
-      <table width="100%" border="0" cellspacing="2" cellpadding="0" summary="Links to ESC Standards and Indicators, User Guide, Data Description documents">
+      <table role="presentation" width="100%" border="0" cellspacing="2" cellpadding="0" summary="Links to ESC Standards and Indicators, User Guide, Data Description documents">
         <caption>&nbsp;
         </caption>
         <tr>

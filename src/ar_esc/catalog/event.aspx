@@ -1,8 +1,10 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="event.aspx.cs" Inherits="catalog_event" Title="Untitled Page" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="Server"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
     <asp:Label runat="server" ID="lblErrorMessage" CssClass="error" />
     <br />
-    <table style="width: 100%; border-collapse: collapse;" runat="server" id="contentsTable" class="mainBody">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;" runat="server" id="contentsTable" class="mainBody">
         <tr valign="top">
             <td>
                

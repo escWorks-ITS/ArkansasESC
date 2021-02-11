@@ -3,8 +3,28 @@
     Title="Group Registration" ValidateRequest="false"%>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="Server"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
+
+    <style type="text/css">
+
+    .RadListBox .rlbSelected
+     {
+         background-color: BLACK !important;
+     }
+
+    </style>
     <script language="javascript" type="text/javascript">
+
+        var listbox;
+        function setListBoxDefaultTabIndex(sender) {
+            listbox = sender;
+            var $groupElement = $(listbox.get_element()).find('.rlbGroup');
+            if ($groupElement.attr('tabindex') === undefined) {
+                $groupElement.attr("tabindex", "0");
+            }
+        }
 
         var timer;
         var count = 0;
@@ -84,8 +104,12 @@
             }
         }
 
+        function RestSubscriptionMobile() {
+            location.reload();
+
+        }
     </script>
-    <table border="0" cellpadding="4" cellspacing="0" width="100%">
+    <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%">
         <tr>
             <td>
                 <asp:Label runat="server" ID="lblSessionID" />-<asp:Label runat="server" ID="lblTitle"
@@ -99,8 +123,9 @@
     <br />
     <br />
     <br />
+    <font color="white"> Hold down Shift and M key to bring into focus even when focus is lost and then navigate through arrow keys. Hit down or up arrow key to select the item. To move selected item to right side hold down Ctrl button and hit right arrow key and to move to left the selected item hold down Ctrl button and hit left arrow key. If arrow keys do not respond, please click Refresh button at the bottom of the page and try again. </font>
     <div align="center">
-        <table>
+        <table role="presentation">
             <tr>
                 <td>
                     <asp:Label ID="UserSearchLabel"
@@ -129,23 +154,39 @@ runat="server"></asp:Label>
                 </td>
             </tr>
             <tr>
-                <td class="mainBody">
-                    <telerik:RadListBox ID="listBoxAvailableUsers" Width="440px" Height="250px" Style="text-align: left;"
+                <td class="mainBody smallestFont horizontal">
+                      <telerik:RadListBox ID="listBoxAvailableUsers" Width="330" Height="400" runat="Server"
+                        SelectionMode="Multiple" CssClass="mainBody smallFont optionHeight" AllowTransfer="true" AllowTransferOnDoubleClick="true"
+                        EnableDragAndDrop="true" TransferToID="listBoxSelectedUsers" RenderMode="Lightweight"  OnClientLoad="setListBoxDefaultTabIndex">
+                        <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
+                        <ButtonSettings AreaWidth="100" Position="Right" RenderButtonText="true" ShowTransferAll="false" />
+                        <Localization  ToLeft="Remove" ToRight="Add" AllToLeft="Remove All" AllToRight="Add All"/>
+                    </telerik:RadListBox>                        <%--<telerik:RadListBox ID="listBoxAvailableUsers" Width="440px" Height="250px" Style="text-align: left;"
                         runat="Server" SelectionMode="Multiple" AllowTransfer="true" AllowTransferOnDoubleClick="true"
                         EnableDragAndDrop="true" TransferToID="listBoxSelectedUsers">
                         <ButtonSettings AreaWidth="96" Position="Right" RenderButtonText="true" ShowTransferAll="true" />
                         <Localization  ToLeft="Remove" ToRight="Add" AllToLeft="Remove All" AllToRight="Add All"/>
-                    </telerik:RadListBox>
+                    </telerik:RadListBox>--%>
                 </td>
-                <td class="mainBody">
+                 <td class="mainBody smallestFont horizontal">
+                    <telerik:RadListBox ID="listBoxSelectedUsers" Width="330" Height="400" runat="Server"
+                        SelectionMode="Multiple" CssClass="mainBody smallFont" AllowTransferOnDoubleClick="true"
+                        EnableDragAndDrop="true" RenderMode="Lightweight" OnClientLoad="setListBoxDefaultTabIndex">
+
+                    <KeyboardNavigationSettings CommandKey="Shift" FocusKey="M" />
+                    </telerik:RadListBox>
+                     <asp:HiddenField ID="hiddenFieldSelectedUsers" runat="server" />
+
+                </td>
+                <%--<td class="mainBody">
                     <telerik:RadListBox ID="listBoxSelectedUsers" CssClass="mainBody" Style="text-align: left;"
                         runat="server" Width="340px" Height="250px" SelectionMode="Multiple" EnableDragAndDrop="true" />
                     <asp:HiddenField ID="hiddenFieldSelectedUsers" runat="server" />
-                </td>
+                </td>--%>
             </tr>
             <tr>
                 <td class="mainBody" colspan="2">
-                    <font color="gray"><i>(Hold &lt;Ctrl&gt; for multiple selections. Double click or Drag&amp;Drop
+                    <font color="black"><i>(Hold &lt;Ctrl&gt; for multiple selections. Double click or Drag&amp;Drop
                         to transfer.)</i></font>
                 </td>
             </tr>
@@ -159,7 +200,14 @@ runat="server"></asp:Label>
             </tr>
         </table>
     </div>
-    <input type="button" name="btnCancel" value="Cancel" class="Button" onclick="top.location.href='../Default.aspx';" />
+
+    <input type="button" name="btnCancel" class="formInput btn btn-ARESCblue btn-lg" style="width: 170px; font-size:small"  value="Cancel"  onclick="top.location.href='../Default.aspx';"  />
     <asp:Button runat="server" ID="btnCheckout" Text="Continue" UseSubmitBehavior="true"
-        OnClientClick="return CheckAvailableSeats();" />
+        OnClientClick="return CheckAvailableSeats();" CssClass="formInput btn btn-ARESCblue btn-lg" Style="width: 170px; font-size:small" />
+    <input type="button" id="btnRefresh" name="btnRefresh" value="Refresh" class="formInput btn btn-ARESCblue btn-lg" style="width: 140px; font-size: small" onclick="RestSubscriptionMobile()" tabindex="0" />
+
+
+<%--    <input type="button" name="btnCancel" value="Cancel" class="Button" onclick="top.location.href='../Default.aspx';" />
+    <asp:Button runat="server" ID="btnCheckout" Text="Continue" UseSubmitBehavior="true"
+        OnClientClick="return CheckAvailableSeats();" />--%>
 </asp:Content>

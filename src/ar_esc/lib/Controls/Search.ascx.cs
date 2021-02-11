@@ -176,9 +176,8 @@ public partial class Search : System.Web.UI.UserControl
         if (orgId == 12861)
         {
             plESC.Visible = false;
-
             grdSearch.DataSource = SessionInfoList.DoSearch(true, false, chkFree.Checked, chkWeekend.Checked, this.txtSearch.Text.Trim(), orgId);
-
+            grdSearchMobile.DataSource = SessionInfoList.DoSearch(true, false, chkFree.Checked, chkWeekend.Checked, this.txtSearch.Text.Trim(), orgId);
         }
         else
         {
@@ -189,6 +188,9 @@ public partial class Search : System.Web.UI.UserControl
             }
 
             grdSearch.DataSource = SessionInfoList.DoSearch(true, false, chkFree.Checked, chkWeekend.Checked, this.txtSearch.Text.Trim(), orgId);
+            grdSearch.DataBind();
+            grdSearchMobile.DataSource = SessionInfoList.DoSearch(true, false, chkFree.Checked, chkWeekend.Checked, this.txtSearch.Text.Trim(), orgId);
+            grdSearchMobile.DataBind();
         }
     }
 }

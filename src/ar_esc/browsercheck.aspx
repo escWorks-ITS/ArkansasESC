@@ -12,7 +12,7 @@
   
     <form id="form1" runat="server">
     <div>
-        <table border="0" >
+        <table role="presentation" border="0" >
             <tr>
                  <td align="center" colspan="3"><img src="lib/img/warning.jpg"  height="150"/><br></td>
             </tr>

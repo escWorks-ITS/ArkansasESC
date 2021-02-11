@@ -18,6 +18,12 @@
 	font-family : Verdana;
 	font-size: 8pt;
 }
+
+span.mainBodyBold {
+    color: black !important;
+    font-size: 14px;
+}
+
 .mainBodySmall
 {
 	font-size: 8pt;
@@ -108,17 +114,21 @@ upcomingSessionHeader2
 	font-family: Tahoma, Helvetica, sans-serif; 
 
 }
-.breakoutheader
-{
-	font-size: 12pt;
-	font-weight: bold;
-	color: white; 
-	text-align: left;
-	font-family: Tahoma, Helvetica, sans-serif; 
-	background-color:#659A66;
 
-	
-	}
+a.upcomingLink {
+    /*color:#000000;*/
+    color: #3437EB !important;
+    text-decoration: underline;
+}
+
+.breakoutheader {
+    font-size: 12pt;
+    font-weight: bold;
+    color: white !important;
+    text-align: left;
+    font-family: Tahoma, Helvetica, sans-serif;
+    background-color: #003399;
+}
 
 .breakoutAltRow
 {background-color: #CCCCCC;
@@ -215,3 +225,20 @@ div#escWorksSimpleSearch .headerDescending
 {
 		background:transparent url(..\img\sort_desc.gif) no-repeat scroll right center;
 }
+
+/*#findSession {
+    margin-left: 390px;
+    width: 200px;
+}*/
+
+/*#searchText {
+    margin-left: 390px;
+}*/
+
+/*#btnSearch {
+    margin-left: 10px !important;
+    z-index: 999;
+}*/
+
+
+

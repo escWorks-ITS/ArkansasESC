@@ -18,6 +18,8 @@ public partial class shoebox_subscriptions_default : region4.escWeb.BasePages.Sh
         //base.lblSubscriptionNumber = lblSubscriptionNumber;
         base.lsbSubscription1 = lsbSubscription1;
         base.lsbSubscription2 = lsbSubscription2;
+        base.lsbSubscription3 = lsbSubscription3;
+        base.lsbSubscription4 = lsbSubscription4;
         base.ddRecommended = ddRecommended;
         base.ddSubscribed = ddSubscribed;
     }

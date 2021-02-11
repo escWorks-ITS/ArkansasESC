@@ -4,9 +4,64 @@
 <%@ Register TagPrefix="myMenu" Namespace="region4.escWorks.WebControls" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en-us" xmlns="http://www.w3.org/1999/xhtml">
+
 <head id="Head1" runat="server">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <%--test-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>escWorks</title>
+    <link type="text/css" rel="stylesheet" href="~/lib/css/escWorksStyle.css" />
+    <link type="text/css" rel="stylesheet" href="~/lib/css/page-styles.css" />
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script> --%> 
+    <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Region 4 serves a seven-county area composed of 50 public school districts and 45 public charter schools, representing more than 1.1 million students, 87,000 educators, and 1,500 campuses.">
+    <meta name="keywords" content="education,staar science,staar math,staar reading,staar writing,staar,math resources,katy schools,state assessments,houston schools,staarstaar,texas education,texas education resources,science resources,reading resources,cy-fair schools">
+    <meta name="viewport" content="width=device-width, target-densitydpi=high-dpi, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="generator" content="Kalibrate .NET Framework">
+    <meta name="copyright" content="Region 4 Education Service Center">
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/ga.js"></script>
+    <script type="text/javascript" async="" src="https://siteimproveanalytics.com/js/siteanalyze_6017401.js"></script>
+    <%-- <script id="ua-prop-uuid" class="UA-30076566-1"></script>--%>
+    <meta name="robots" content="index">
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>AR_ESC</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />    
+    <link rel="stylesheet" type="text/css" media="all" href="https://static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.css" />
+
+ <%--   <link rel="icon" type="image/ico" href="Content/favicon.ico?St6$e?" />--%>
+    <link href="Content/home.css" rel="stylesheet" type="text/css" />
+    <link href="Content/superslides.css" rel="stylesheet" type="text/css" />
+    <link href="Content/superslidesmid.css" rel="stylesheet" type="text/css" />
+    <link href="Content/animate.css" rel="stylesheet" type="text/css" />
+    <link href="Content/contentblocks.css" rel="stylesheet" type="text/css" />
+    <link href="Content/styles.css" rel="stylesheet" type="text/css" />
+    <link href="Content/screendesktop.css" rel="stylesheet" type="text/css" />
+    <link href="Content/screen768.css" rel="stylesheet" type="text/css" />
+    <link href="Content/pushy.css" rel="stylesheet" type="text/css" />
+    <link href="Content/r4menu.css" rel="stylesheet" type="text/css" />
+    <link href="Content/dropdown.css" rel="stylesheet" type="text/css" />
+    <link href="Content/screen1004.css" rel="stylesheet" type="text/css" />
+    <link href="Content/screen768.css" rel="stylesheet" type="text/css" />
+    <link href="Content/screen480.css" rel="stylesheet" type="text/css" />
+    <link href="Content/screen320.css" rel="stylesheet" type="text/css" />
+    <link href="Content/esc4-modified.css" rel="stylesheet" type="text/css" />
+    <link href="Content/escWorksStyle.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src='<%#ResolveUrl("~/lib/js/modernizr.js") %>'></script>
+    <script type="text/javascript" src='<%#ResolveUrl("~/lib/js/jquery.watermark.js") %>'></script>
+    <script type="text/javascript" src='<%#ResolveUrl("~/lib/js/jquery.pushy.js") %>'></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <%--<title>escWorks</title>--%>
     <link type="text/css" rel="stylesheet" href="<%# cssMaster %>" />
     <link type="text/css" rel="stylesheet"  href="<%# cssPageTitle%>" />
     <link type="text/css" rel="stylesheet" href="<%# cssMenu %>" />
@@ -16,21 +71,472 @@
    
     <script src='https://www.google.com/recaptcha/api.js' type="text/javascript" async defer></script>
 </head>
-<body style="width: 100%">
+<body style="width: 100%;">
+    <p id="main" tabindex="-1"><a class="skip-to-content-link" href="#MainBody">
+    Skip to content
+    </a><br />
     <form runat="server" class="mainBody">
     <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
     </asp:ScriptManager>
-    <table align="center" style ="background-color:<%# mainBodyBackgroundColor %>">
+
+            <div id="basecontainer">
+        <div class="basegridwidth" <%# escBorder %>>
+
+            <div class="header" id="<%# BannerTheme %>" >
+                <div class="logo">
+                </div>
+                
+                <div class="utilitynav no-zoom">
+                </div>
+
+
+    <script language="javascript">
+        /* start ZoomMenu */
+
+        $(document).ready(function () {
+            if ($("#itemCount").text() != "") {
+                $(".itemCountMaster").text($("#itemCount").text());
+                localStorage.setItem("itemCount", $("#itemCount").text());
+            }
+            else {
+                $(".itemCountMaster").text(localStorage.getItem("itemCount"));
+            }
+
+            var profile = document.getElementById('profileValue').innerHTML;
+
+            if (profile == null || profile == '') {
+                $("#SignIn").show();
+                $("#CreateNewAccount").show();
+                $("#SignOut").hide();
+                $("#Greetings").hide();
+                $("#MobileGreetings").hide();
+            } else {
+                $("#SignIn").hide();
+                $("#CreateNewAccount").hide();
+                $("#SignOut").show();
+                $("#Greetings").show();
+                $("#MobileGreetings").show();
+            }
+
+            $('input.rgValue').attr('id', 'formLabel');
+            $("[name='ctl00$mainBody$cal1$ctl06']").attr('id', 'formLabel_month');
+            $("[name='ctl00$mainBody$cal1$ctl07']").attr('id', 'formLabel_year');
+        }
+
+
+    );
+
+        $(function () {
+
+
+            if (!window.jw) jw = {};
+
+            jw.ZoomMenu = function (a, o) {
+                var t = this;
+
+                t.body = $("body");
+                t.element = a = $(a);
+                t.settings = {
+                    min: 12
+                    , max: 30
+                    , tags: "*:not(html,script,style,iframe,head,meta,title,link)"
+                    , exclude: ".no-zoom,.no-zoom *"
+                    , increment: 2
+                };
+
+                if (o) for (var i in o) t.settings[i] = o[i];
+
+
+                t.minusBtn = a.children("span.minus");
+                t.plusBtn = a.children("span.plus");
+                t.defaultBtn = a.children("span.default");
+
+                t.zoomFont = function (n) {
+                    var s = this.settings, l = $(s.tags);
+
+                    l.each(function (i, a) {
+                        a = $(a);
+                        a.css("fontSize", a.css("fontSize"));
+                    });
+
+                    l.not(s.exclude).each(function (i, a, d) {
+
+                        a = $(a); d = a.data();
+
+                        if (!d.def) {
+                            d.def = parseInt(a.css("fontSize"));
+                            d.curr = d.def;
+                        }
+
+                        d.curr = d.curr + n;
+
+                        if (d.curr > s.max) d.curr = s.max;
+                        else if (d.curr < s.min) d.curr = s.min;
+
+                        if (!n) d.curr = d.def;
+
+                        a.css("fontSize", d.curr + "px");
+
+                    });
+                }
+
+
+                t.init = function () {
+                    var t = this, s = t.settings;
+                    t.minusBtn.mousedown(function () {
+                        t.zoomFont(-s.increment);
+                    });
+
+
+                    t.plusBtn.mousedown(function () {
+                        t.zoomFont(s.increment);
+                    });
+
+                    t.defaultBtn.mousedown(function () {
+                        t.zoomFont(0);
+                    });
+                }
+
+                this.init();
+            }
+        });
+        /* end ZoomMenu */
+
+        $(function () {
+            new jw.ZoomMenu($("#zoom"), {
+                min: 12
+                , max: 30
+                , exclude: ".no-zoom,.no-zoom *"
+                , increment: 2
+            });
+        });
+
+        // $('ul').css('list-style-type', 'none');
+        // $('li').css('list-style-type', 'none');
+    </script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //'search-results';
+
+    $('.menu-btn').focus(function () {
+        $('.menu-btn').click();
+    });
+
+    $('.ContactUs').blur(function () {
+        $('.menu-btn').click();
+    });
+
+        $("#btnSearch").bind("click", function () {
+            if ($("#txtSearch").val().length > 0) {
+                location.href = "/search-results?keyword=" + $("#txtSearch").val();
+            }
+        });
+
+        $("#txtSearch").bind("keypress", function (e) {
+            if (e.keyCode == 13) {
+                location.href = "/search-results?keyword=" + $("#txtSearch").val();
+            }
+        });
+
+
+
+        //$(".menu-btn").bind("click", function () {
+        //    alert("1 am clicked");
+        //    $('nav.pushy').toggleClass("pushy-right pushy-open");
+        //$('body').toggleClass("pushy-active");
+        //});
+    });
+                </script>
+
+    <div class="navr no-zoom">
+
+<header>
+    <!-- Menu Button -->
+    <div class="menu-btn" tabindex="0"></div>
+
+    <!-- Pushy Menu -->
+    <nav class="pushy pushy-right">
+        <div class="menu-title">
+         <%--<img src="<%#ResolveUrl("~/lib/img/pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>--%>
+             <%--<img src="ResolveUrl(<%# PushyMenu %>)" alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;" />--%>          
+        
+        <% if(BannerTheme == "summerhead"){%>
+            <img src="<%#ResolveUrl("~/lib/img/pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>
+        <%}%>
+
+        <% if(BannerTheme == "summerhead2"){%>
+            <img src="<%#ResolveUrl("~/lib/img/ar_ade/logo320pushy.png") %> " alt="escWorks" style="background-color: #325e8e; style="width:30;height:30px;" height="120px;"/>
+        <%}%>
+        
+        </div>
+
+                                   <ul>
+                                <li>
+                                    <ul>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/default.aspx") %>">Home</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a style="background-color : #003399; color: white !important; font-weight:bold;">Sign In/Out / Create New Account</a>
+                                    <ul>
+                                        <li id="SignIn"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signin.aspx?ReturnUrl=/default.aspx") %> ">Sign In</a></li>
+                                        <li id="SignOut"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signout.aspx") %> ">Sign Out</a></li>
+                                        <li id="CreateNewAccount"><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/account/signup.aspx") %>">Create New Account</a></li>  
+                                        <li id="Greetings"><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/account/default.aspx") %>">Hello, <%= Session["UserFirstName"] %></a></li>                 
+                                        <p id="profileValue" style="display:none"><%= Session["profile"] %></p>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a style="background-color : #003399; color: white !important; font-weight:bold;">Search Types</a>
+                                    <ul>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/search.aspx") %>">Search</a></li>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/catalog/calendar.aspx") %>">Calendar of Sessions</a></li>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/catalog/results.aspx?cmd=conference") %>">Conferences</a></li>
+                                        
+                                        <% if(BannerTheme == "summerhead"){%>
+                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_ade/") %>">Search ADE Sessions</a></li>
+                                        <%}%>
+
+                                        <% if(BannerTheme == "summerhead2"){%>
+                                            <li><a style="color: white !important;" href="<%#ResolveUrl("https://dev-www.escweb.net/ar_esc/") %>">Search AESC Sessions</a></li>
+                                        <%}%>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a style="background-color : #003399; color: white !important; font-weight:bold;">User Account Information</a>
+                                    <ul>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/transcripts/default.aspx") %>">Professional Development Record</a></li>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/account/default.aspx") %>">User Account</a></li>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/registration/default.aspx") %>">Registration/Certificate</a></li>
+                                        <li><a style="color: white !important;" href="<%#ResolveUrl("~/shoebox/subscriptions/default.aspx") %>">Subscriptions</a></li>
+                                    </ul>
+                                </li>          
+                                <li>
+                                    <a style="background-color : #003399; color: white !important; font-weight:bold;">Help</a>
+                                    <ul>
+<%--                                        <li><a href="<%#ResolveUrl("~/help.aspx") %>" id="Help">Help &amp; How-To</a></li>--%>
+                                        <li><a class="ContactUs" style="color: white !important;" href="<%#ResolveUrl("~/about/contact.aspx") %>">Contact Us</a></li> 
+                                        <%--<li><a href="<%#ResolveUrl("~/quickRegister.aspx") %>">Quick Sign Up</a></li>--%>
+                                        <%--<li><a href="<%#ResolveUrl("~/help.aspx") %>">Test</a></li>--%>
+                                        
+                                    </ul>
+                                </li>                           
+                            </ul>
+
+        <div class="clear25"></div>
+    </nav>
+
+
+
+    <!-- Site Overlay -->
+    <div class="site-overlay"></div>
+</header>
+
+
+
+    </div>
+</div>
+            <div class="navd no-zoom">
+<script type="text/javascript">
+    jQuery(window).load(function () {
+
+        $("#nav > li > a.reveal").click(function (e) { // binding onclick
+            if ($(this).parent().hasClass('selected')) {
+                $("#nav .selected div div").fadeOut(100); // hiding popups
+                $("#nav .selected").removeClass("selected");
+            } else {
+                $("#nav .selected div div").fadeOut(100); // hiding popups
+                $("#nav .selected").removeClass("selected");
+
+                if ($(this).next(".subs").length) {
+                    $(this).parent().addClass("selected"); // display popup
+                    $(this).next(".subs").children().fadeIn(100);
+                }
+            }
+            e.stopPropagation();
+        });
+
+        $("body").click(function () { // binding onclick to body
+            $("#nav .selected div div").slideUp(100); // hiding popups
+            $("#nav .selected").removeClass("selected");
+        });
+    });
+                </script>
+        </div>
+
+            <div class="contentwidth" style="width:99%">
+                <div class="contentgrid homegrid">
+                    <div class="contentarea">
+<%--                        <div>
+            <a title="<%# logoTitle %>"  href="<%# logoLink %>">
+                <img src="<%# BasePage.PathToRoot %><%# logo %>"  alt="AESC Logo" style ="border: none;" /></a></div>--%>
+                        <div id="leftMenu" class="colcontentblockleft StandardCBStyle" style="width:21%;" >                   
+                            <table role="presentation" border="0" cellpadding="0" style="background-color:<%# menuBackgroundColor %>;">
+                                 <tr><td><h1><span style="display: none;">escWorks</span></h1><br /></td></tr>
+<%--	                        <tr><td width="100%" style="background-color:<%# menuBackgroundColor %>; padding:10px; font-family:'Open Sans', Helvetica, Arial, sans-serif;"><h2><font color="#800800">Quick</font><font color="#800800">Links</font></h2><br /></td></tr>--%>
+                            <tr><td><img border='0' src="<%# BasePage.PathToRoot %><%# linklogo %>" align='left'
+                                             alt="quicklinks.jpg" hspace="0" vspace="0" /></td></tr>
+                                <tr>
+                                    <td width='100%' valign="top" style="background-color:<%# menuBackgroundColor %>;">
+<%--                                        <img border='3' style="border-color: #F8EDCD;" src="<%# BasePage.PathToRoot %>lib/img/1-ql_header1.jpg"
+                                            align='left' alt="1-ql_header.jpg" hspace="0" vspace="0" width="211px" />--%>
+                                        <myMenu:MenuV3 runat ="server" ID="MenuV2" DisplayAllItems =" true"  />
+                                        <%--<escWorks:MenuV2 runat="server" id="menu2" DisplayAllItems="true" DisplayCreateNewLink="true" DisplayMessage="true" />
+                                        <escWorks:MenuV2 runat="server" ID="MenuV1" DisplayAllItems="true" />--%>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="background-color: <%# menuBackgroundColor %>;">
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="mlabel" align="left" style="color : <%# pdfDownloadFontColor %>; background-color: white;">
+                                        <br /><strong>PDF Downloads</strong><br /><br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: <%# menuBackgroundColor %>; line-height:18px; padding-left: 8px;">
+                                        <ucontrol:FileList ID="flList" runat="server" />
+                                        <%--<ucontrol:FileList ID="FileList1" runat="server" />--%>
+                                    </td>
+                                </tr>
+                                          <tr>
+                                <td style="background-color: white !important">
+                                   &nbsp; &nbsp;<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=7784106a0ca511e0b34b005056b201e5"></script>
+                                </td>
+                            </tr>
+                            </table>
+
+                                 </div>
+
+                          
+
+                 <div id="DetailsBody" class="col-12 col-sm-10 col-lg-9" style="height: auto; vertical-align: top; width: 100% !important">                         
+                           
+                                  <escWorks:PageTitle runat="server" ID="pageTitle" BackColor="<%# pageTitleBackgroundColor %>" />
+                              <%--<escWorks:PageTitle runat="server" ID="pageTitle" BackColor="#FFFFFF"/>--%>
+                                    <br />
+                                    <br />
+                            <asp:ContentPlaceHolder runat="server" ID="mainBody">
+                                
+                            </asp:ContentPlaceHolder></div>
+                        
+<%--                            <asp:Panel ID="panelFooter" runat="server" Visible="false">
+                                <span style="color: white !important">footer</span>
+                                <div style="background-color:#245a95 !important; width:100%; height:60px">
+                                    <div style="padding: 5px;" align="center";>
+                                <span style="font-size: 14px;"><font color="#ffffff">Four Capitol Mall,  Little Rock, AR 72201    |    Phone: 501-682-447    |    <a href="https://goo.gl/maps/3jwm6wmvgRr" >  <font color="#ffffff">Map & Directions</font></a></font></span></div>
+                            </div>
+                            </asp:Panel>--%>
+
+	                    </div> 
+
+                    </div>
+
+                </div>
+            
+
+                <div class="clearbody"></div>
+
+<%--            <div style="background-color: #F0F0F0; padding: 10px 0px 10px 0px;">
+                <div style="text-align: center; font-size:small">7145 West Tidwell Dr, Houston, TX 77092</div>
+            </div>--%>
+            
+            <%--<div style="text-align: center;"><img src="<%#ResolveUrl("~/lib/standard/img/escWorks_LOGO_PoweredBy.jpg") %> " alt="Powered by ESC Image" /></div>
+            </div>--%>
+
+<%--                    <div style="padding: 25px;" align="center">
+                                <h4>
+                                    <font color="#1c3664">Region 16 Education Service CenterCenter  |  5800 Bell Street  |  Amarillo, TX 79109-6230  <br /> Phone: 806-677-5000  |  Fax: 806-677-5001</font></h4>  |  <a href="http://www.esc16.net/default.aspx?name=about.home"
+                                                    class="taglinegrey">About Region 16</a>
+                                <br /><div style="padding: 5px;" align="center">
+                    <a title="escWorks.NET" href="http://www.escworks.com">
+                        <img src="<%# BasePage.PathToRoot %>lib/standard/img/escWorks_LOGO_PoweredBy.jpg"
+                            alt="Powered by escWorks Logo" border="0" /></a>
+                </div>
+                                <p>
+                                </p>
+                                <p>
+                                </p>
+                            </div>--%>
+            <%--<div style="background-color: #11347d; color: #ffffff;" >--%>
+            <%--<table border="0" cellpadding="0" cellspacing="0" width="100%">--%>
+<%--                                <tr>
+                                    <td height="2" class="FooterRule" colspan="2">
+                                        <img src="/global/img/trans.gif" width="0" height="0" border="0" alt="Transparent Gif">
+                                    </td>
+                                </tr>--%>
+                                <%--<tr>--%>
+<%--                                    <td>
+                                        <table border="0" cellpadding="4" cellspacing="0" width="100%" >
+                                            <tr>
+                                                <td class="FooterContent">
+                                                    Copyright 2014 escWorks .NET. All Rights Reserved.<br />
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>--%>
+<%--                                    <td valign="top">
+                                        <table border="0" cellpadding="4" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td class="FooterContent" align="right">
+                                                    Region VI Education Service Center
+                                                    <br />
+                                                    <a href="http://www.esc6.net/" class="FooterLink" style="color: #ffffff; text-decoration: underline;" >Home Page</a> &nbsp;|&nbsp; <a
+                                                        href="about/Contact.aspx" class="FooterLink" style="color: #ffffff; text-decoration: underline;">Contact Us</a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>--%>
+<%--                                    <td colspan="3" style="background-color: #333333;color:#ffffff;font-size:1.25em;">
+                                        <div style="padding: 5px;" align="center">
+                                    TSBVI Outreach Programs | 512-206-9268<br />
+                                <%--TSBVI Outreach Programs | <a href="mailto:outreach@tsbvi.edu" style="color:#ffffff !important; text-decoration:none";>outreach@tsbvi.edu</a><br />
+                                1100 W 45th St Austin, TX 78756 | 512-454-8631 | <a href="http://www.tsbvi.edu/outreach/4041-tsbvi-outreach-map"style="color:#ffffff !important; text-decoration:none";>Map</a></div>
+                                     </td>--%>
+<%--                                </tr>
+                            </table>
+                        </div>--%>
+
+<%--                <div style="padding: 5px; float: right; width: 50%;">
+                    <a title="escWorks .NET" href="http://www.escworks.com">
+                        <img src="<%# BasePage.PathToRoot %>lib/standard/img/escWorks_LOGO_PoweredBy.jpg"
+                           alt="Powered by escWorks Logo" border="0" /></a>
+                </div>--%>
+            </div>
+                            <asp:Panel ID="panelFooter" runat="server" Visible="false">
+                                <div class="basegridwidth">
+                                <%--<span style="color: white !important">footer</span>--%>
+                                <div style="background-color:#245a95 !important; width:100%; height:60px">
+                                    <div style="padding: 5px;" align="center";>
+                                <span style="font-size: 14px;"><font color="#ffffff">Four Capitol Mall,  Little Rock, AR 72201    |    Phone: 501-682-447    |    <a style="text-decoration: underline;" href="https://goo.gl/maps/3jwm6wmvgRr" ><font color="#ffffff">Map & Directions</font></a></font></span></div>
+                                </div>
+                                </div>
+                            </asp:Panel>
+                <div style="padding: 5px;" align="center">
+                    <a title="escWorks.NET" href="http://www.escworks.com">
+                        <img src="<%# BasePage.PathToRoot %>lib/standard/img/escWorks_LOGO_PoweredBy.jpg"
+                            alt="Powered by escWorks Logo" border="0" /></a>
+                </div>
+        <%--</div>--%>
+
+        <div id="footer" class="contentwidth">
+
+        </div>
+            <asp:Label runat="server" ID="lblStagingServer" CssClass="error" Text="" />
+        </div>
+
+<%--    <table align="center" style ="background-color:<%# mainBodyBackgroundColor %>">
         <tr valign="top">
             <td>
                 <table style="margin-left: auto; width: 1024px; margin-right: auto; margin-top: 20px;margin-top: 20px;  border-right: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-top: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-left: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-bottom: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; background-color: <%# logoSpaceColor %>">
-                    <%--test-border-collapse: collapse; border-right: <%# mainBodyBorderColor %><%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-top: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; 
-                    border-left: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>; border-bottom: <%# mainBodyBorderColor %> <%# mainBodyBorderWidth %> <%# mainBodyBorderStyle %>;">--%>
                     <tr>
                         <td colspan="3" style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px; background-color:  <%# logoBackgroundColor %>;">
                             <div>
                                 <a title="<%# logoTitle %>"  href="<%# logoLink %>">
-                                   <%-- <img src="<%# BasePage.PathToRoot %><%# logo %>" height="80px" width ="1024px" alt="AESC Logo" style ="border: none;" /></a></div>--%>
                                     <img src="<%# BasePage.PathToRoot %><%# logo %>"  alt="AESC Logo" style ="border: none;" /></a></div>
                                     
                         </td>
@@ -43,28 +549,17 @@
                     <tr style="vertical-align: top;">
                         <td style="width: 199px; padding: 10px;" valign="top">
                             <table border="0" cellpadding="0" cellspacing="0" style="background-color:<%# menuBackgroundColor %>; border: <%# menuBorderStyle %> <%# menuBorderWidth %> <%# menuBorderColor %>;height:<%# menuHeight %>">
-                                <%--<tr>
-                                    <td bgcolor="#4785c8">
-                                        &nbsp;
-                                    </td>
-                                </tr>--%>
                              <tr>
                                     <td width='100%'>
                                         <img border='0' src="<%# BasePage.PathToRoot %><%# linklogo %>" align='left'
                                              alt="quicklinks.jpg" hspace="0" vspace="0" />
                                     </td>
-                                   <%-- <td style="background-color: #003399;">
-                                    </td>--%>
+
                                 </tr>
                               
-                                    <%--<td style="background-color: #003399;">
-                                        <br />
-                                    </td>--%>
-                             
+                               
                                 <tr>
-                                  <%--  <td width="100%" style="background-color: #003399;">
-                                        <escWorks:MenuV2 runat="server" ID="menu2" DisplayAllItems="true" />
-                                    </td>--%>
+
                                     <td>
                                         <myMenu:MenuV3 runat ="server" ID="menu2" DisplayAllItems =" true"  />
 
@@ -78,7 +573,7 @@
                                 <tr>
                                     <td class="mlabel" align="left"><font color="<%# pdfDownloadFontColor %>">&nbsp;<%# pdfDownloadLabel %></font></td>
                                       <%--  PDF Downloads
-                                    </td>--%>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -104,7 +599,7 @@
                                     <asp:ContentPlaceHolder runat="server" ID="mainBody" />
                                 </div>
                             </div>
-                         </td>--%>
+                         </td>
 
                         <td style="height: 100%; vertical-align: top; padding-right: 5px;">
                             <div style="background-color: <%# logoSpaceColor %>; width: 790px">
@@ -139,7 +634,7 @@
                 <br />
             </td>
         </tr>
-    </table>
+    </table>--%>
     </form>
 </body>
 </html>

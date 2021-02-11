@@ -64,7 +64,7 @@
     <form id="EvaluationForm" method="post" runat="server">
     <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" runat="server">
     </asp:ScriptManager>
-    <table cellspacing="0" cellpadding="0" width="555" height="100%" border="0">
+    <table role="presentation" cellspacing="0" cellpadding="0" width="555" height="100%" border="0">
         <asp:PlaceHolder ID="pForm" runat="server">
             <tr valign="middle">
                 <td colspan="2">
