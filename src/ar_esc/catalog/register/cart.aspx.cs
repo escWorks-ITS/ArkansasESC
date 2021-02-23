@@ -16,7 +16,7 @@ public partial class catalog_register_cart : region4.escWeb.BasePages.Catalog.Re
     {
         base._txtPromoCode = txtPromoCode;
         base._btnApplyPromoCode = btnApplyCode;
-        base._cartDisplay = cartDisplay1;
+        //base._cartDisplay = cartDisplay1;
         base._pPromoCode = pPromoCode;
         base._btnCheckout = btnCheckOut;
     }

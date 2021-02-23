@@ -1,16 +1,18 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="shoebox_default" MasterPageFile="~/MasterPage.master" %>
 
 
-<asp:Content runat="server" ContentPlaceHolderID="mainBody">
+<asp:Content runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
 
-    <table border="0" cellpadding="4" cellspacing="0" width="100%"> 
+    <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%"> 
 		<tr>
 			<td valign="top">
 				<b><i>"My Account"</i></b> is a record tracking system that enables
 				educators to track their professional growth on-line.
 				The Portfolio component is free to users of the <b><i><%# region4.escWeb.SiteVariables.customer_name %></i></b> escWorks<small><sup>&reg;</sup></small> system.
 				
-				<table border="0" cellpadding="8" cellspacing="0" width="100%">
+				<table role="presentation" border="0" cellpadding="8" cellspacing="0" width="100%">
 					<tr>
 						<td valign="top">
 							<img src="../lib/img/shoebox.jpg" border="0" alt="Shoebox Image">
@@ -20,7 +22,7 @@
 							</span>
 						</td>
 						<td width="100%">
-							<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 								<tr>
 									<td width="100%">
 										<a href="transcripts/default.aspx" class="link"><b>Transcripts</b></a>

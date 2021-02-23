@@ -2,9 +2,11 @@
     EnableEventValidation="false" MasterPageFile="~/MasterPage.master" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<asp:Content runat="server" ContentPlaceHolderID="mainBody">
+<asp:Content runat="server" ContentPlaceHolderID="mainBody"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCBlue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
     <asp:Panel runat="server" ID="pFirst">
-        <table width="75%" class="mainBody">
+        <%--<table width="75%" class="mainBody">
             <tr>
                 <td colspan="3">
                     <strong><asp:Label ID="PrimaryEmailLabel"
@@ -24,8 +26,29 @@ runat="server"></asp:Label></strong>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPrimaryEmail"
                         CssClass="error" Display="Dynamic" ErrorMessage="RequiredFieldValidator" SetFocusOnError="True">Primary Email is required</asp:RequiredFieldValidator>
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8">
+        <asp:Label ID="UserNameLabel"
+        text="<strong>Primary Email:</strong>"
+        AssociatedControlID="txtPrimaryEmail"
+        CssClass="smallFont" style="color: #292568;"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtPrimaryEmail" runat="server" CssClass="form-control smallFont" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPrimaryEmail"
+                        CssClass="error smallFont" Display="Dynamic" ErrorMessage="RequiredFieldValidator" SetFocusOnError="True">Primary Email is required</asp:RequiredFieldValidator>
+        
+    </div>       
+</div>
+        <br />
+
+        <button type="button" class="btn btn-ARESCBlue btn-lg" onclick="location.href='../account/email.aspx'">Change Primary Email</button>  
+<%--    <button type="button" class="btn btn-info btn-lg"" onclick="location.href='../account/password.aspx/OnChangePassword()'">Change Password</button>--%>
+<asp:LinkButton ID="btnChangePassword" runat="server" OnClick="OnChangePassword"><button type="button" class="btn btn-ARESCBlue btn-lg">Change Password</button></asp:LinkButton>
+<br /><br />
+
+            <%--<tr>
                 <td colspan="3" valign="top">
                     <strong><asp:Label ID="SecondaryEmailLabel"
 text="Secondary Email:"
@@ -37,7 +60,19 @@ runat="server"></asp:Label></strong>
                 <td colspan="3" valign="top">
                     <asp:TextBox ID="txtSecondaryEmail" runat="server" Width="276px" CssClass="formInput" />
                 </td>
-            </tr>
+            </tr>--%>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8">
+        <asp:Label ID="SecondaryEmailLabel"
+        text="<strong>Secondary Email:</strong>"
+        AssociatedControlID="txtSecondaryEmail"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtSecondaryEmail" CssClass="form-control smallFont" runat="server" /><br />        
+     </div>       
+  </div>
+
             <%--            <tr>
                 <td colspan="3" valign="top">
                     <strong>Salutation</strong></td>
@@ -48,7 +83,7 @@ runat="server"></asp:Label></strong>
                     </asp:DropDownList><br />
                 </td>
             </tr>--%>
-            <tr>
+<%--            <tr>
                 <td style="width: 158px" valign="top">
                     <strong><asp:Label ID="LastNameLabel"
 text="Last Name:"
@@ -82,8 +117,46 @@ runat="server"></asp:Label></strong>
                 <td style="height: 45px" valign="top">
                     <asp:TextBox ID="txtMiddleName" runat="server" CssClass="formInput" />
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">*&nbsp;</font>
+        <asp:Label ID="FirstNameLabel"
+        text="<strong>First Name: </strong>"
+        AssociatedControlID="txtFirstName"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control smallFont" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtFirstName"
+        CssClass="error smallFont" ErrorMessage="First Name is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div> 
+    <div class="col-xs-12 col-sm-4">
+      <font color="black">*&nbsp;</font>
+        <asp:Label ID="LastNameLabel"
+        text="<strong>Last Name:</strong>"
+        AssociatedControlID="txtLastName"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtLastName" runat="server" CssClass="form-control smallFont" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastName"
+        CssClass="error smallFont" ErrorMessage="Last Name is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div>
+
+
+
+    <div class="col-xs-12 col-sm-4">
+        <asp:Label ID="MiddleNameLabel"
+        text="<strong>Middle Name:</strong>"
+        AssociatedControlID="txtMiddleName"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtMiddleName" runat="server" CssClass="form-control smallFont" /><br />
+    </div> 
+</div>
+
+
+<%--            <tr>
                 <td colspan="3" valign="top">
                     <strong><asp:Label ID="HomeAddressLabel"
 text="Home Address:"
@@ -98,8 +171,23 @@ runat="server"></asp:Label></strong>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtHomeAddress"
                         CssClass="error" ErrorMessage="Home Address is required"></asp:RequiredFieldValidator>
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+          <div class="row">
+    <div class="col-xs-12 col-sm-12">
+         <font color="black">*&nbsp;</font>
+        <asp:Label ID="HomeAddressLabel"
+        text="<strong>Home Address:</strong>"
+        AssociatedControlID="txtHomeAddress"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtHomeAddress" runat="server" CssClass="form-control smallFont" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtHomeAddress"
+                        CssClass="error smallFont" ErrorMessage="Home Address is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+</div>
+</div>
+
+<%--            <tr>
                 <td style="width: 158px" valign="top">
                     <strong><asp:Label ID="CityLabel"
 text="City:"
@@ -134,8 +222,46 @@ runat="server"></asp:Label></strong>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtZip"
                         CssClass="error" ErrorMessage="Zip is required"></asp:RequiredFieldValidator>
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+              <div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">*&nbsp;</font>
+        <asp:Label ID="CityLabel"
+        text="<strong>City:</strong>"
+        AssociatedControlID="txtCity"
+        CssClass="smallFont"
+        runat="server"></asp:Label>       
+       <asp:TextBox ID="txtCity" runat="server" CssClass="form-control smallFont" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtCity"
+                        CssClass="error smallFont" ErrorMessage="City is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">*&nbsp;</font>
+        <asp:Label ID="StateLabel"
+        text="<strong>State: (2 letter Abbrev)</strong>"
+        AssociatedControlID="ddState"
+        CssClass="smallFont"
+        runat="server"></asp:Label>                         
+        <asp:DropDownList ID="ddState" runat="server" CssClass="form-control smallFont" style="height: 30px"></asp:DropDownList>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ddState"
+                        CssClass="error smallFont" ErrorMessage="State is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">*&nbsp;</font>
+        <asp:Label ID="ZipLabel"
+        text="<strong>Zip:</strong>"
+        AssociatedControlID="txtZip"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtZip" runat="server" CssClass="form-control smallFont" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtZip"
+                        CssClass="error smallFont" ErrorMessage="Zip is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div>
+  </div>
+
+
+<%--            <tr>
                 <td style="width: 158px" valign="top">
                     <strong><asp:Label ID="HomePHoneLabel"
 text="Home Phone:"
@@ -169,8 +295,46 @@ runat="server"></asp:Label></strong>
                 <td colspan="1" style="height: 45px" valign="top">
                     <asp:TextBox ID="txtEmployeeNo" runat="server" CssClass="formInput" /><br />
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+          <div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">*&nbsp;</font>
+        <asp:Label ID="HomePhoneLabel"
+        text="<strong>Home Phone:</strong>"
+        AssociatedControlID="txtHomePhone"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtHomePhone" runat="server" CssClass="form-control smallFont" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="txtHomePhone"
+                        CssClass="error smallFont" ErrorMessage="Home Phone is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">*&nbsp;</font>
+        <asp:Label ID="WorkPhoneLabel"
+        text="<strong>Work Phone:</strong>"
+        AssociatedControlID="txtWorkPhone"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtWorkPhone" runat="server" CssClass="form-control smallFont" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtWorkPhone"
+                        CssClass="error smallFont" ErrorMessage="Work Phone is required" ForeColor="#A80000"></asp:RequiredFieldValidator>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+        <font color="black">&nbsp;</font>
+        <asp:Label ID="EmployeeNoLabel"
+        text="<strong>Employee No.</strong>"
+        AssociatedControlID="txtEmployeeNo"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+        <asp:TextBox ID="txtEmployeeNo" runat="server" CssClass="form-control smallFont" />
+<%--        <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtWorkPhone"
+                        CssClass="error smallFont" ErrorMessage="Work Phone is required" ForeColor="#A80000"></asp:RequiredFieldValidator>--%>
+    </div>
+</div>
+
+
+<%--            <tr>
                 <td colspan="3" valign="top">
                     <strong><asp:Label ID="OrganizationLabel"
 text=<%# region4.escWeb.SiteVariables.ObjectProvider.OrganizationNameCapitalized %>
@@ -190,8 +354,25 @@ runat="server"></asp:Label>
                         Category="Org" PromptText="Please select a region..." ServicePath="~/services/locationservice.asmx"
                         ServiceMethod="GetRegions" />
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+         <div class="row">
+    <div class="col-xs-12 col-sm-10">
+         <font color="black">*&nbsp;</font>
+        <strong><asp:Label ID="RegionLabel"
+        text=<%# region4.escWeb.SiteVariables.ObjectProvider.OrganizationNameCapitalized %>
+        AssociatedControlID="ddlRegion"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+                        </strong>
+        <asp:DropDownList ID="ddlRegion" runat="server" CssClass="form-control smallFont" Height="33px" />
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlRegion"
+            CssClass="error smallFont" ErrorMessage="Region is a required field" ForeColor="#A80000"></asp:RequiredFieldValidator>
+        <cc1:CascadingDropDown ID="CascadingDropDown1" runat="server" TargetControlID="ddlRegion" Category="Org" PromptText="Please select a region..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GetRegions" />
+    </div>
+  </div>
+
+<%--            <tr>
                 <td colspan="3" valign="top">
                     <strong><asp:Label ID="SiteLabel"
 text=<%# region4.escWeb.SiteVariables.ObjectProvider.SiteNameCapitalized %>
@@ -208,10 +389,25 @@ runat="server"></asp:Label>
                     <cc1:CascadingDropDown ID="CascadingDropDown2" runat="server" TargetControlID="ddlDistrict"
                         ParentControlID="ddlRegion" PromptText="Please select a district..." ServicePath="~/services/locationservice.asmx"
                         ServiceMethod="GetDistrictsForRegion" Category="Site" />
-                    <%--<asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>--%>
+                    <%--<asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+           <div class="row">
+    <div class="col-xs-12 col-sm-10">
+        <font color="black">*&nbsp;</font>
+        <strong><asp:Label ID="DistrictLabel"
+        text=<%# region4.escWeb.SiteVariables.ObjectProvider.SiteNameCapitalized %>
+        AssociatedControlID="ddlDistrict"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+                        </strong>
+        <asp:DropDownList ID="ddlDistrict" runat="server" CssClass="form-control smallFont" Height="33px" /><br />
+        <cc1:CascadingDropDown ID="CascadingDropDown2" runat="server" TargetControlID="ddlDistrict" ParentControlID="ddlRegion" PromptText="Please select a district..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GetDistrictsForRegion" Category="Site" />
+    </div>
+  </div> 
+
+<%--            <tr>
                 <td colspan="3" valign="top">
                     <strong><asp:Label ID="SchoolLabel"
 text=<%# region4.escWeb.SiteVariables.ObjectProvider.SchoolNameCapitalized %>
@@ -228,10 +424,25 @@ runat="server"></asp:Label>
                     <cc1:CascadingDropDown ID="CascadingDropDown3" runat="server" TargetControlID="ddlSchool"
                         ParentControlID="ddlDistrict" PromptText="Please select a school..." ServicePath="~/services/locationservice.asmx"
                         ServiceMethod="GetSchoolsFromDistricts" Category="Room" />
-                    <%--<asp:RangeValidator ID="RangeValidator3" runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>--%>
+                    <%--<asp:RangeValidator ID="RangeValidator3" runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>
                 </td>
-            </tr>
-            <tr>
+            </tr>--%>
+
+ <div class="row">
+    <div class="col-xs-12 col-sm-10">
+        <font color="black">*&nbsp;</font>
+        <strong><asp:Label ID="SchoolLabel"
+        text=<%# region4.escWeb.SiteVariables.ObjectProvider.SchoolNameCapitalized %>
+        AssociatedControlID="ddlSchool"
+        CssClass="smallFont"
+        runat="server"></asp:Label> </strong>
+       
+        <asp:DropDownList ID="ddlSchool" runat="server" CssClass="form-control smallFont" Height="33px" /><br />
+                    <cc1:CascadingDropDown ID="CascadingDropDown3" runat="server" TargetControlID="ddlSchool" ParentControlID="ddlDistrict" PromptText="Please select a school..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GetSchoolsFromDistricts" Category="Room" />
+    </div>
+  </div>
+
+<%--            <tr>
                 <td colspan="3" valign="top">
                     <strong><asp:Label ID="PositionLabel"
 text="Position:"
@@ -244,9 +455,26 @@ runat="server"></asp:Label></strong>
                     <asp:DropDownList ID="ddlPosition" runat="server" CssClass="formInput">
                     </asp:DropDownList>
                     <br />
-                    <%--<asp:RangeValidator ID="RangeValidator4" runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>--%>
+                    <%--<asp:RangeValidator ID="RangeValidator4" runat="server" ErrorMessage="RangeValidator"></asp:RangeValidator>
                 </td>
-            </tr>
+            </tr>--%>
+
+          <div class="row">
+    <div class="col-xs-12 col-sm-10">
+     <font color="black">*&nbsp;</font>
+        <asp:Label ID="PositionLabel"
+        text="<strong>Position:</strong>"
+        AssociatedControlID="ddlPosition"
+        CssClass="smallFont"
+        runat="server"></asp:Label>
+
+       <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="ddlPosition"
+            CssClass="error smallFont" ErrorMessage="Position is a required field" ForeColor="#A80000"></asp:RequiredFieldValidator>--%>
+         <%--<cc1:CascadingDropDown ID="CascadingDropDown4" runat="server" TargetControlID="ddlPosition" ParentControlID="ddlSchool" PromptText="Please select a Position..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GePositionsFromSchool"  Category="Room"/>--%>
+        <asp:DropDownList ID="ddlPosition" runat="server" CssClass="form-control smallFont" Height="33px" /><br />
+    </div>
+  </div>
+
             <%--            <tr>
                 <td colspan="3" valign="top">
                     <strong>Grade Level:</strong>
@@ -257,15 +485,16 @@ runat="server"></asp:Label></strong>
                     <asp:DropDownList runat="server" ID="ddlGradeLevel" CssClass="formInput" />
                 </td>
             </tr>--%>
-            <tr>
+<%--            <tr>
                 <td colspan="3" valign="top">
                 </td>
             </tr>
-        </table>
+        </table>--%>
         <asp:Label ID="lbErrorMessage" runat="server"></asp:Label>
-        <br />
-        <br />
-        <asp:Button runat="server" ID="btnSubmit" Text="Save Record" />
+        <%--<asp:Button runat="server" ID="btnSubmit" Text="Save Record" />--%>
+        <asp:Button ID="btnSubmit" runat="Server" Text="Save Record" CssClass="formInput btn btn-ARESCBlue btn-lg"
+            Style="width: 150px; font-size:small" ToolTip="Click here to save record.">
+        </asp:Button>
     </asp:Panel>
     <asp:Panel runat="server" ID="pSuccess" Visible="false">
         You have successfully saved the changes to your account!<br />

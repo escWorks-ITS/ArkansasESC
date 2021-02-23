@@ -15,6 +15,9 @@ using System.Xml;
 public partial class MasterPage : region4.escWeb.MasterPage
 {
     protected string pageBackgroundColor;
+    protected string escBorder = "";
+    protected string BannerTheme;
+    protected string PushyMenu;
     protected string logo;
     protected string logoBackgroundColor;
     protected string logoSpaceColor;
@@ -111,6 +114,18 @@ public partial class MasterPage : region4.escWeb.MasterPage
 
             if (region4.escWeb.SiteVariables.CustomerSiteId == cid)
             {
+                if (region4.escWeb.SiteVariables.CustomerSiteId == "ar_esc")
+                {
+                    BannerTheme = "summerhead";                   
+                    PushyMenu = "~/lib/img/pushy.png";
+                    escBorder = "id='escBorder' style = 'outline: 5px solid #c91e26;'";
+                }
+                else
+                {
+                    BannerTheme = "summerhead2";
+                    //PushyMenu = "ResolveUrl('~/lib/img/ar_ade/logo320pushy.png')";
+                    PushyMenu = "~/lib/img/ar_ade/logo320pushy.png";
+                }
                 reader.ReadToFollowing("page");
                 pageBackgroundColor = reader.GetAttribute("color");
                 reader.ReadToFollowing("header");
@@ -166,6 +181,21 @@ public partial class MasterPage : region4.escWeb.MasterPage
                 }
 
                 break;
+            }
+            else
+            {
+                if (region4.escWeb.SiteVariables.CustomerSiteId == "ar_esc")
+                {
+                    BannerTheme = "summerhead";
+                    PushyMenu = "/lib/img/pushy.png";
+                    escBorder = "style = 'border: 5px solid #c91e26'";
+                }
+                else
+                {
+                    BannerTheme = "summerhead2";
+                    //PushyMenu = "ResolveUrl('~/lib/img/ar_ade/logo320pushy.png')";
+                    PushyMenu = "/lib/img/ar_ade/logo320pushy.png";
+                }
             }
         }
     }

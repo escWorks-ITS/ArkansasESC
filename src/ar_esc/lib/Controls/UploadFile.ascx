@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="UploadFile.ascx.cs" EnableViewState="False" Inherits="lib_Controls_UploadFile" %>
-  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
    <asp:Panel ID="pnlUpload" runat="server" Visible="false">
         <div>
            <strong><label for=<%=FileUpload1.ClientID %>>File Upload:</label></strong>     

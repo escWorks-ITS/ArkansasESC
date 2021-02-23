@@ -24,7 +24,7 @@
     </script>
 </head>
 <body onload="Page_OnInit();" style="margin: 0px;">
-    <table cellspacing="0" cellpadding="0" width="100%" height="100%" border="0">
+    <table role="presentation" cellspacing="0" cellpadding="0" width="100%" height="100%" border="0">
         <tr>
             <td colspan="2" height="1" bgcolor="#191970">
                 <img src="/global/img/trans.gif" border="0" height="1" alt="Transparent Gif"></td>

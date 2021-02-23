@@ -18,9 +18,14 @@
 	font-family : Verdana;
 	font-size: 8pt;
 }
-.mainBodySmall
-{
-	font-size: 8pt;
+
+span.mainBodyBold {
+    color: black !important;
+    font-size: 14px !important;
+}
+
+.mainBodySmall {
+    font-size: 8pt;
 }
 
 .link
@@ -103,28 +108,28 @@ upcomingSessionHeader2
 	
 	font-size: 10pt;
 	font-weight: bold;
-	color: #ffffff;
+	color: black !important;
 	text-align: left;
 	font-family: Tahoma, Helvetica, sans-serif; 
 
 }
 
-a.upcomingLink  
-{
-    color:#000000;
+a.upcomingLink {
+    /*color:#000000;*/
+    color: black !important;
+    font-size:10px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-.breakoutheader
-{
-	font-size: 12pt;
-	font-weight: bold;
-	color: white; 
-	text-align: left;
-	font-family: Tahoma, Helvetica, sans-serif; 
-	background-color:#659A66;
-
-	
-	}
+.breakoutheader {
+    font-size: 12pt;
+    font-weight: bold;
+    color: white !important;
+    text-align: left;
+    font-family: Tahoma, Helvetica, sans-serif;
+    background-color: #003399;
+}
 
 .breakoutAltRow
 {background-color: #CCCCCC;
@@ -134,7 +139,7 @@ a.upcomingLink
 {
 	font-size: 8pt;
 	font-weight: bold;
-	color: #ffffff;
+	color: black !important;
 	text-align: right;
 }
 .mlabel              
@@ -220,4 +225,8 @@ div#escWorksSimpleSearch .headerAscending
 div#escWorksSimpleSearch .headerDescending
 {
 		background:transparent url(..\img\sort_desc.gif) no-repeat scroll right center;
+}
+
+span.welcomemessage {
+    color: black !important;
 }

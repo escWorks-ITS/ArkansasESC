@@ -1,10 +1,12 @@
 <%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="default.aspx.cs" Inherits="catalog_default" Title="Untitled Page" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" Runat="Server"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
 
-<table border="0" cellpadding="4" cellspacing="0" width="100%"> 
+<table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%"> 
 	<tr>
 		<td>
-			<table border="0" width="100%">
+			<table role="presentation" border="0" width="100%">
 				<tr>
 					<td width="40" nowrap><img src="/global/img/ico/32/search.gif" border="0" alt="Search Offerings" width="32" height="32"></td>
 					<td width="100%">
@@ -19,7 +21,7 @@
 				</tr>
 			</table>
 			<br>
-			<table border="0" width="100%">
+			<table role="presentation" border="0" width="100%">
 				<tr>
 					<td width="40" nowrap><img src="/global/img/ico/32/browse.gif" border="0" alt="Browse Offerings" width="32" height="32"></td>
 					<td width="100%">
@@ -34,7 +36,7 @@
 				</tr>
 			</table>
 			<br>
-			<table border="0" width="100%">
+			<table role="presentation" border="0" width="100%">
 				<tr>
 					<td width="40" nowrap><img src="/global/img/ico/32/calendar.gif" border="0" alt="Calendar of Events" width="32" height="32"></td>
 					<td width="100%">

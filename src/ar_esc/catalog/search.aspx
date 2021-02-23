@@ -3,14 +3,16 @@
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="mainBody" runat="server"><a name="MainBody"></a>
+    <span style="padding-right: 10px;"><button type="button" onclick="javascript:history.back()" class="formInput btn btn-ARESCblue btn-lg" role="button" style="width: 130px; font-size:small" ToolTip="Click here to go to previous page.">Previous</button></span>
+    <br /><br />
 
     <script src="../lib/js/calendar.js" type="text/javascript"></script>
     <asp:Panel runat="server" ID="pQuery">
-        <table width="100%" >
+        <table role="presentation" width="100%" >
             <tr valign="top">
                 <td>
-                    <table class="mainBody" style="border-top: solid 2px gray; border-bottom: solid 2px gray; ">
+                    <table role="presentation" class="mainBody" style="border-top: solid 2px gray; border-bottom: solid 2px gray; ">
                         <tr>
                             <td colspan="2">
                                 Search Professional Development Catalog For:
@@ -50,7 +52,7 @@
                     </table>
                 </td>
          <td>
-                    <table class="mainBody" style="border-top: solid 2px gray; border-bottom: solid 2px gray; ">
+                    <table role="presentation" class="mainBody" style="border-top: solid 2px gray; border-bottom: solid 2px gray; ">
                         <tr>
                             <td>
                                 Already know the
@@ -73,7 +75,7 @@
         <br />
     </asp:Panel>
     <asp:PlaceHolder runat="server" ID="pResults" Visible="false">
-        <table class="mainBody" width="100%" class="mainBody">
+        <table role="presentation" class="mainBody" width="100%" class="mainBody">
         <tr>
         <td colspan="2">Click on a title for a listing of available <%# region4.escWeb.SiteVariables.ObjectProvider.SessionPluralName %></td>
         </tr>
@@ -82,7 +84,7 @@
         <td align="right"><asp:ImageButton runat="server" ID="btnNewSearch" /></td>
         </tr>
         </table>
-        <table runat="server" class="mainBody" id="tableResults" width="100%" />
+        <table role="presentation" runat="server" class="mainBody" id="tableResults" width="100%" />
     </asp:PlaceHolder>
     <asp:Label runat="server" class="error" ID="lblError" />
     <br />
