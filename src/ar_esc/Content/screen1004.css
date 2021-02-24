@@ -283,4 +283,8 @@
         background-color: white !important;
         color: black !important;
     }
+
+    a.calendarlink {
+        font-size: 10px !important;
+    }
 }

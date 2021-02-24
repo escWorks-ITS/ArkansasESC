@@ -639,4 +639,8 @@ a:hover.tooltips span {
         background-color: white !important;
         color: black !important;
     }
+
+    a.calendarlink {
+        font-size: 9px !important;
+    }
 } 
