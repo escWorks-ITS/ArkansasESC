@@ -44,7 +44,7 @@ namespace escWeb.ar_esc.ObjectModel
                         time = (IsOnline || IsMultiVenueOnline) ? new DateTime(EndDate.Year, EndDate.Month, EndDate.Day)
                             : new DateTime(StartDate.Year, StartDate.Month, StartDate.Day, StartDate.Hour, StartDate.Minute, StartDate.Second);
 
-                    return time.AddHours(-region4.escWeb.SiteVariables.NumOfHoursBeforeRegistrationClosed);
+                    return time.AddHours(0);
                 }
                 else
                 {
