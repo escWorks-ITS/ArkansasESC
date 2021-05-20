@@ -18,6 +18,13 @@ namespace escWeb.ar_esc.ObjectModel
             set { _employeeNo = value; }
         }
 
+        private int _accommodationId;
+        public int AccommodationId
+        {
+            get { return _accommodationId; }
+            set { _accommodationId = value; }
+        }
+
         public User(int user_pk)
             : base(user_pk)
         {
@@ -26,6 +33,42 @@ namespace escWeb.ar_esc.ObjectModel
         public User(Guid sid)
             : base(sid)
         {
+        }
+
+        protected override void LoadCustomerInfo(System.Data.SqlClient.SqlCommand cmd)
+        {
+            cmd.Parameters.Clear();
+            cmd.CommandText = "[p.objectModel.User.CustomerSpec.Load]";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@sid", this.Sid);
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    _accommodationId = (reader["SpecialNeed_ID"] == DBNull.Value) ? 0 : Convert.ToInt32(reader["SpecialNeed_ID"]);
+                }
+                reader.Close();
+            }
+            cmd.CommandText = "";
+            cmd.Parameters.Clear();
+        }
+
+        protected override void SaveCustomerInfo(System.Data.SqlClient.SqlCommand cmd)
+        {
+            string query = string.Empty;
+
+            cmd.Parameters.Clear();
+            cmd.CommandText = "[p.objectModel.User.CustomerSpec.Save]";
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@sid", this.Sid);
+            cmd.Parameters.AddWithValue("@special_needs_id", AccommodationId);
+           
+            cmd.ExecuteNonQuery();
+
+            cmd.CommandText = "";
+            cmd.Parameters.Clear();
+
         }
 
         protected override void SaveCustomerInfo(SqlParameterCollection sqc)
