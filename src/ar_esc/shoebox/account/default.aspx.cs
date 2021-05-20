@@ -52,22 +52,28 @@ public partial class shoebox_account_default : region4.escWeb.BasePages.ShoeBox.
     {
         if (!Page.IsPostBack)
         {
+            //escWeb.ar_esc.ObjectModel.User myUser = CurrentUser as escWeb.ar_esc.ObjectModel.User;
+            //ddlAccommodation.SelectedValue = myUser.AccommodationId.ToString();
+
             CascadingDropDown1.SelectedValue = CurrentUser.Location.Site.Organization.LocationID.ToString();
             CascadingDropDown2.SelectedValue = CurrentUser.Location.Site.LocationID.ToString();
             CascadingDropDown3.SelectedValue = CurrentUser.Location.LocationID.ToString();
         }
     }
 
+
     protected override void LoadCustomerParameters(region4.ObjectModel.User user)
     {
         escWeb.ar_esc.ObjectModel.User myUser = user as escWeb.ar_esc.ObjectModel.User;
         this.txtEmployeeNo.Text = myUser.EmployeeNo;
+        ddlAccommodation.SelectedValue = myUser.AccommodationId.ToString();
     }
 
     protected override void SetCustomerParameters(region4.ObjectModel.User user)
     {
         escWeb.ar_esc.ObjectModel.User myUser = user as escWeb.ar_esc.ObjectModel.User;
         myUser.EmployeeNo = this.txtEmployeeNo.Text;
+        myUser.AccommodationId = ddlAccommodation.SelectedValue == "" ? 0 : Convert.ToInt32(ddlAccommodation.SelectedValue);
     }
     protected void OnChangePassword(object sender, EventArgs e)
     {
@@ -77,5 +83,24 @@ public partial class shoebox_account_default : region4.escWeb.BasePages.ShoeBox.
         Response.Redirect(url);
     }
 
-   
+    protected void ddlAccommodation_OnLoad(object sender, EventArgs e)
+    {
+        DropDownList list = sender as DropDownList;
+        region4.ItemCollection items;
+        if (list == null)
+            throw new Exception("Expected a dropdownlist but didn't get one");
+        list.Items.Clear();
+        if (list.Items.Count > 0)
+            return;
+        list.Items.Add(new ListItem("Please select a special need ...", ""));
+
+        items = region4.ItemCollection.ReturnItemsByGroup(Convert.ToInt32(ConfigurationManager.AppSettings["user.specialneeds.group"]));
+
+        foreach (region4.Item item in items)
+            if (item.Enabled)
+                list.Items.Add(new ListItem(item.Display, item.ItemId.ToString()));
+
+        escWeb.ar_esc.ObjectModel.User myUser = CurrentUser as escWeb.ar_esc.ObjectModel.User;
+        ddlAccommodation.SelectedValue = myUser.AccommodationId.ToString();
+    }
 }
