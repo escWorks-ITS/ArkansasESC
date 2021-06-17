@@ -753,4 +753,48 @@ a:hover.tooltips span {
         background-color: white !important;
         color: black !important;
     }
+
+    ol li div p {
+        width: 38%;
+    }
+
+    /*li div {
+        width: 85%;
+    }*/
+
+    /*div span strong span {
+        width: 38% !important;
+    }*/
+
+    div span span {
+        width: 100% !important;
+        color: black !important;
+    }
+
+    #PageTitleH1 {
+        font-size: 14px !important;
+        color: black !important;
+    }
+
+    p span {
+        /*background-color: white !important;*/
+        color: darkblue !important;
+    }
+
+        p span strong {
+            color: red !important;
+        }
+
+    ol li div p {
+        width: 90%;
+    }
+
+    li div {
+        width: 90% !important;
+    }
+
+    #PageTitleH1 {
+        font-size: 14px !important;
+        color: black !important;
+    }
 } 
