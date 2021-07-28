@@ -242,19 +242,20 @@
            </div>--%>
 
 <div class="CalendarDesktop">
+    <asp:PlaceHolder ID="desktopIPaddropdown" runat="server" Visible="false">
     <table role="presentation" width="100%" style="border-collapse: collapse;">
         <tr>
             <td><asp:Label ID="Labelcoop"
         text="Co-op:"
         AssociatedControlID="ddlcooperative"
         runat="server"></asp:Label>
-                <asp:DropDownList ID="ddlcooperative" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddlcooperative_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddlcooperative" runat="server" AutoPostBack="true" Width="100%" style="height: 30px !important;" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddlcooperative_SelectedIndexChanged"></asp:DropDownList>
             </td>
             <td><asp:Label ID="Labeldistrict"
         text="District:"
         AssociatedControlID="ddldistrict"
         runat="server"></asp:Label>
-                <asp:DropDownList ID="ddldistrict" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrict_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddldistrict" runat="server" AutoPostBack="true" Width="100%" style="height: 30px !important;" CssClass="form-control fullWidth smallFont" OnSelectedIndexChanged ="ddldistrict_SelectedIndexChanged"></asp:DropDownList>
             </td>
             <label for="ctl00_mainBody_cal1"><span style="display:none">Aria</span></label>
 <label for="formLabel_month" style="display: none;">formLabel_month</label>
@@ -265,11 +266,13 @@
         <td colspan="2"><escWorks:Calendar runat="server" ID="cal1" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
         </tr>
     </table>
+    </asp:PlaceHolder>
 </div>
     
 <br />
 
 <div class="CalendarMobile col-sm-12 col-lg-5" style="float:right">
+    <asp:PlaceHolder ID="mobiledropdown" runat="server" Visible="false">
     <table role="presentation" width="100%" style="border-collapse: collapse;">
         <tr>
             <td><asp:Label ID="LabelcoopMobile"
@@ -291,6 +294,7 @@
         <td colspan="2"><escWorks:Calendar runat="server" ID="cal2" PreviousText="&lt;&lt; Previous" NextText="Next &gt;&gt;" SetDateText="Go"  /></td>
         </tr>--%>
     </table>
+    </asp:PlaceHolder>
     <br />
                <div id="displayButton" style="display: none;">
              <div class='container'>
@@ -341,8 +345,10 @@
     </div>--%>
 <br />
     <div><h2 style="display: none; color: red">H2</h2></div>
-    <div><h3 style="line-height:1.6">
-        <myControl:MobileCalendar2 runat="server" ID="MobileCalendar"  />
+    <div><h3 style="line-height:1.6">.
+        <asp:PlaceHolder ID="mobileCal" runat="server" Visible="false">
+            <myControl:MobileCalendar2 runat="server" ID="MobileCalendar"  />
+        </asp:PlaceHolder>
         </h3>
     </div>
 </div>

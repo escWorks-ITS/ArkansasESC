@@ -218,6 +218,14 @@
     $(document).ready(function () {
         //'search-results';
 
+        $("p:contains('Registration Information')").each(function () {
+        $(this).html($(this).html().replace("Registration Information", "<span style='color: black;'>Registration Information</span>"));
+        });
+
+        $("p:contains('You must register using the link above. We will not use your Shoebox to register.')").each(function () {
+        $(this).html($(this).html().replace("You must register using the link above. We will not use your Shoebox to register.", "<span style='color: darkred !important;'>You must register using the link above. We will not use your Shoebox to register.</span>"));
+        });
+
     $('.menu-btn').focus(function () {
         $('.menu-btn').click();
     });

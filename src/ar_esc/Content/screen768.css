@@ -527,7 +527,7 @@ a:hover.tooltips span {
         visibility: visible;
     }
 
-    .CalendarMobile {      
+    .CalendarMobile {
         display: none;
     }
 
@@ -637,6 +637,23 @@ a:hover.tooltips span {
 
     span.rlbbuttonicon.rlbicontransferup::before {
         background-color: white !important;
+        color: black !important;
+    }
+
+    a.calendarlink {
+        font-size: 9px !important;
+    }
+
+    ol li div p {
+        width: 90%;
+    }
+
+    li div {
+        width: 70% !important;
+    }
+
+    #PageTitleH1 {
+        font-size: 14px !important;
         color: black !important;
     }
 } 

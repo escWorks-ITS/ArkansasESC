@@ -435,6 +435,19 @@ runat="server"></asp:Label>
          <%--<cc1:CascadingDropDown ID="CascadingDropDown4" runat="server" TargetControlID="ddlPosition" ParentControlID="ddlSchool" PromptText="Please select a Position..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GePositionsFromSchool"  Category="Room"/>--%>
         <asp:DropDownList ID="ddlPosition" runat="server" CssClass="form-control smallFont" Height="33px" /><br />
     </div>
+    <div class="col-xs-12 col-sm-10">
+     <font color="white">*&nbsp;</font>
+        <asp:Label ID="AccomodationsLabel"
+        text="<strong>:</strong>"
+        AssociatedControlID="ddlAccommodation"
+        CssClass="smallFont"
+        runat="server">Special Accommodations:</asp:Label>
+
+       <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="ddlPosition"
+            CssClass="error smallFont" ErrorMessage="Position is a required field" ForeColor="#A80000"></asp:RequiredFieldValidator>--%>
+         <%--<cc1:CascadingDropDown ID="CascadingDropDown4" runat="server" TargetControlID="ddlPosition" ParentControlID="ddlSchool" PromptText="Please select a Position..." ServicePath="~/services/locationservice.asmx" ServiceMethod="GePositionsFromSchool"  Category="Room"/>--%>
+        <asp:DropDownList ID="ddlAccommodation" runat="server" CssClass="form-control smallFont" Height="33px" OnPreRender="ddlAccommodation_PreRender"/><br />
+    </div>
   </div>
 
             <%--<tr>

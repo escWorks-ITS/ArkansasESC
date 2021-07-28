@@ -54,6 +54,7 @@ public partial class shoebox_account_signup : region4.escWeb.BasePages.ShoeBox.A
     {
         escWeb.ar_esc.ObjectModel.User myUser = user as escWeb.ar_esc.ObjectModel.User;
         myUser.EmployeeNo = this.txtEmployeeNo.Text;
+        myUser.AccommodationId = ddlAccommodation.SelectedValue == "" ? 0 : Convert.ToInt32(ddlAccommodation.SelectedValue);
     }
     protected override void _state_Load(object sender, EventArgs e)
     {
@@ -204,6 +205,25 @@ public partial class shoebox_account_signup : region4.escWeb.BasePages.ShoeBox.A
 }
 
         }
+
+    }
+
+    protected void ddlAccommodation_PreRender(object sender, EventArgs e)
+    {
+        DropDownList list = sender as DropDownList;
+        region4.ItemCollection items;
+        if (list == null)
+            throw new Exception("Expected a dropdownlist but didn't get one");
+        list.Items.Clear();
+        if (list.Items.Count > 0)
+            return;
+        list.Items.Add(new ListItem("Please select a special need ...", ""));
+
+        items = region4.ItemCollection.ReturnItemsByGroup(Convert.ToInt32(ConfigurationManager.AppSettings["user.specialneeds.group"]));
+
+        foreach (region4.Item item in items)
+            if (item.Enabled)
+                list.Items.Add(new ListItem(item.Display, item.ItemId.ToString()));
     }
 
 }
