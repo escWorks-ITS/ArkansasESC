@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 using System.Xml;
 
 public partial class _Default : region4.escWeb.BasePages.default_aspx
-{
+{//test
 
     protected string sloganBackgroundColor;
     protected string logoSpaceColor;
