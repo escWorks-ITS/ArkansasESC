@@ -287,7 +287,7 @@
                                 <li>
                                     <a style="background-color : #003399; color: white !important; font-weight:bold;">Sign In/Out / Create New Account</a>
                                     <ul>
-                                        <li id="SignIn"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signin.aspx?ReturnUrl=/default.aspx") %> ">Sign In</a></li>
+                                        <li id="SignIn"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signin.aspx") %> ">Sign In</a></li>
                                         <li id="SignOut"><a style="color: white !important;" href="<%#ResolveUrl("~/security/signout.aspx") %> ">Sign Out</a></li>                                      
                                                
                                         <% if(BannerTheme == "summerhead"){%>
